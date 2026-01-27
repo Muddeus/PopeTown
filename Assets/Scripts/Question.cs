@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Question", menuName = "Scriptable Objects/Question")]
+[CreateAssetMenu(fileName = "Question", menuName = "Question")]
 public class Question : ScriptableObject
 {
     //public int ID;
     public string questionText;
+    public string responseText;
+    public List<string> conversation;
     public bool unlocked;
     public bool newQuestion;
     // locations: e.g. 0-TownCenter, 1-blank

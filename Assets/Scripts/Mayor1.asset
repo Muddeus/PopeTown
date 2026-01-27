@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
-  m_Name: Butcher1
+  m_Name: Mayor1
   m_EditorClassIdentifier: Assembly-CSharp::Questions
-  questionText: 
-  unlocked: 0
+  questionText: Where were you last night?
+  responseText: I don't wanna tell you
+  conversation: []
+  unlocked: 1
   newQuestion: 1
   location: 0
   character: 0

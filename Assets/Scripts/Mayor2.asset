@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
+  m_Name: Mayor2
+  m_EditorClassIdentifier: Assembly-CSharp::Question
+  questionText: I need to know.
+  responseText: Ok i was here
+  conversation: []
+  unlocked: 0
+  newQuestion: 1
+  location: 0
+  character: 0
+  exploredIDs:
+  - {fileID: 11400000, guid: abdb711b5bde1ba439eba87506a6712c, type: 2}
