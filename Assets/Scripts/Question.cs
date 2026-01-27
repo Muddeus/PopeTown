@@ -1,0 +1,43 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "Question", menuName = "Scriptable Objects/Question")]
+public class Question : ScriptableObject
+{
+    //public int ID;
+    public string questionText;
+    public bool unlocked;
+    public bool newQuestion;
+    // locations: e.g. 0-TownCenter, 1-blank
+    //[Header("Prerequisite explored questions")]
+    //public int location;
+    public Location location; 
+    // characters: e.g. 0-Goobli
+    //public int character;
+    public Character character;
+
+    [Header("Prerequisite explored questions")]
+    public List<Question> exploredIDs;
+}
+
+public enum Character
+{
+    Mayor,
+    SexWorker,
+    Homeless,
+    Artist,
+    Punk,
+    Handywoman
+}
+
+public enum Location
+{
+    Entrance,
+    TownSquare,
+    MayorsOffice,
+    Docks,
+    Suburbs,
+    ArtStudio,
+    Shack,
+    Park
+}
