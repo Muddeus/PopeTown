@@ -147,32 +147,64 @@ public class UIManager : MonoBehaviour
 
     public int GetCurrentLocationProgress()
     {
-        int prog;
+        int prog = 0;
         switch (GameManager.Ins.location)
         {
             case Location.Entrance:
-                prog = GameManager.Ins.
+                prog = GameManager.Ins.entranceTextProgress;
                 break;
             case Location.TownSquare:
-                
+                prog = GameManager.Ins.townSquareTextProgress;
                 break;
             case Location.MayorsOffice:
-
+                prog = GameManager.Ins.mayorsOfficeTextProgress;
                 break;
             case Location.Docks:
-
+                prog = GameManager.Ins.docksTextProgress;
                 break;
             case Location.Suburbs:
-
+                prog = GameManager.Ins.suburbsTextProgress;
                 break;
             case Location.ArtStudio:
-
+                prog = GameManager.Ins.artStudioTextProgress;
                 break;
             case Location.Shack:
-
+                prog = GameManager.Ins.shackTextProgress;
                 break;
             case Location.Park:
+                prog = GameManager.Ins.parkTextProgress;
+                break;
+        }
 
+        return prog;
+    }
+    public void SetCurrentLocationProgress(int prog)
+    {
+        switch (GameManager.Ins.location)
+        {
+            case Location.Entrance:
+                GameManager.Ins.entranceTextProgress = prog;
+                break;
+            case Location.TownSquare:
+                prog = GameManager.Ins.townSquareTextProgress;
+                break;
+            case Location.MayorsOffice:
+                prog = GameManager.Ins.mayorsOfficeTextProgress;
+                break;
+            case Location.Docks:
+                prog = GameManager.Ins.docksTextProgress;
+                break;
+            case Location.Suburbs:
+                prog = GameManager.Ins.suburbsTextProgress;
+                break;
+            case Location.ArtStudio:
+                prog = GameManager.Ins.artStudioTextProgress;
+                break;
+            case Location.Shack:
+                prog = GameManager.Ins.shackTextProgress;
+                break;
+            case Location.Park:
+                prog = GameManager.Ins.parkTextProgress;
                 break;
         }
     }

@@ -18,5 +18,7 @@ MonoBehaviour:
   text:
   - woah hey hey this is crazy time this town is crazy this is such a crazy town
     what the hell what the hell this town is crazy!
+  - 'second text second text second text second text second text '
+  - 'third Text wow third Text wow third Text wow third Text wow third Text wow '
   unlocked: 1
   exploredIDs: []
