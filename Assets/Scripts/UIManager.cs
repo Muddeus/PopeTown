@@ -134,13 +134,31 @@ public class UIManager : MonoBehaviour
     
     public void NextText()
     {
-        if (textAnimating)
+        if (textAnimating) // if text still coming out..
         {
             textTimer = 9999f;
         }
-        else
+        else // if moving to next text/screen
         {
-            mainText = currentTextList[GameManager.Ins.entranceTextProgress].text[textProgress];
+            textProgress++;
+            if (textProgress <= currentTextList[GetCurrentLocationProgress()].text.Length)
+            {
+                mainText = currentTextList[GetCurrentLocationProgress()].text[textProgress];
+            }
+            else
+            {
+                SetCurrentLocationProgress(GetCurrentLocationProgress()+1);
+                textProgress = 0;
+            }
+
+            if (GetCurrentLocationProgress() >= currentTextList.Count)
+            {
+                // Return to questions screen if no more text available
+                print("RETURN TO QUESTION SCREEN");
+            }
+            
+            
+
             AnimateText();
         }
     }
@@ -186,25 +204,28 @@ public class UIManager : MonoBehaviour
                 GameManager.Ins.entranceTextProgress = prog;
                 break;
             case Location.TownSquare:
-                prog = GameManager.Ins.townSquareTextProgress;
+                GameManager.Ins.townSquareTextProgress = prog;
                 break;
             case Location.MayorsOffice:
-                prog = GameManager.Ins.mayorsOfficeTextProgress;
+                GameManager.Ins.mayorsOfficeTextProgress = prog;
                 break;
             case Location.Docks:
-                prog = GameManager.Ins.docksTextProgress;
+                GameManager.Ins.docksTextProgress = prog;
                 break;
             case Location.Suburbs:
-                prog = GameManager.Ins.suburbsTextProgress;
+                GameManager.Ins.suburbsTextProgress = prog;
                 break;
             case Location.ArtStudio:
-                prog = GameManager.Ins.artStudioTextProgress;
+                GameManager.Ins.artStudioTextProgress = prog;
                 break;
             case Location.Shack:
-                prog = GameManager.Ins.shackTextProgress;
+                GameManager.Ins.shackTextProgress = prog;
                 break;
             case Location.Park:
-                prog = GameManager.Ins.parkTextProgress;
+                GameManager.Ins.parkTextProgress = prog;
+                break;
+            default:
+                print("ERROR: NO VALID LOCATION");
                 break;
         }
     }
