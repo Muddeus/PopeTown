@@ -1,3 +1,5 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -33,17 +35,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public Location location;
+    public Location location; // Leave this set to Entrance in the inspector as default starting location
     void Start()
     {
-        location = Location.Entrance;
+        //location = Location.Entrance;
     }
 
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            UIManager.Instance.SkipTextAnimation();
+            print("MOUSE DOWN");
+        }
     }
+
+
 }
+
 
 public enum Character
 {

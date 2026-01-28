@@ -4,9 +4,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "TextObj", menuName = "TextObj")]
 public class TextObj : ScriptableObject
 {
+    public int ID;
     public Character character;
     public Location location;
-    public string text;
+    public string[] text;
     
     
 
