@@ -6,7 +6,7 @@ public class Question : ScriptableObject
 {
     //public int ID;
     public string questionText;
-    public string responseText;
+    //public string responseText;
     public List<string> conversation;
     public bool unlocked;
     public bool newQuestion;

@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
-  m_Name: Mayor2
-  m_EditorClassIdentifier: Assembly-CSharp::Question
-  questionText: I need to know.
-  responseText: Ok i was here
-  conversation: []
+  m_Name: Test1
+  m_EditorClassIdentifier: Assembly-CSharp::Questions
+  questionText: Where were you last night?
+  conversation:
+  - I don't wanna tell you
+  - Just tell me... cunt...
+  - ok i was at the uh dock??
   unlocked: 0
   newQuestion: 1
   location: 0
   character: 0
-  exploredIDs:
-  - {fileID: 11400000, guid: abdb711b5bde1ba439eba87506a6712c, type: 2}
+  exploredIDs: []

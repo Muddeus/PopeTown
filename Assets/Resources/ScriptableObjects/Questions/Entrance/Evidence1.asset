@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Evidence1
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: You present the hand bill
-  responseText: What how did you find that???
-  conversation: []
+  conversation:
+  - What how did you find that???
   unlocked: 0
   newQuestion: 1
   location: 0

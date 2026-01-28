@@ -42,7 +42,13 @@ public class UIManager : MonoBehaviour
     public TMP_Text mainTextDisplay;
     private int textProgress;
 
-    public TextObj[] AllTextArray;
+    public bool questionMode;
+    public GameObject questionsBox;
+    public GameObject contentBox; // Where the question buttons go
+    public GameObject buttonPrefab;
+    public Question currentQuestion;
+
+    public TextObj[] allTextArray;
     public List<TextObj> currentTextList;
     
     public List<TextObj> entranceTextList;
@@ -54,11 +60,25 @@ public class UIManager : MonoBehaviour
     public List<TextObj> shackTextList;
     public List<TextObj> parkTextList;
 
+    public Question[] allQuestionArray;
+    public List<Question> currentQuestionList;
+    
+    public List<Question> entranceQuestionList;
+    public List<Question> townSquareQuestionList;
+    public List<Question> mayorsOfficeQuestionList;
+    public List<Question> docksQuestionList;
+    public List<Question> suburbsQuestionList;
+    public List<Question> artStudioQuestionList;
+    public List<Question> shackQuestionList;
+    public List<Question> parkQuestionList;
+
     void Start()
     {
         textProgress = 0;
-        AllTextArray = Resources.LoadAll<TextObj>("");
-        foreach (TextObj obj in AllTextArray)
+        questionMode = false;
+        questionsBox.SetActive(false);
+        allTextArray = Resources.LoadAll<TextObj>("");
+        foreach (TextObj obj in allTextArray)
         {
             switch (obj.location)
             {
@@ -88,10 +108,43 @@ public class UIManager : MonoBehaviour
                     break;
             }
         }
+        
+        allQuestionArray = Resources.LoadAll<Question>("");
+        foreach (Question obj in allQuestionArray)
+        {
+            switch (obj.location)
+            {
+                case Location.Entrance:
+                    entranceQuestionList.Add(obj);
+                    break;
+                case Location.TownSquare:
+                    townSquareQuestionList.Add(obj);
+                    break;
+                case Location.MayorsOffice:
+                    mayorsOfficeQuestionList.Add(obj);
+                    break;
+                case Location.Docks:
+                    docksQuestionList.Add(obj);
+                    break;
+                case Location.Suburbs:
+                    suburbsQuestionList.Add(obj);
+                    break;
+                case Location.ArtStudio:
+                    artStudioQuestionList.Add(obj);
+                    break;
+                case Location.Shack:
+                    shackQuestionList.Add(obj);
+                    break;
+                case Location.Park:
+                    parkQuestionList.Add(obj);
+                    break;
+            }
+        }
         // When game loads, start here
         if (GameManager.Ins.location == Location.Entrance)
         {
             currentTextList = entranceTextList;
+            currentQuestionList = entranceQuestionList;
             mainText = currentTextList[0].text[0];
             print(mainText);
             //mainTextDisplay.text = mainText;
@@ -101,20 +154,35 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        if (textAnimating )//&& textTimer > textSpeed)
+        if (textAnimating && (!questionMode || currentQuestion !=null))//&& textTimer > textSpeed)
         {
             textPosition = (int)(textTimer / textSpeed);
             textPosition = Math.Clamp(textPosition, 0, textLength);
-            
+
+            if (mainText.Length == 0)
+            {
+                mainTextDisplay.text = "";
+            }
+            else
+            {
                 mainTextDisplay.text = mainText.Substring(0, textPosition);
-                //textTimer = 0;
+            }
             
             if(textPosition >= textLength) textAnimating = false;
             
 
             textTimer += Time.deltaTime;
         }
-        print(textAnimating);
+
+        if (questionMode && !questionsBox.activeInHierarchy) // Runs once each time question mode is activated
+        {
+            RefreshQuestions();
+        }
+
+        if (questionMode)
+        {
+            
+        }
     }
 
     private float textTimer;
@@ -130,7 +198,24 @@ public class UIManager : MonoBehaviour
         textLength = mainText.Length;
     }
 
-    
+    public void RefreshQuestions()
+    {
+        questionsBox.SetActive(true);
+        mainText = "";
+        mainTextDisplay.text = "";
+        //foreach(Transform child in contentBox.transform) Destroy(child.gameObject);
+        ClearQuestions();
+        foreach (Question obj in currentQuestionList)
+        {
+            GameObject button = Instantiate(buttonPrefab, contentBox.transform);
+            button.GetComponent<ButtonLogic>().question = obj;
+        }
+    }
+
+    public void ClearQuestions()
+    {
+        foreach(Transform child in contentBox.transform) Destroy(child.gameObject);
+    }
     
     public void NextText()
     {
@@ -140,27 +225,63 @@ public class UIManager : MonoBehaviour
         }
         else // if moving to next text/screen
         {
+            // Update the log here, text has been read
             textProgress++;
-            if (textProgress <= currentTextList[GetCurrentLocationProgress()].text.Length)
+
+            if (questionMode)
             {
-                mainText = currentTextList[GetCurrentLocationProgress()].text[textProgress];
+                if (currentQuestion != null) // If there is a current question
+                {
+                    print("there is a current question");
+                    mainText = currentQuestion.conversation[textProgress-1]; // start from 1 in question mode
+                }
+                else // If there is no current question
+                {
+                    
+                    textProgress = 0;
+                    RefreshQuestions();
+                }
+
+                if (GetCurrentLocationProgress() >= currentTextList.Count)
+                {
+                    // Return to questions screen if no more text available
+                    print("RETURN TO QUESTION SCREEN");
+                    questionMode = true;
+                }
             }
             else
             {
-                SetCurrentLocationProgress(GetCurrentLocationProgress()+1);
-                textProgress = 0;
-            }
+                if (textProgress < currentTextList[GetCurrentLocationProgress()].text.Length)
+                {
+                    mainText = currentTextList[GetCurrentLocationProgress()].text[textProgress];
+                }
+                else
+                {
+                    SetCurrentLocationProgress(GetCurrentLocationProgress() + 1);
+                    textProgress = 0;
+                }
 
-            if (GetCurrentLocationProgress() >= currentTextList.Count)
-            {
-                // Return to questions screen if no more text available
-                print("RETURN TO QUESTION SCREEN");
+                if (GetCurrentLocationProgress() >= currentTextList.Count)
+                {
+                    // Return to questions screen if no more text available
+                    print("RETURN TO QUESTION SCREEN");
+                    questionMode = true;
+                }
             }
+            
             
             
 
             AnimateText();
         }
+    }
+
+    public void SelectQuestion(Question question)
+    {
+        currentQuestion = question;
+        textProgress = 0;
+        ClearQuestions();
+        NextText();
     }
 
     public int GetCurrentLocationProgress()
