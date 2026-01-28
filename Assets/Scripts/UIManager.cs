@@ -221,19 +221,29 @@ public class UIManager : MonoBehaviour
     {
         if (textAnimating) // if text still coming out..
         {
+            print("Still animating text..");
             textTimer = 9999f;
         }
         else // if moving to next text/screen
         {
             // Update the log here, text has been read
             textProgress++;
-
+            print("Question mode: " + questionMode);
             if (questionMode)
             {
                 if (currentQuestion != null) // If there is a current question
                 {
                     print("there is a current question");
-                    mainText = currentQuestion.conversation[textProgress-1]; // start from 1 in question mode
+                    if ((textProgress - 1) < currentQuestion.conversation.Count)
+                    {
+                        mainText = currentQuestion.conversation[textProgress-1]; // start from 1 in question mode
+                    }
+                    else // question over, update changes and return to questions
+                    {
+                        currentQuestion.newQuestion = false;
+                        currentQuestion = null;
+                        RefreshQuestions();
+                    }
                 }
                 else // If there is no current question
                 {
@@ -281,6 +291,7 @@ public class UIManager : MonoBehaviour
         currentQuestion = question;
         textProgress = 0;
         ClearQuestions();
+        textAnimating = false;
         NextText();
     }
 

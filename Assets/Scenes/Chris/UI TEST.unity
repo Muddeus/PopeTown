@@ -1174,7 +1174,7 @@ MonoBehaviour:
   artStudioQuestionList: []
   shackQuestionList: []
   parkQuestionList: []
-  textSpeed: 0.033
+  textSpeed: 0.01
 --- !u!1001 &865798572
 PrefabInstance:
   m_ObjectHideFlags: 0
