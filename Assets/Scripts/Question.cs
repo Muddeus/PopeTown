@@ -22,24 +22,3 @@ public class Question : ScriptableObject
     public List<Question> exploredIDs;
 }
 
-public enum Character
-{
-    Mayor,
-    SexWorker,
-    Homeless,
-    Artist,
-    Punk,
-    Handywoman
-}
-
-public enum Location
-{
-    Entrance,
-    TownSquare,
-    MayorsOffice,
-    Docks,
-    Suburbs,
-    ArtStudio,
-    Shack,
-    Park
-}

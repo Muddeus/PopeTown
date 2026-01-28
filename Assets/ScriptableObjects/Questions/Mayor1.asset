@@ -15,7 +15,7 @@ MonoBehaviour:
   questionText: Where were you last night?
   responseText: I don't wanna tell you
   conversation: []
-  unlocked: 1
+  unlocked: 0
   newQuestion: 1
   location: 0
   character: 0
