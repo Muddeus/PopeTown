@@ -178,8 +178,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: EXAMINE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f142aed3be055284eb5c991cfa702ca5, type: 2}
-  m_sharedMaterial: {fileID: -1204510001096136984, guid: f142aed3be055284eb5c991cfa702ca5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4c9a6a5a1b063a642aaa38a998aedaf7, type: 2}
+  m_sharedMaterial: {fileID: -8279006466773168639, guid: 4c9a6a5a1b063a642aaa38a998aedaf7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -203,8 +203,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -425,8 +425,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: NOTES
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f142aed3be055284eb5c991cfa702ca5, type: 2}
-  m_sharedMaterial: {fileID: -1204510001096136984, guid: f142aed3be055284eb5c991cfa702ca5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4c9a6a5a1b063a642aaa38a998aedaf7, type: 2}
+  m_sharedMaterial: {fileID: -8279006466773168639, guid: 4c9a6a5a1b063a642aaa38a998aedaf7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -450,8 +450,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1911,8 +1911,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: OPTIONS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f142aed3be055284eb5c991cfa702ca5, type: 2}
-  m_sharedMaterial: {fileID: -1204510001096136984, guid: f142aed3be055284eb5c991cfa702ca5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4c9a6a5a1b063a642aaa38a998aedaf7, type: 2}
+  m_sharedMaterial: {fileID: -8279006466773168639, guid: 4c9a6a5a1b063a642aaa38a998aedaf7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1936,8 +1936,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2443,8 +2443,8 @@ MonoBehaviour:
   m_text: I haven't spoken to Mr. Brown in a week. We... We aren't on very good terms
     at the moment.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 37b0fd399c3446c4e97630a6eff82418, type: 2}
-  m_sharedMaterial: {fileID: -4080031903546666085, guid: 37b0fd399c3446c4e97630a6eff82418, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4c9a6a5a1b063a642aaa38a998aedaf7, type: 2}
+  m_sharedMaterial: {fileID: -8279006466773168639, guid: 4c9a6a5a1b063a642aaa38a998aedaf7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2879,8 +2879,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2988,10 +2988,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' GEMINI'
+  m_text: GEMINI
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f142aed3be055284eb5c991cfa702ca5, type: 2}
-  m_sharedMaterial: {fileID: -1204510001096136984, guid: f142aed3be055284eb5c991cfa702ca5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4c9a6a5a1b063a642aaa38a998aedaf7, type: 2}
+  m_sharedMaterial: {fileID: -8279006466773168639, guid: 4c9a6a5a1b063a642aaa38a998aedaf7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3015,14 +3015,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 5
