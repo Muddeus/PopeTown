@@ -2,7 +2,13 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-    void QuitGame()
+    public void ToggleMenu(GameObject gameObject)
+    {
+        gameObject.SetActive(!gameObject.activeInHierarchy);
+    }
+
+
+    public void QuitGame()
     {
         Application.Quit();
     }
