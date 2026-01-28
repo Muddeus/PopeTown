@@ -5,7 +5,7 @@ using UnityEngine;
 public class Item : ScriptableObject
 {
     private Character character;
-    public string itemText;
+    public string text;
     
     public string mayorResponseText;
     public List<string> mayorConversation;

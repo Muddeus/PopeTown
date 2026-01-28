@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Text", menuName = "Text")]
-public class Text : ScriptableObject
+[CreateAssetMenu(fileName = "TextObj", menuName = "TextObj")]
+public class TextObj : ScriptableObject
 {
-    private Character character;
+    public Character character;
+    public Location location;
     public string text;
     
     
@@ -14,5 +15,5 @@ public class Text : ScriptableObject
     
 
     [Header("Prerequisite explored questions")]
-    public List<Question> exploredIDs;
+    public List<ScriptableObject> exploredIDs;
 }
