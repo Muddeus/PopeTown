@@ -1,14 +1,19 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonLogic : MonoBehaviour
 {
     public Question question;
     private TMP_Text buttonText;
     private bool initialized = false;
+    private Image image;
+    public int fadedAmount;
+    public Color fadedColor;
     void Start()
     {
         buttonText = GetComponentInChildren<TMP_Text>();
+        image = GetComponent<Image>();
         //buttonText.text = question.questionText;
     }
 
@@ -20,8 +25,15 @@ public class ButtonLogic : MonoBehaviour
             {
                 initialized = true;
                 buttonText.text = question.questionText;
+                fadedColor = Color.Lerp(image.color, Color.black, .2f);
+                if (!question.newQuestion) image.color = fadedColor;
             }
         }
+        else // After initialisation
+        {
+           
+        }
+        
     }
 
     public void OnClick()

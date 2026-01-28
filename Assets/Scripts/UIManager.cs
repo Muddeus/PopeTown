@@ -112,6 +112,17 @@ public class UIManager : MonoBehaviour
         allQuestionArray = Resources.LoadAll<Question>("");
         foreach (Question obj in allQuestionArray)
         {
+            // (re)Sets unlocked and newQuestion fields
+            obj.newQuestion = true;
+            if (obj.exploredIDs.Count == 0)
+            {
+                obj.unlocked = true;
+            }
+            else
+            {
+                obj.unlocked = false;
+            }
+            // Make lists of questions by location
             switch (obj.location)
             {
                 case Location.Entrance:
@@ -207,8 +218,12 @@ public class UIManager : MonoBehaviour
         ClearQuestions();
         foreach (Question obj in currentQuestionList)
         {
-            GameObject button = Instantiate(buttonPrefab, contentBox.transform);
-            button.GetComponent<ButtonLogic>().question = obj;
+            if (obj.unlocked) // Locked questions will not show up until unlocked and refreshed again
+            {
+                GameObject button = Instantiate(buttonPrefab, contentBox.transform);
+                if(obj.newQuestion) button.transform.SetAsFirstSibling();
+                button.GetComponent<ButtonLogic>().question = obj;
+            }
         }
     }
 
@@ -241,6 +256,21 @@ public class UIManager : MonoBehaviour
                     else // question over, update changes and return to questions
                     {
                         currentQuestion.newQuestion = false;
+                        // Check prerequisites
+                        foreach (Question q in allQuestionArray)
+                        {
+                            if (q.exploredIDs != null)
+                            {
+                                bool unlocked = true;
+                                foreach (Question r in q.exploredIDs)
+                                {
+                                    // If any prerequisites are still unexplored, keep that question locked,
+                                    if(r.newQuestion == true) unlocked = false; 
+                                    // otherwise, unlock
+                                }
+                                q.unlocked = unlocked;
+                            }
+                        }
                         currentQuestion = null;
                         RefreshQuestions();
                     }

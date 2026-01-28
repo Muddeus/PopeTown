@@ -10,15 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
-  m_Name: Test1
-  m_EditorClassIdentifier: Assembly-CSharp::Questions
-  questionText: Where were you last night?
+  m_Name: Test4
+  m_EditorClassIdentifier: Assembly-CSharp::Question
+  questionText: Ok last question. Why you stink?
   conversation:
-  - I don't wanna tell you
-  - Just tell me... cunt...
-  - ok i was at the uh dock??
+  - It's called having a life.
+  - I'm too busy living, having fun, doing adult stuff. Too busy to have a shower.
+  - Not like YOU'D know anything about that.
+  - CUUUUNNTTTT
+  - That's all.
   unlocked: 1
   newQuestion: 0
   location: 0
   character: 0
-  exploredIDs: []
+  exploredIDs:
+  - {fileID: 11400000, guid: 42c061ee827ae7b4caa218800bd236ad, type: 2}

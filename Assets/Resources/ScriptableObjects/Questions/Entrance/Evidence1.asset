@@ -15,8 +15,8 @@ MonoBehaviour:
   questionText: You present the hand bill
   conversation:
   - What how did you find that???
-  unlocked: 0
-  newQuestion: 1
+  unlocked: 1
+  newQuestion: 0
   location: 0
   character: 0
   exploredIDs:

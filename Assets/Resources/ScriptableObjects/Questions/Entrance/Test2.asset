@@ -15,8 +15,8 @@ MonoBehaviour:
   questionText: I need to know.
   conversation:
   - Ok i was here
-  unlocked: 0
-  newQuestion: 1
+  unlocked: 1
+  newQuestion: 0
   location: 0
   character: 0
   exploredIDs:
