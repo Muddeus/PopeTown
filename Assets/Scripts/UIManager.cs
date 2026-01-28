@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 public class UIManager : MonoBehaviour
 {
     private static UIManager _instance;
-    public static UIManager Instance
+    public static UIManager Ins
     {
         get
         {
@@ -40,8 +40,11 @@ public class UIManager : MonoBehaviour
 
     public string mainText;
     public TMP_Text mainTextDisplay;
+    private int textProgress;
 
     public TextObj[] AllTextArray;
+    public List<TextObj> currentTextList;
+    
     public List<TextObj> entranceTextList;
     public List<TextObj> townSquareTextList;
     public List<TextObj> mayorsOfficeTextList;
@@ -53,6 +56,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        textProgress = 0;
         AllTextArray = Resources.LoadAll<TextObj>("");
         foreach (TextObj obj in AllTextArray)
         {
@@ -84,9 +88,11 @@ public class UIManager : MonoBehaviour
                     break;
             }
         }
-        if (GameManager.Instance.location == Location.Entrance)
+        // When game loads, start here
+        if (GameManager.Ins.location == Location.Entrance)
         {
-            mainText = entranceTextList[0].text[0];
+            currentTextList = entranceTextList;
+            mainText = currentTextList[0].text[0];
             print(mainText);
             //mainTextDisplay.text = mainText;
             AnimateText();
@@ -126,11 +132,48 @@ public class UIManager : MonoBehaviour
 
     
     
-    public void SkipTextAnimation()
+    public void NextText()
     {
         if (textAnimating)
         {
             textTimer = 9999f;
+        }
+        else
+        {
+            mainText = currentTextList[GameManager.Ins.entranceTextProgress].text[textProgress];
+            AnimateText();
+        }
+    }
+
+    public int GetCurrentLocationProgress()
+    {
+        int prog;
+        switch (GameManager.Ins.location)
+        {
+            case Location.Entrance:
+                prog = GameManager.Ins.
+                break;
+            case Location.TownSquare:
+                
+                break;
+            case Location.MayorsOffice:
+
+                break;
+            case Location.Docks:
+
+                break;
+            case Location.Suburbs:
+
+                break;
+            case Location.ArtStudio:
+
+                break;
+            case Location.Shack:
+
+                break;
+            case Location.Park:
+
+                break;
         }
     }
 }

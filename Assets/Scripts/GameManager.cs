@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
-    public static GameManager Instance
+    public static GameManager Ins
     {
         get
         {
@@ -36,6 +36,14 @@ public class GameManager : MonoBehaviour
     }
 
     public Location location; // Leave this set to Entrance in the inspector as default starting location
+    public int entranceTextProgress;
+    public int townSquareTextProgress;
+    public int mayorsOfficeTextProgress;
+    public int docksTextProgress;
+    public int suburbsTextProgress;
+    public int artStudioTextProgress;
+    public int shackTextProgress;
+    public int parkTextProgress;
     void Start()
     {
         //location = Location.Entrance;
@@ -45,8 +53,8 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            UIManager.Instance.SkipTextAnimation();
-            print("MOUSE DOWN");
+            UIManager.Ins.NextText();
+            
         }
     }
 
