@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
-  m_Name: Test1
-  m_EditorClassIdentifier: Assembly-CSharp::Questions
-  questionText: Where were you last night?
+  m_Name: Entrance0
+  m_EditorClassIdentifier: Assembly-CSharp::Question
+  questionText: Why no visitors?
   conversation:
-  - I don't wanna tell you
-  - Just tell me... cunt...
-  - ok i was at the uh dock??
-  unlocked: 1
+  - "We\u2019ve just had some... odd folk about, that\u2019s all. You\u2019ll have
+    to come back some other time."
+  unlocked: 0
   newQuestion: 0
   location: 0
-  character: 0
+  character: 7
+  itemReceived: {fileID: 0}
+  itemUnlockAt: 0
   exploredIDs: []

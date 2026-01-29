@@ -16,13 +16,12 @@ MonoBehaviour:
   character: 0
   location: 0
   text:
-  - You received an anonymous call that an unidentifiable body was found in The Town
-    of Aberdeen this morning
-  - The cryptid will copy the appearance, behaviour and mannerisms of the victim
-    and dispatch them in order to take their place
-  - The cryptid is unable to duplicate anything artificial
-  - Only a cryptid is capable of lying once their mask has been shattered
-  - ...
-  - You arrive at the entrance of the town, where you are greeted by the guard
+  - "When a murder occurs, and the body can\u2019t be identified, then check to see
+    who\u2019s missing. When things don\u2019t make sense, because no one is missing,
+    then you\u2019re dealing with a Twin Skin."
+  - "You\u2019ve received an anonymous call that a murder occurred last night in
+    the little town of Aberdeen."
+  - "The body can\u2019t be identified, and everyone is accounted for."
+  - "Time to find out who\u2019s pretending."
   unlocked: 1
   exploredIDs: []

@@ -17,6 +17,8 @@ public class Question : ScriptableObject
     // characters: e.g. 0-Goobli
     //public int character;
     public Character character;
+    public Item itemReceived;
+    public int itemUnlockAt;
 
     public Dialogue[] dialogue;
     

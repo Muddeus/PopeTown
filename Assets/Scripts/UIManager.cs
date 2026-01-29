@@ -50,6 +50,8 @@ public class UIManager : MonoBehaviour
     public GameObject buttonPrefab;
     public Question currentQuestion;
 
+    public List<Item> ownedItemList;
+    
     public TMP_Text nameBoxText;
     public Image nameBox;
     public Image handsBox;
@@ -165,6 +167,7 @@ public class UIManager : MonoBehaviour
         // When game loads, start here
         if (GameManager.Ins.location == Location.Entrance)
         {
+            GameManager.Ins.character = Character.None;
             currentTextList = entranceTextList;
             currentQuestionList = entranceQuestionList;
             mainText = currentTextList[0].text[0];
@@ -230,6 +233,8 @@ public class UIManager : MonoBehaviour
         {
             if (obj.unlocked) // Locked questions will not show up until unlocked and refreshed again
             {
+                GameManager.Ins.character = obj.character;
+                SetPortrait();
                 GameObject button = Instantiate(buttonPrefab, contentBox.transform);
                 if(obj.newQuestion) button.transform.SetAsFirstSibling();
                 button.GetComponent<ButtonLogic>().question = obj;
@@ -254,14 +259,35 @@ public class UIManager : MonoBehaviour
             // Update the log here, text has been read
             SetPortrait();
             
+            
             textProgress++;
-            print("Question mode: " + questionMode);
             if (questionMode)
             {
                 if (currentQuestion != null) // If there is a current question
                 {
-                    print("there is a current question");
                     // set portrait
+                    GameManager.Ins.character = currentQuestion.character;
+                    SetPortrait();
+                    
+                    // Check if item to unlock
+                    if (currentQuestion.itemReceived != null)
+                    {
+                        if (textProgress == currentQuestion.itemUnlockAt)
+                        {
+                            // add itemReceived to ownedItemsList
+                            bool dupe = false;
+                            foreach (Item i in ownedItemList) // check if it's already there
+                            {
+                                if (i == currentQuestion.itemReceived) // dupe exists, don't add
+                                {
+                                    dupe = true;
+                                    print("Already own item " + currentQuestion.itemReceived);
+                                }
+                            }
+                            if(!dupe) ownedItemList.Add(currentQuestion.itemReceived);
+                        }
+                    }
+                    
                     if ((textProgress - 1) < currentQuestion.conversation.Count)
                     {
                         mainText = currentQuestion.conversation[textProgress-1]; // start from 1 in question mode
@@ -302,24 +328,33 @@ public class UIManager : MonoBehaviour
                     questionMode = true;
                 }
             }
-            else
+            else // NOT in Question Mode (text mode)
             {
+                
+                // if we have more text segments to go..
                 if (textProgress < currentTextList[GetCurrentLocationProgress()].text.Length)
                 {
+                    //print("current text length: " +  currentTextList[GetCurrentLocationProgress()].text.Length);
                     mainText = currentTextList[GetCurrentLocationProgress()].text[textProgress];
+                    GameManager.Ins.character = currentTextList[GetCurrentLocationProgress()].character;
+                    SetPortrait();
                 }
-                else
+                else // end of text chain..
                 {
                     SetCurrentLocationProgress(GetCurrentLocationProgress() + 1);
                     textProgress = 0;
+                    GameManager.Ins.character = Character.None;
+                    SetPortrait();
                 }
-
+                print("current loc progress: " + GetCurrentLocationProgress());
+                
                 if (GetCurrentLocationProgress() >= currentTextList.Count)
                 {
                     // Return to questions screen if no more text available
                     print("RETURN TO QUESTION SCREEN");
                     questionMode = true;
                 }
+                if(!questionMode) mainText = currentTextList[GetCurrentLocationProgress()].text[textProgress];
             }
             
             
