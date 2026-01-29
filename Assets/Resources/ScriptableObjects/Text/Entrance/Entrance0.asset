@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: Entrance0
   m_EditorClassIdentifier: Assembly-CSharp::TextObj
   ID: 0
-  character: 7
+  character: 0
   location: 0
   text:
-  - woah hey hey this is crazy time this town is crazy this is such a crazy town
-    what the hell what the hell this town is crazy!
-  - 'second text second text second text second text second text '
-  - 'third Text wow third Text wow third Text wow third Text wow third Text wow '
+  - You received an anonymous call that an unidentifiable body was found in The Town
+    of Aberdeen this morning
+  - The cryptid will copy the appearance, behaviour and mannerisms of the victim
+    and dispatch them in order to take their place
+  - The cryptid is unable to duplicate anything artificial
+  - Only a cryptid is capable of lying once their mask has been shattered
+  - ...
+  - You arrive at the entrance of the town, where you are greeted by the guard
   unlocked: 1
   exploredIDs: []

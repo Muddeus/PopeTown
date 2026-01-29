@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -48,7 +50,11 @@ public class UIManager : MonoBehaviour
     public GameObject buttonPrefab;
     public Question currentQuestion;
 
+    public TMP_Text nameBoxText;
+    public Image nameBox;
+    public Image handsBox;
     public GameObject currentPortrait;
+    public GameObject portraitPanel;
     public GameObject guardPortrait;
 
     public TextObj[] allTextArray;
@@ -80,6 +86,8 @@ public class UIManager : MonoBehaviour
         textProgress = 0;
         questionMode = false;
         questionsBox.SetActive(false);
+        nameBoxText.text = "";
+        nameBox.enabled = false;
         allTextArray = Resources.LoadAll<TextObj>("");
         foreach (TextObj obj in allTextArray)
         {
@@ -160,14 +168,13 @@ public class UIManager : MonoBehaviour
             currentTextList = entranceTextList;
             currentQuestionList = entranceQuestionList;
             mainText = currentTextList[0].text[0];
-            print(mainText);
-            //mainTextDisplay.text = mainText;
             AnimateText();
         }
     }
 
     void Update()
     {
+        handsBox.enabled = questionMode;
         if (textAnimating && (!questionMode || currentQuestion !=null))//&& textTimer > textSpeed)
         {
             textPosition = (int)(textTimer / textSpeed);
@@ -245,6 +252,8 @@ public class UIManager : MonoBehaviour
         else // if moving to next text/screen
         {
             // Update the log here, text has been read
+            SetPortrait();
+            
             textProgress++;
             print("Question mode: " + questionMode);
             if (questionMode)
@@ -252,6 +261,7 @@ public class UIManager : MonoBehaviour
                 if (currentQuestion != null) // If there is a current question
                 {
                     print("there is a current question");
+                    // set portrait
                     if ((textProgress - 1) < currentQuestion.conversation.Count)
                     {
                         mainText = currentQuestion.conversation[textProgress-1]; // start from 1 in question mode
@@ -326,6 +336,81 @@ public class UIManager : MonoBehaviour
         ClearQuestions();
         textAnimating = false;
         NextText();
+    }
+
+    public void SetPortrait() // and name
+    {
+        nameBoxText.text = "";
+        
+        /*switch (GameManager.Ins.location)
+        {
+            case Location.Entrance:
+                currentPortrait = guardPortrait;
+                nameBoxText.text = "Periwinkle";
+                break;
+            case Location.TownSquare:
+                nameBoxText.text = "";
+                break;
+            case Location.MayorsOffice:
+                nameBoxText.text = "";
+                break;
+            case Location.Docks:
+                nameBoxText.text = "";
+                break;
+            case Location.Suburbs:
+                nameBoxText.text = "";
+                break;
+            case Location.ArtStudio:
+                nameBoxText.text = "";
+                break;
+            case Location.Shack:
+                nameBoxText.text = "";
+                break;
+            case Location.Park:
+                nameBoxText.text = "";
+                break;
+        }*/
+        
+        switch (GameManager.Ins.character)
+        {
+            case Character.Guard:
+                currentPortrait = guardPortrait;
+                nameBoxText.text = "Periwinkle";
+                break;
+            case Character.Handywoman:
+                nameBoxText.text = "";
+                break;
+            case Character.Punk:
+                nameBoxText.text = "";
+                break;
+            case Character.Artist:
+                nameBoxText.text = "";
+                break;
+            case Character.Homeless:
+                nameBoxText.text = "";
+                break;
+            case Character.SexWorker:
+                nameBoxText.text = "";
+                break;
+            case Character.Mayor:
+                nameBoxText.text = "";
+                break;
+            case Character.None:
+                nameBoxText.text = "";
+                break;
+        }
+
+        nameBox.enabled = !(nameBoxText.text == ""); // Hides box when no text
+        if(portraitPanel.transform.childCount > 0) Destroy(portraitPanel.transform.GetChild(0).gameObject); // DOES THIS CAUSE ERROR?
+        
+        if (currentPortrait == null)
+        {
+            
+        }
+        else
+        {
+            Instantiate(currentPortrait, portraitPanel.transform);
+        }
     }
 
     public int GetCurrentLocationProgress()

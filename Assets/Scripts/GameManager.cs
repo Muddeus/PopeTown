@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     }
 
     public Location location; // Leave this set to Entrance in the inspector as default starting location
+    public Character character;
     public int entranceTextProgress;
     public int townSquareTextProgress;
     public int mayorsOfficeTextProgress;
