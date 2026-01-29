@@ -10,15 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
-  m_Name: Entrance1
+  m_Name: ExamineEntrance
   m_EditorClassIdentifier: Assembly-CSharp::Question
-  questionText: "I\u2019m here to investigate the murder from last night"
+  questionText: 
   conversation:
-  - "Wh\u2014what\u2019s that now? Murder? Last night? What are you on about?"
-  unlocked: 1
+  - A small guardhouse, operated by a lone guard. He appears nervous and is sweating
+    profusely...
+  unlocked: 0
   newQuestion: 0
   location: 0
   character: 7
   itemReceived: {fileID: 0}
   itemUnlockAt: 0
-  exploredIDs: []
+  exploredIDs:
+  - {fileID: 11400000, guid: ef0988c6c8f6baf4d859b8e5e5b5053f, type: 2}

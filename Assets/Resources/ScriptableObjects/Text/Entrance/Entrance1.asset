@@ -16,8 +16,7 @@ MonoBehaviour:
   character: 7
   location: 0
   text:
+  - ...
   - Woah there! No visitors in Aberdeen today, sorry love.
-  - two
-  - three
   unlocked: 1
   exploredIDs: []

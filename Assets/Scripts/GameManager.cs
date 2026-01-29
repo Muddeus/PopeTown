@@ -45,6 +45,16 @@ public class GameManager : MonoBehaviour
     public int artStudioTextProgress;
     public int shackTextProgress;
     public int parkTextProgress;
+
+    public Question examineEntrance;
+    public Question examineTownSquare;
+    public Question examineMayorsOffice;
+    public Question examineDocks;
+    public Question examineSuburbs;
+    public Question examineArtStudio;
+    public Question examineShack;
+    public Question examinePark;
+    
     void Start()
     {
         //location = Location.Entrance;

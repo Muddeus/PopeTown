@@ -373,6 +373,40 @@ public class UIManager : MonoBehaviour
         NextText();
     }
 
+    public void Examine()
+    {
+        switch (GameManager.Ins.location)
+        {
+            case Location.Entrance:
+                SelectQuestion(GameManager.Ins.examineEntrance);
+                break;
+            case Location.TownSquare:
+                break;
+            case Location.MayorsOffice:
+                break;
+            case Location.Docks:
+                break;
+            case Location.Suburbs:
+                break;
+            case Location.ArtStudio:
+                break;
+            case Location.Shack:
+                break;
+            case Location.Park:
+                break;
+        }
+    }
+
+    public void Leave()
+    {
+        
+    }
+
+    public void UpdateNotes()
+    {
+        
+    }
+
     public void SetPortrait() // and name
     {
         nameBoxText.text = "";
