@@ -6,7 +6,7 @@ public class SFXManager : MonoBehaviour
 {
     public static SFXManager instance;
 
-    [SerializeField] private AudioSource SFXObject;
+    [SerializeField] private AudioSource sFXObject;
 
     private void Awake()
     {
@@ -19,7 +19,7 @@ public class SFXManager : MonoBehaviour
     public void PlaySound(AudioClip audioClip, Transform spawntransform, float volume)
     {
         //spawn in gameobject
-        AudioSource audioSource = Instantiate(SFXObject, spawntransform.position, Quaternion.identity);
+        AudioSource audioSource = Instantiate(sFXObject, spawntransform.position, Quaternion.identity);
 
         //assign the audioclip
         audioSource.clip = audioClip;
