@@ -85,3 +85,10 @@ public enum Location
     Shack,
     Park
 }
+
+public struct Dialogue
+{
+    public string text;
+    public Character character;
+    public bool characterSpeaking;
+}

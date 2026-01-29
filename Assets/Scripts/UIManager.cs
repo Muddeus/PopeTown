@@ -48,6 +48,9 @@ public class UIManager : MonoBehaviour
     public GameObject buttonPrefab;
     public Question currentQuestion;
 
+    public GameObject currentPortrait;
+    public GameObject guardPortrait;
+
     public TextObj[] allTextArray;
     public List<TextObj> currentTextList;
     

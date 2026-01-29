@@ -18,6 +18,8 @@ public class Question : ScriptableObject
     //public int character;
     public Character character;
 
+    public Dialogue[] dialogue;
+    
     [Header("Prerequisite explored questions")]
     public List<Question> exploredIDs;
 }
