@@ -47,13 +47,17 @@ public class UIManager : MonoBehaviour
     public bool questionMode;
     public GameObject questionsBox;
     public GameObject contentBox; // Where the question buttons go
+    public GameObject examineObj;
+    public GameObject leaveObj;
     public GameObject buttonPrefab;
+    public GameObject notePrefab;
     public Question currentQuestion;
 
     public List<Item> ownedItemList;
     
     public TMP_Text nameBoxText;
     public Image nameBox;
+    public Transform notesBox;
     public Image handsBox;
     public GameObject currentPortrait;
     public GameObject portraitPanel;
@@ -90,6 +94,8 @@ public class UIManager : MonoBehaviour
         questionsBox.SetActive(false);
         nameBoxText.text = "";
         nameBox.enabled = false;
+        leaveObj.SetActive(false);
+        examineObj.SetActive(false);
         allTextArray = Resources.LoadAll<TextObj>("");
         foreach (TextObj obj in allTextArray)
         {
@@ -225,6 +231,8 @@ public class UIManager : MonoBehaviour
     public void RefreshQuestions()
     {
         questionsBox.SetActive(true);
+        leaveObj.SetActive(true);
+        examineObj.SetActive(true);
         mainText = "";
         mainTextDisplay.text = "";
         //foreach(Transform child in contentBox.transform) Destroy(child.gameObject);
@@ -272,7 +280,7 @@ public class UIManager : MonoBehaviour
                     // Check if item to unlock
                     if (currentQuestion.itemReceived != null)
                     {
-                        if (textProgress == currentQuestion.itemUnlockAt)
+                        if (textProgress >= currentQuestion.itemUnlockAt)
                         {
                             // add itemReceived to ownedItemsList
                             bool dupe = false;
@@ -330,7 +338,8 @@ public class UIManager : MonoBehaviour
             }
             else // NOT in Question Mode (text mode)
             {
-                
+                leaveObj.SetActive(false);
+                examineObj.SetActive(false);
                 // if we have more text segments to go..
                 if (textProgress < currentTextList[GetCurrentLocationProgress()].text.Length)
                 {
@@ -373,6 +382,11 @@ public class UIManager : MonoBehaviour
         NextText();
     }
 
+    public void SelectItem(Item item)
+    {
+        // TODO
+    }
+
     public void Examine()
     {
         switch (GameManager.Ins.location)
@@ -404,7 +418,15 @@ public class UIManager : MonoBehaviour
 
     public void UpdateNotes()
     {
-        
+        for (int i = 0; i < notesBox.childCount; i++)
+        {
+            Destroy(notesBox.GetChild(i).gameObject);
+        }
+        foreach (Item i in ownedItemList)
+        {
+            GameObject note = Instantiate(notePrefab, notesBox);
+            note.GetComponent<ItemLogic>().item = i;
+        }
     }
 
     public void SetPortrait() // and name
