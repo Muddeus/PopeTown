@@ -15,10 +15,16 @@ MonoBehaviour:
   questionText: "I\u2019m here to investigate the murder from last night"
   conversation:
   - "Wh\u2014what\u2019s that now? Murder? Last night? What are you on about?"
+  - "You\u2019ve got no right reason thinking there\u2019s been any such murderous
+    business in this little town of ours!"
+  - "What? A \u2014 a call? Well that... that hardly proves a thing now does it?."
+  - "Listen, I know what I\u2019m talking about, because I actually blimmin\u2019
+    live here, right?"
+  - "And you don\u2019t have any reason to think I\u2019m fibbing now do you lass?"
   unlocked: 1
   newQuestion: 0
   location: 0
   character: 7
-  itemReceived: {fileID: 0}
-  itemUnlockAt: 0
+  itemReceived: {fileID: 11400000, guid: 8e281bab4442ddb4e9975fa6f9b18719, type: 2}
+  itemUnlockAt: 4
   exploredIDs: []
