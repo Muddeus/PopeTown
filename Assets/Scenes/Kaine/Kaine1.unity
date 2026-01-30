@@ -2269,10 +2269,15 @@ MonoBehaviour:
   questionMode: 0
   questionsBox: {fileID: 0}
   contentBox: {fileID: 0}
+  examineObj: {fileID: 0}
+  leaveObj: {fileID: 0}
   buttonPrefab: {fileID: 0}
+  notePrefab: {fileID: 0}
   currentQuestion: {fileID: 0}
+  ownedItemList: []
   nameBoxText: {fileID: 0}
   nameBox: {fileID: 0}
+  notesBox: {fileID: 0}
   handsBox: {fileID: 0}
   currentPortrait: {fileID: 0}
   portraitPanel: {fileID: 0}
@@ -2974,6 +2979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4cbedfc148ef7241a0a17839b3515ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Button
+  notesAudioClip: {fileID: 8300000, guid: e54809742ea2c954485982494e5f7120, type: 3}
 --- !u!4 &1228428345
 Transform:
   m_ObjectHideFlags: 0
