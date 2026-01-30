@@ -7,6 +7,9 @@ public class SFXManager : MonoBehaviour
     public static SFXManager instance;
 
     public AudioClip notes1; // Sound 1
+
+
+    public AudioClip[] periwinkleSpeaks;
     
 
     [SerializeField] private AudioSource sFXObject;
