@@ -4,6 +4,7 @@ public class Notesification : MonoBehaviour
 {
     public bool notified;
     public GameObject alert;
+    public Animator anim;
     void Start()
     {
         alert.SetActive(false);
@@ -19,7 +20,7 @@ public class Notesification : MonoBehaviour
         alert.SetActive(notified);
         if (notified)
         {
-            // play animation
+            anim.Play("Note Get");
         }
     }
     public void UpdateNotification(bool notify)

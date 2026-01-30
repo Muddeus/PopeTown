@@ -361,8 +361,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 12.5}
-  m_SizeDelta: {x: 0, y: 25}
+  m_AnchoredPosition: {x: 0, y: 15}
+  m_SizeDelta: {x: 0, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &93968938
 MonoBehaviour:
@@ -384,7 +384,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '!'
+  m_text: (!)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f142aed3be055284eb5c991cfa702ca5, type: 2}
   m_sharedMaterial: {fileID: -1204510001096136984, guid: f142aed3be055284eb5c991cfa702ca5, type: 2}
@@ -929,11 +929,11 @@ RectTransform:
   - {fileID: 497896634}
   m_Father: {fileID: 1092409966}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 285, y: 14}
-  m_SizeDelta: {x: 60.972, y: 20.694}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 125, y: 4.5}
+  m_SizeDelta: {x: 60.972, y: 25}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &233884792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2592,7 +2592,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1022666741}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.48212796
+  m_Size: 0.482128
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3056,6 +3056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 804882679}
   - component: {fileID: 804882680}
+  - component: {fileID: 804882681}
   m_Layer: 5
   m_Name: MusicSlider
   m_TagString: Untagged
@@ -3104,7 +3105,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -3125,7 +3126,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1198804215}
+  m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1416231030}
   m_HandleRect: {fileID: 1198804214}
   m_Direction: 0
@@ -3136,6 +3137,14 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!222 &804882681
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804882678}
+  m_CullTransparentMesh: 1
 --- !u!1 &829410567
 GameObject:
   m_ObjectHideFlags: 0
@@ -4721,6 +4730,13 @@ MonoBehaviour:
   artStudioTextProgress: 0
   shackTextProgress: 0
   parkTextProgress: 0
+  townSquareUnlocked: 0
+  mayorsOfficeUnlocked: 0
+  docksUnlocked: 0
+  suburbsUnlocked: 0
+  artStudioUnlocked: 0
+  shackUnlocked: 0
+  parkUnlocked: 0
   examineEntrance: {fileID: 11400000, guid: e77bd23e36f27404fb1eb6884c1b3b08, type: 2}
   examineTownSquare: {fileID: 0}
   examineMayorsOffice: {fileID: 0}
@@ -6202,6 +6218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   notified: 0
   alert: {fileID: 93968936}
+  anim: {fileID: 829410573}
 --- !u!1 &1534577827
 GameObject:
   m_ObjectHideFlags: 0
@@ -6236,7 +6253,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 7.1914673, y: -0.000011444092}
+  m_AnchoredPosition: {x: 7.1914673, y: -0.000015258789}
   m_SizeDelta: {x: 227.5, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1534577829
@@ -6259,8 +6276,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I haven't spoken to Mr. Brown in a week. We... We aren't on very good terms
-    at the moment.
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 37b0fd399c3446c4e97630a6eff82418, type: 2}
   m_sharedMaterial: {fileID: -4080031903546666085, guid: 37b0fd399c3446c4e97630a6eff82418, type: 2}
@@ -6373,11 +6389,11 @@ RectTransform:
   - {fileID: 168558544}
   m_Father: {fileID: 1092409966}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 285, y: 45}
-  m_SizeDelta: {x: 60.972, y: 20.694}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 124.999985, y: -4.5}
+  m_SizeDelta: {x: 60.972, y: 25}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1546006370
 MonoBehaviour:
   m_ObjectHideFlags: 0

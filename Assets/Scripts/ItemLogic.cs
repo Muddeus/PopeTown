@@ -30,7 +30,6 @@ public class ItemLogic : MonoBehaviour
         else // After initialisation
         {
             //buttonText.text = item.titleText + (newItem?" (!)":"");
-            print("text length: " + buttonText.text);
             buttonText.text = item.titleText + (item.titleText.Length>13?(newItem?"(!)":""):(newItem?" (!)":""));
         }
         

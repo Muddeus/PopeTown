@@ -473,7 +473,8 @@ public class UIManager : MonoBehaviour
             }
         }
         //print(notesification);
-        notesification.UpdateNotification(unreadNotes);
+        // Updats notification only if it needs updating (result differs from expected)
+        if(notesification.notified != unreadNotes)notesification.UpdateNotification(unreadNotes);
         if (unreadNotes)
         {
             

@@ -46,6 +46,14 @@ public class GameManager : MonoBehaviour
     public int shackTextProgress;
     public int parkTextProgress;
 
+    public bool townSquareUnlocked;
+    public bool mayorsOfficeUnlocked;
+    public bool docksUnlocked;
+    public bool suburbsUnlocked;
+    public bool artStudioUnlocked;
+    public bool shackUnlocked;
+    public bool parkUnlocked;
+
     public Question examineEntrance;
     public Question examineTownSquare;
     public Question examineMayorsOffice;
