@@ -96,6 +96,7 @@ public class UIManager : MonoBehaviour
         nameBox.enabled = false;
         leaveObj.SetActive(false);
         examineObj.SetActive(false);
+        ClearNotes();
         allTextArray = Resources.LoadAll<TextObj>("");
         foreach (TextObj obj in allTextArray)
         {
@@ -266,7 +267,7 @@ public class UIManager : MonoBehaviour
         {
             // Update the log here, text has been read
             SetPortrait();
-            
+            UpdateNotes();
             
             textProgress++;
             if (questionMode)
@@ -292,7 +293,12 @@ public class UIManager : MonoBehaviour
                                     print("Already own item " + currentQuestion.itemReceived);
                                 }
                             }
-                            if(!dupe) ownedItemList.Add(currentQuestion.itemReceived);
+
+                            if (!dupe)
+                            {
+                                currentQuestion.itemReceived.newItem = true; // makes items marked true by default
+                                ownedItemList.Add(currentQuestion.itemReceived);
+                            }
                         }
                     }
                     
@@ -416,17 +422,36 @@ public class UIManager : MonoBehaviour
         
     }
 
+    public void ClearNotes()
+    {
+        for (int i = 0; i < notesBox.childCount; i++)
+        {
+            Destroy(notesBox.GetChild(i).gameObject);
+        }
+    }
     public void UpdateNotes()
     {
         for (int i = 0; i < notesBox.childCount; i++)
         {
             Destroy(notesBox.GetChild(i).gameObject);
         }
+
+        bool unreadNotes = false;
         foreach (Item i in ownedItemList)
         {
             GameObject note = Instantiate(notePrefab, notesBox);
             note.GetComponent<ItemLogic>().item = i;
+            if (i.newItem == true) unreadNotes = true;
         }
+
+        if (unreadNotes)
+        {
+            Notesification notesification = FindFirstObjectByType<Notesification>();
+            print(notesification);
+            notesification.UpdateNotification(unreadNotes);
+        }
+
+        
     }
 
     public void SetPortrait() // and name

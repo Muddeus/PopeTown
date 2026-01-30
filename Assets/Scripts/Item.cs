@@ -5,7 +5,10 @@ using UnityEngine;
 public class Item : ScriptableObject
 {
     private Character character;
-    public string text;
+    public string titleText;
+    public string text;    
+    public bool newItem;
+
     
     public string mayorResponseText;
     public List<string> mayorConversation;
