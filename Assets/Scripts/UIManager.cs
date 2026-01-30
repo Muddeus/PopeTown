@@ -187,6 +187,8 @@ public class UIManager : MonoBehaviour
         handsBox.enabled = questionMode;
         if (textAnimating && (!questionMode || currentQuestion !=null))//&& textTimer > textSpeed)
         {
+            // text animation
+            if(!(GameManager.Ins.character == Character.None)) PlayTextSound();
             textPosition = (int)(textTimer / textSpeed);
             textPosition = Math.Clamp(textPosition, 0, textLength);
 
@@ -377,6 +379,19 @@ public class UIManager : MonoBehaviour
 
             AnimateText();
         }
+    }
+
+    private float soundTimer = 0;
+    public void PlayTextSound()
+    {
+        if (soundTimer > textSpeed * 4f)
+        {
+            soundTimer = 0;
+            SFXManager sfx = SFXManager.instance;
+            sfx.PlayRandomSound(sfx.periwinkleSpeaks,transform,1f);
+        }
+
+        soundTimer += Time.deltaTime;
     }
 
     public void SelectQuestion(Question question)
