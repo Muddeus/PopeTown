@@ -2979,7 +2979,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4cbedfc148ef7241a0a17839b3515ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Button
-  notesAudioClip: {fileID: 8300000, guid: e54809742ea2c954485982494e5f7120, type: 3}
 --- !u!4 &1228428345
 Transform:
   m_ObjectHideFlags: 0
@@ -4090,6 +4089,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de9ee8842e4c0d49b31ca1e698e990e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SFXManager
+  notes1: {fileID: 8300000, guid: e54809742ea2c954485982494e5f7120, type: 3}
+  periwinkleSpeaks:
+  - {fileID: 8300000, guid: c18c6d8ca1875994f82e1b6f04fda333, type: 3}
+  - {fileID: 8300000, guid: ba0f821c6dd9c61498594dc7c60a8a9e, type: 3}
+  - {fileID: 8300000, guid: 0011e9773b211654ca0f5dcb07f051f6, type: 3}
   sFXObject: {fileID: 8761177432083639136, guid: cd419cabaa8972044929e58e262592f6, type: 3}
 --- !u!4 &1713211056
 Transform:
