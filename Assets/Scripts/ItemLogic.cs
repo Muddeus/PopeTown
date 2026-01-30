@@ -23,18 +23,23 @@ public class ItemLogic : MonoBehaviour
             if (item != null)
             {
                 initialized = true;
-                buttonText.text = item.text;
+                
+                newItem = item.newItem;
             }
         }
         else // After initialisation
         {
-           
+            //buttonText.text = item.titleText + (newItem?" (!)":"");
+            print("text length: " + buttonText.text);
+            buttonText.text = item.titleText + (item.titleText.Length>13?(newItem?"(!)":""):(newItem?" (!)":""));
         }
         
     }
 
     public void OnClick()
     {
+        print("item click: " + item);
+        item.newItem = false;
         UIManager.Ins.SelectItem(item);
     }
 }

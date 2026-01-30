@@ -24,6 +24,7 @@ public class Notesification : MonoBehaviour
     }
     public void UpdateNotification(bool notify)
     {
+        print("NOTIFY: " + notify);
         notified = notify;
         UpdateNotification();
     }

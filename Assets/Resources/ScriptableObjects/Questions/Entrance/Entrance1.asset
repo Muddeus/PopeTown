@@ -22,9 +22,9 @@ MonoBehaviour:
     live here, right?"
   - "And you don\u2019t have any reason to think I\u2019m fibbing now do you lass?"
   unlocked: 1
-  newQuestion: 0
+  newQuestion: 1
   location: 0
   character: 7
-  itemReceived: {fileID: 11400000, guid: 8e281bab4442ddb4e9975fa6f9b18719, type: 2}
-  itemUnlockAt: 4
+  itemReceived: {fileID: 0}
+  itemUnlockAt: 0
   exploredIDs: []

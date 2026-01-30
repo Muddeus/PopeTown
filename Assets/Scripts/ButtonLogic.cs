@@ -41,6 +41,5 @@ public class ButtonLogic : MonoBehaviour
         UIManager.Ins.SelectQuestion(question);
         question.newQuestion = false;
         UIManager.Ins.UpdateNotes();
-        print("clicked");
     }
 }

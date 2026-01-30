@@ -43,6 +43,7 @@ public class UIManager : MonoBehaviour
     public string mainText;
     public TMP_Text mainTextDisplay;
     private int textProgress;
+    private Notesification notesification;
 
     public bool questionMode;
     public GameObject questionsBox;
@@ -97,6 +98,7 @@ public class UIManager : MonoBehaviour
         leaveObj.SetActive(false);
         examineObj.SetActive(false);
         ClearNotes();
+        notesification = FindFirstObjectByType<Notesification>();
         allTextArray = Resources.LoadAll<TextObj>("");
         foreach (TextObj obj in allTextArray)
         {
@@ -262,7 +264,7 @@ public class UIManager : MonoBehaviour
     {
         if (textAnimating) // if text still coming out..
         {
-            print("Still animating text..");
+            //print("Still animating text..");
             textTimer = 9999f;
         }
         else // if moving to next text/screen
@@ -340,7 +342,7 @@ public class UIManager : MonoBehaviour
                 if (GetCurrentLocationProgress() >= currentTextList.Count)
                 {
                     // Return to questions screen if no more text available
-                    print("RETURN TO QUESTION SCREEN");
+                    //print("RETURN TO QUESTION SCREEN");
                     questionMode = true;
                 }
             }
@@ -363,12 +365,12 @@ public class UIManager : MonoBehaviour
                     GameManager.Ins.character = Character.None;
                     SetPortrait();
                 }
-                print("current loc progress: " + GetCurrentLocationProgress());
+                //print("current loc progress: " + GetCurrentLocationProgress());
                 
                 if (GetCurrentLocationProgress() >= currentTextList.Count)
                 {
                     // Return to questions screen if no more text available
-                    print("RETURN TO QUESTION SCREEN");
+                    //print("RETURN TO QUESTION SCREEN");
                     questionMode = true;
                 }
                 if(!questionMode) mainText = currentTextList[GetCurrentLocationProgress()].text[textProgress];
@@ -388,7 +390,7 @@ public class UIManager : MonoBehaviour
         {
             soundTimer = 0;
             SFXManager sfx = SFXManager.instance;
-            sfx.PlayRandomSound(sfx.periwinkleSpeaks,transform,1f);
+            sfx.PlayRandomSound(sfx.periwinkleSpeaks,transform,0.1f);
         }
 
         soundTimer += Time.deltaTime;
@@ -405,7 +407,14 @@ public class UIManager : MonoBehaviour
 
     public void SelectItem(Item item)
     {
-        // TODO
+        Question itemQuestion = ScriptableObject.CreateInstance<Question>();
+        itemQuestion.conversation = new List<string>();
+        itemQuestion.character = GameManager.Ins.character;
+        itemQuestion.location = GameManager.Ins.location;
+        itemQuestion.conversation.Add(item.text);
+        SelectQuestion(itemQuestion);
+        //notesification.UpdateNotification();
+        UpdateNotes();
     }
 
     public void Examine()
@@ -455,15 +464,19 @@ public class UIManager : MonoBehaviour
         foreach (Item i in ownedItemList)
         {
             GameObject note = Instantiate(notePrefab, notesBox);
-            note.GetComponent<ItemLogic>().item = i;
-            if (i.newItem == true) unreadNotes = true;
+            ItemLogic itemLogic = note.GetComponent<ItemLogic>();
+            itemLogic.item = i;
+            if (i.newItem == true)
+            {
+                unreadNotes = true;
+                //itemLogic.item.titleText = itemLogic.item.titleText + "(!)";
+            }
         }
-
+        //print(notesification);
+        notesification.UpdateNotification(unreadNotes);
         if (unreadNotes)
         {
-            Notesification notesification = FindFirstObjectByType<Notesification>();
-            print(notesification);
-            notesification.UpdateNotification(unreadNotes);
+            
         }
 
         
