@@ -6,6 +6,9 @@ public class SFXManager : MonoBehaviour
 {
     public static SFXManager instance;
 
+    public AudioClip notes1; // Sound 1
+    
+
     [SerializeField] private AudioSource sFXObject;
 
     private void Awake()
@@ -60,4 +63,10 @@ public class SFXManager : MonoBehaviour
         //destroy clip
         Destroy(audioSource.gameObject, clipLength);
     }
+}
+public enum Sound
+{
+    None,
+    Notes,
+    
 }

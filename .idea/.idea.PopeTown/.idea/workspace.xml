@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7285e2cb-2db6-429d-b2e4-ccad62700fa0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PopeTown/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PopeTown/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/BorderguardSprites.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/BorderguardSprites.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Button.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Button.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SFXManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SFXManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
