@@ -52,6 +52,7 @@ public class UIManager : MonoBehaviour
     public GameObject leaveObj;
     public GameObject buttonPrefab;
     public GameObject notePrefab;
+    public GameObject emptyNotesText;
     public Question currentQuestion;
 
     public List<Item> ownedItemList;
@@ -272,6 +273,7 @@ public class UIManager : MonoBehaviour
             // Update the log here, text has been read
             SetPortrait();
             UpdateNotes();
+            emptyNotesText.SetActive(notesBox.childCount == 0); // Get rid of EMPTY text if not empty
             
             textProgress++;
             if (questionMode)
@@ -455,6 +457,7 @@ public class UIManager : MonoBehaviour
     }
     public void UpdateNotes()
     {
+        emptyNotesText.SetActive(notesBox.childCount == 0);
         for (int i = 0; i < notesBox.childCount; i++)
         {
             Destroy(notesBox.GetChild(i).gameObject);
