@@ -193,6 +193,7 @@ public class UIManager : MonoBehaviour
     private float textSpeedMult;
     void Update()
     {
+        if (nameBoxText.text == "") nameBox.enabled = false;
         // hands animation
         handsBox.enabled = questionMode;
         if (questionMode)
@@ -306,6 +307,7 @@ public class UIManager : MonoBehaviour
     {
         if (textAnimating) // if text still coming out..
         {
+            //if(GameManager.Ins.location != Location.Entrance) SetPortrait(); // don't want it to affect start of game
             //print("Still animating text..");
             textTimer = 9999f;
         }
@@ -508,11 +510,16 @@ public class UIManager : MonoBehaviour
         //notesification.UpdateNotification();
         UpdateNotes();
     }
+    
 
     public void GoToLocation(Location location) // ONLY TO BE ACCESSED BY GAMEMANAGER SCRIPT OF SAME NAME
     {
         GameManager.Ins.location = location;
         GameManager.Ins.character = Character.None;
+        questionMode = false;
+        questionsBox.SetActive(false); // This could mess up something.
+        ClearQuestions();
+        ClearPortrait();
         switch (location)
         {
             case Location.Entrance:
@@ -550,7 +557,6 @@ public class UIManager : MonoBehaviour
         }
         mainText = currentTextList[0].text[0];
         textProgress = 0;
-        questionMode = false;
         AnimateText();
     }
 
@@ -621,38 +627,22 @@ public class UIManager : MonoBehaviour
         
     }
 
+    public void ClearPortrait()
+    {
+        if (portraitPanel.transform.childCount > 0)
+        {
+            Destroy(portraitPanel.transform.GetChild(0).gameObject); // CAREFUL THIS IS DANGEROUS
+
+        }
+
+        nameBoxText.text = "";
+    }
+
     public void SetPortrait() // and name
     {
         nameBoxText.text = "";
         
-        /*switch (GameManager.Ins.location)
-        {
-            case Location.Entrance:
-                currentPortrait = guardPortrait;
-                nameBoxText.text = "Periwinkle";
-                break;
-            case Location.TownSquare:
-                nameBoxText.text = "";
-                break;
-            case Location.MayorsOffice:
-                nameBoxText.text = "";
-                break;
-            case Location.Docks:
-                nameBoxText.text = "";
-                break;
-            case Location.Suburbs:
-                nameBoxText.text = "";
-                break;
-            case Location.ArtStudio:
-                nameBoxText.text = "";
-                break;
-            case Location.Shack:
-                nameBoxText.text = "";
-                break;
-            case Location.Park:
-                nameBoxText.text = "";
-                break;
-        }*/
+        
         
         switch (GameManager.Ins.character)
         {
@@ -682,15 +672,48 @@ public class UIManager : MonoBehaviour
                 nameBoxText.text = "";
                 break;
         }
+        switch (GameManager.Ins.location)
+        {
+            case Location.Entrance:
+                //currentPortrait = guardPortrait;
+                //nameBoxText.text = "Periwinkle";
+                break;
+            case Location.TownSquare:
+                currentPortrait = null;
+                nameBoxText.text = "Town Square";
+                break;
+            case Location.MayorsOffice:
+                nameBoxText.text = "";
+                break;
+            case Location.Docks:
+                nameBoxText.text = "";
+                break;
+            case Location.Suburbs:
+                nameBoxText.text = "";
+                break;
+            case Location.ArtStudio:
+                nameBoxText.text = "";
+                break;
+            case Location.Shack:
+                nameBoxText.text = "";
+                break;
+            case Location.Park:
+                nameBoxText.text = "";
+                break;
+        }
 
         nameBox.enabled = !(nameBoxText.text == ""); // Hides box when no text
-        if(portraitPanel.transform.childCount > 0) Destroy(portraitPanel.transform.GetChild(0).gameObject); // DOES THIS CAUSE ERROR?
+        //if(portraitPanel.transform.childCount > 0) Destroy(portraitPanel.transform.GetChild(0).gameObject); // DOES THIS CAUSE ERROR?
         
         if (currentPortrait == null)
         {
-            
+            if (portraitPanel.transform.childCount > 0)
+            {
+                Destroy(portraitPanel.transform.GetChild(0).gameObject); // CAREFUL THIS IS DANGEROUS
+
+            }
         }
-        else
+        else if(portraitPanel.transform.childCount == 0)
         {
             Instantiate(currentPortrait, portraitPanel.transform);
         }

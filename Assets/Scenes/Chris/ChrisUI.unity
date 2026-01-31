@@ -5885,7 +5885,7 @@ MonoBehaviour:
   artStudioTextProgress: 0
   shackTextProgress: 0
   parkTextProgress: 0
-  townSquareUnlocked: 0
+  townSquareUnlocked: 1
   mayorsOfficeUnlocked: 0
   docksUnlocked: 0
   suburbsUnlocked: 0
