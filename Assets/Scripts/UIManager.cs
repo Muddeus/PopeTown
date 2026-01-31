@@ -142,7 +142,7 @@ public class UIManager : MonoBehaviour
         {
             // (re)Sets unlocked and newQuestion fields
             obj.newQuestion = true;
-            if (obj.exploredIDs.Count == 0)
+            if (obj.exploredIDs.Count == 0 && obj.necessaryItems.Count == 0)
             {
                 obj.unlocked = true;
             }
@@ -266,6 +266,7 @@ public class UIManager : MonoBehaviour
 
     public void RefreshQuestions()
     {
+        //evidenceCount = 0; // resets for next evidence. could be cause of bug..
         currentQuestion = null;
         questionsBox.SetActive(true);
         leaveObj.SetActive(GameManager.Ins.townSquareUnlocked);
@@ -328,7 +329,7 @@ public class UIManager : MonoBehaviour
                     // set portrait
                     GameManager.Ins.character = currentQuestion.character;
                     SetPortrait();
-                    
+                    //PresentEvidenceCheck();
                     // Check if item to unlock (multiple items ahead)
                     if (currentQuestion.itemReceived != null)
                     {
@@ -407,15 +408,27 @@ public class UIManager : MonoBehaviour
                         // Check prerequisites
                         foreach (Question q in allQuestionArray)
                         {
-                            if (q.exploredIDs != null)
+                            if (q.exploredIDs != null && q.necessaryItems != null)
                             {
                                 bool unlocked = true;
+                                // we will check questions first...
                                 foreach (Question r in q.exploredIDs)
                                 {
                                     // If any prerequisites are still unexplored, keep that question locked,
                                     if(r.newQuestion == true) unlocked = false; 
-                                    // otherwise, unlock
+                                    // otherwise, continue
                                 }
+                                //...then check items
+                                foreach (Item n in q.necessaryItems) // each necessary item
+                                {
+                                    bool unlocked2 = false;
+                                    foreach (Item o in ownedItemList) // is checked if it's owned
+                                    {
+                                        if (o == n) unlocked2 = true;
+                                    }
+                                    if (unlocked2 == false) unlocked = false; // if any are missing then keep locked, otherwise continue
+                                }
+                                // only unlocks if it managed to stay unlocked through every test 
                                 q.unlocked = unlocked;
                             }
                         }
@@ -479,12 +492,87 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    //private int evidencesRequired;
+    //private int evidenceCount = 0; // make sure this is reset each question
+    public void PresentEvidenceCheck(Item presentedItem)
+    {
+        //print("Evidence count: " + evidenceCount);
+        // check if the current message has an associated piece of evidence
+        //
+        // check if the presented evidence matches the associated one
+
+        // find total evidence required
+        bool match = false;
+        /*int addUp = 0;
+        if (currentQuestion.itemPresent != null) addUp++;
+        if (currentQuestion.itemPresent2 != null) addUp++;
+        if (currentQuestion.itemPresent3 != null) addUp++;
+        evidencesRequired = addUp;
+            */
+        
+        if (currentQuestion.itemPresent == presentedItem && textProgress == currentQuestion.itemPresentAt)
+        {
+            match = true;
+        }
+        else if (currentQuestion.itemPresent2 == presentedItem && textProgress == currentQuestion.itemPresentAt2)
+        {
+            match = true;
+        }
+        else if (currentQuestion.itemPresent3 == presentedItem && textProgress == currentQuestion.itemPresentAt3)
+        {
+            match = true;
+        }
+
+        if (presentedItem == null) match = false;
+
+        if (match) // EVIDENCE PRESENTED CORRECTLY
+        {
+            // continue on with the question convo
+        }
+        else // INCORRECT EVIDENCE
+        {
+            // give character response and then refresh questions
+            Question wrongEvidenceResponse = ScriptableObject.CreateInstance<Question>();
+            wrongEvidenceResponse.conversation = new List<string>();
+            wrongEvidenceResponse.character = GameManager.Ins.character;
+            wrongEvidenceResponse.location = GameManager.Ins.location;
+            wrongEvidenceResponse.conversation.Add(GameManager.Ins.CharacterWrongEvidenceResponse(GameManager.Ins.character));
+            SelectQuestion(wrongEvidenceResponse);
+            //notesification.UpdateNotification();
+            //UpdateNotes();
+        }
+        
+        
+        // CAN I DELETE TS? THIS WAS JUST A COPY PASTE FOR REFERENCE HERE
+        /*if (currentQuestion.itemReceived != null)
+        {
+            if (textProgress >= currentQuestion.itemUnlockAt)
+            {
+                // add itemReceived to ownedItemsList
+                bool dupe = false;
+                foreach (Item i in ownedItemList) // check if it's already there
+                {
+                    if (i == currentQuestion.itemReceived) // dupe exists, don't add
+                    {
+                        dupe = true;
+                        print("Already own item " + currentQuestion.itemReceived);
+                    }
+                }
+
+                if (!dupe)
+                {
+                    currentQuestion.itemReceived.newItem = true; // makes items marked true by default
+                    ownedItemList.Add(currentQuestion.itemReceived);
+                }
+            }
+        }*/
+    }
     public void AddItemFromText()
     {
         // Check if item to unlock (multiple items ahead)
                     if (currentTextList[GetCurrentLocationProgress()].itemReceived != null)
                     {
-                        if (textProgress >= currentTextList[GetCurrentLocationProgress()].itemUnlockAt)
+                        if (textProgress >= currentTextList[GetCurrentLocationProgress()].itemUnlockAfter)
                         {
                             // add itemReceived to ownedItemsList
                             bool dupe = false;
@@ -505,7 +593,7 @@ public class UIManager : MonoBehaviour
                     }
                     if (currentTextList[GetCurrentLocationProgress()].itemReceived2 != null)
                     {
-                        if (textProgress >= currentTextList[GetCurrentLocationProgress()].itemUnlockAt2)
+                        if (textProgress >= currentTextList[GetCurrentLocationProgress()].itemUnlockAfter2)
                         {
                             // add itemReceived2 to ownedItemsList
                             bool dupe = false;
@@ -526,7 +614,7 @@ public class UIManager : MonoBehaviour
                     }
                     if (currentTextList[GetCurrentLocationProgress()].itemReceived3 != null)
                     {
-                        if (textProgress >= currentTextList[GetCurrentLocationProgress()].itemUnlockAt3)
+                        if (textProgress >= currentTextList[GetCurrentLocationProgress()].itemUnlockAfter3)
                         {
                             // add itemReceived3 to ownedItemsList
                             bool dupe = false;
@@ -653,11 +741,6 @@ public class UIManager : MonoBehaviour
             case Location.Park:
                 break;
         }
-    }
-
-    public void Leave()
-    {
-        
     }
 
     public void ClearNotes()

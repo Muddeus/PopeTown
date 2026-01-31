@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "TextObj", menuName = "TextObj")]
 public class TextObj : ScriptableObject
@@ -13,11 +14,11 @@ public class TextObj : ScriptableObject
     public bool unlocked;
     
     public Item itemReceived;
-    public int itemUnlockAt;
+    [FormerlySerializedAs("itemUnlockAt")] public int itemUnlockAfter;
     public Item itemReceived2;
-    public int itemUnlockAt2;
+    [FormerlySerializedAs("itemUnlockAt2")] public int itemUnlockAfter2;
     public Item itemReceived3;
-    public int itemUnlockAt3;
+    [FormerlySerializedAs("itemUnlockAt3")] public int itemUnlockAfter3;
 
     [Header("Prerequisite explored questions")]
     public List<ScriptableObject> exploredIDs;

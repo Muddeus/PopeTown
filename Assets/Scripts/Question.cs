@@ -38,5 +38,8 @@ public class Question : ScriptableObject
     
     [Header("Prerequisite explored questions")]
     public List<Question> exploredIDs;
+    
+    [Header("Prerequisite owned items")]
+    public List<Item> necessaryItems;
 }
 

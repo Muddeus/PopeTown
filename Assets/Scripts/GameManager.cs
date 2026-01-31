@@ -107,6 +107,42 @@ public class GameManager : MonoBehaviour
     {
         UIManager.Ins.GoToLocation(Location.Park);
     }
+
+    public string CharacterWrongEvidenceResponse(Character character)
+    {
+        switch (character)
+        {
+            case Character.Guard:
+                return "Uh... what’s that now?";
+                break;
+            case Character.Handywoman:
+                return "..?";
+                break;
+            case Character.Punk:
+                return "Huh? What? What are you even saying right now?";
+                break;
+            case Character.Artist:
+                return "I... I don’t follow.";
+                break;
+            case Character.Homeless:
+                // he could have 3-4 that he picks from at random
+                return "Ooo, sharp. But not as sharp as Fishburn. Do that one over.";
+                break;
+            case Character.SexWorker:
+                return "Sorry to disappoint hun, but I don’t have anything to hide.";
+                break;
+            case Character.Mayor:
+                return "I think you’re losing the plot woman.";
+                break;
+            case Character.None:
+                return "You proclaim to no one.";
+                break;
+            
+            // ADD TWINSKIN "Now we’re really falling apart, aren’t we?"
+        }
+
+        return "huh..?";
+    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0))

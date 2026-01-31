@@ -15,16 +15,33 @@ MonoBehaviour:
   questionText: "I\u2019m here to investigate the murder from last night"
   conversation:
   - "Wh\u2014what\u2019s that now? Murder? Last night? What are you on about?"
-  - "You\u2019ve got no right reason thinking there\u2019s been any such murderous
-    business in this little town of ours!"
+  - "I\u2019m sure you\u2019ve got no right reason to go thinking there's been a-
+    a murder of all things, here in our little town of Aberdeen!"
   - "What? A \u2014 a call? Well that... that hardly proves a thing now does it?."
-  - "Listen, I know what I\u2019m talking about, because I actually blimmin\u2019
-    live here, right?"
-  - "And you don\u2019t have any reason to think I\u2019m fibbing now do you lass?"
+  - "Listen, I know what I\u2019m talking about, because I actually live here, right?
+    And I\u2019m not some- some anonymous, lying nobody."
+  - "And you don\u2019t have any just reason to think I\u2019m lying, now do you?
+    I\u2019ve got nothing to hide! I\u2019m just here, doing my job."
+  - '[MASK SHATTERS]'
   unlocked: 1
-  newQuestion: 1
+  newQuestion: 0
   location: 0
   character: 7
   itemReceived: {fileID: 0}
   itemUnlockAt: 0
+  itemReceived2: {fileID: 0}
+  itemUnlockAt2: 0
+  itemReceived3: {fileID: 0}
+  itemUnlockAt3: 0
+  itemPresent: {fileID: 11400000, guid: 8e281bab4442ddb4e9975fa6f9b18719, type: 2}
+  itemPresentAt: 1
+  itemPresent2: {fileID: 11400000, guid: 4a44b0ea9545cba4d83780808363e350, type: 2}
+  itemPresentAt2: 4
+  itemPresent3: {fileID: 0}
+  itemPresentAt3: 0
+  checkToUnlockLocation: 0
+  unlockLocation: 0
   exploredIDs: []
+  necessaryItems:
+  - {fileID: 11400000, guid: 8e281bab4442ddb4e9975fa6f9b18719, type: 2}
+  - {fileID: 11400000, guid: 4a44b0ea9545cba4d83780808363e350, type: 2}
