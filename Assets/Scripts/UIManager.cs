@@ -190,6 +190,7 @@ public class UIManager : MonoBehaviour
         }
     }
     private float handsTimer = 0;
+    private float textSpeedMult;
     void Update()
     {
         // hands animation
@@ -206,8 +207,10 @@ public class UIManager : MonoBehaviour
         if (textAnimating && (!questionMode || currentQuestion !=null))//&& textTimer > textSpeed)
         {
             // text animation
+            textSpeedMult = textLength < 20 ? 0.3f : 1f;
+            if (textLength < 10) textSpeedMult = 0.05f;
             if(!(GameManager.Ins.character == Character.None)) PlayTextSound();
-            textPosition = (int)(textTimer / textSpeed);
+            textPosition = (int)(textTimer / textSpeed * textSpeedMult);
             textPosition = Math.Clamp(textPosition, 0, textLength);
             
             // portrait animation
@@ -409,6 +412,10 @@ public class UIManager : MonoBehaviour
                     
                     textProgress = 0;
                     RefreshQuestions();
+                    //if(GameManager.Ins.townSquareUnlocked)leaveObj.SetActive(true);
+                    leaveObj.SetActive(GameManager.Ins.townSquareUnlocked);
+                    print("Check if we can unlock leave button");
+
                 }
 
                 if (GetCurrentLocationProgress() >= currentTextList.Count)
@@ -420,6 +427,7 @@ public class UIManager : MonoBehaviour
             }
             else // NOT in Question Mode (text mode)
             {
+                //if(GameManager.Ins.townSquareUnlocked)leaveObj.SetActive(true);
                 leaveObj.SetActive(false);
                 examineObj.SetActive(false);
                 // if we have more text segments to go..
@@ -444,6 +452,7 @@ public class UIManager : MonoBehaviour
                     // Return to questions screen if no more text available
                     //print("RETURN TO QUESTION SCREEN");
                     questionMode = true;
+                    
                 }
                 if(!questionMode) mainText = currentTextList[GetCurrentLocationProgress()].text[textProgress];
             }
@@ -458,7 +467,8 @@ public class UIManager : MonoBehaviour
     private float soundTimer = 0;
     public void PlayTextSound()
     {
-        if (soundTimer > textSpeed * 4f)
+        float textSoundMult = textSpeedMult == 1 ? 1f : 1.5f;
+        if (soundTimer > textSpeed / (textSpeedMult * textSoundMult) * 4f)
         {
             soundTimer = 0;
             SFXManager sfx = SFXManager.instance;

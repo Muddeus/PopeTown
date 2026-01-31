@@ -24,6 +24,16 @@ public class Question : ScriptableObject
     public Item itemReceived3;
     public int itemUnlockAt3;
 
+    public Item itemPresent;
+    public int itemPresentAt;
+    public Item itemPresent2;
+    public int itemPresentAt2;
+    public Item itemPresent3;
+    public int itemPresentAt3;
+
+    public bool checkToUnlockLocation;
+    public Location unlockLocation;
+    
     public Dialogue[] dialogue;
     
     [Header("Prerequisite explored questions")]
