@@ -17,6 +17,8 @@ MonoBehaviour:
   location: 0
   text:
   - ...
-  - Woah there! No visitors in Aberdeen today, sorry love.
+  - Woah there! No visitors in Aberdeen today.
+  - Sorry... sister? Detective?
+  - "You\u2019ll- uh, you\u2019ll have to turn around."
   unlocked: 1
   exploredIDs: []
