@@ -442,6 +442,9 @@ public class UIManager : MonoBehaviour
             {
                 leaveObj.SetActive(false);
                 examineObj.SetActive(false);
+                
+                AddItemFromText();
+                
                 // if we have more text segments to go..
                 if (textProgress < currentTextList[GetCurrentLocationProgress()].text.Length)
                 {
@@ -474,6 +477,74 @@ public class UIManager : MonoBehaviour
 
             AnimateText();
         }
+    }
+
+    public void AddItemFromText()
+    {
+        // Check if item to unlock (multiple items ahead)
+                    if (currentTextList[GetCurrentLocationProgress()].itemReceived != null)
+                    {
+                        if (textProgress >= currentTextList[GetCurrentLocationProgress()].itemUnlockAt)
+                        {
+                            // add itemReceived to ownedItemsList
+                            bool dupe = false;
+                            foreach (Item i in ownedItemList) // check if it's already there
+                            {
+                                if (i == currentTextList[GetCurrentLocationProgress()].itemReceived) // dupe exists, don't add
+                                {
+                                    dupe = true;
+                                }
+                            }
+
+                            if (!dupe)
+                            {
+                                currentTextList[GetCurrentLocationProgress()].itemReceived.newItem = true; // makes items marked true by default
+                                ownedItemList.Add(currentTextList[GetCurrentLocationProgress()].itemReceived);
+                            }
+                        }
+                    }
+                    if (currentTextList[GetCurrentLocationProgress()].itemReceived2 != null)
+                    {
+                        if (textProgress >= currentTextList[GetCurrentLocationProgress()].itemUnlockAt2)
+                        {
+                            // add itemReceived2 to ownedItemsList
+                            bool dupe = false;
+                            foreach (Item i in ownedItemList) // check if it's already there
+                            {
+                                if (i == currentTextList[GetCurrentLocationProgress()].itemReceived2) // dupe exists, don't add
+                                {
+                                    dupe = true;
+                                }
+                            }
+
+                            if (!dupe)
+                            {
+                                currentTextList[GetCurrentLocationProgress()].itemReceived2.newItem = true; // makes items marked true by default
+                                ownedItemList.Add(currentTextList[GetCurrentLocationProgress()].itemReceived2);
+                            }
+                        }
+                    }
+                    if (currentTextList[GetCurrentLocationProgress()].itemReceived3 != null)
+                    {
+                        if (textProgress >= currentTextList[GetCurrentLocationProgress()].itemUnlockAt3)
+                        {
+                            // add itemReceived3 to ownedItemsList
+                            bool dupe = false;
+                            foreach (Item i in ownedItemList) // check if it's already there
+                            {
+                                if (i == currentTextList[GetCurrentLocationProgress()].itemReceived3) // dupe exists, don't add
+                                {
+                                    dupe = true;
+                                }
+                            }
+
+                            if (!dupe)
+                            {
+                                currentTextList[GetCurrentLocationProgress()].itemReceived3.newItem = true; // makes items marked true by default
+                                ownedItemList.Add(currentTextList[GetCurrentLocationProgress()].itemReceived3);
+                            }
+                        }
+                    }
     }
 
     private float soundTimer = 0;

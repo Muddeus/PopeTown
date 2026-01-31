@@ -38,7 +38,7 @@ public class Item : ScriptableObject
     //public bool newItem;
     //public Location location; 
     
-
+    
     [Header("Prerequisite explored questions")]
     public List<Question> exploredIDs;
 }
