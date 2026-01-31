@@ -265,13 +265,15 @@ public class UIManager : MonoBehaviour
 
     public void RefreshQuestions()
     {
+        currentQuestion = null;
         questionsBox.SetActive(true);
-        leaveObj.SetActive(true);
+        leaveObj.SetActive(GameManager.Ins.townSquareUnlocked);
         examineObj.SetActive(true);
         mainText = "";
         mainTextDisplay.text = "";
         //foreach(Transform child in contentBox.transform) Destroy(child.gameObject);
         ClearQuestions();
+        List<Transform> oldQuestions = new List<Transform>();
         foreach (Question obj in currentQuestionList)
         {
             if (obj.unlocked) // Locked questions will not show up until unlocked and refreshed again
@@ -279,9 +281,19 @@ public class UIManager : MonoBehaviour
                 GameManager.Ins.character = obj.character;
                 SetPortrait();
                 GameObject button = Instantiate(buttonPrefab, contentBox.transform);
-                if(obj.newQuestion) button.transform.SetAsFirstSibling();
+                //button.transform.SetAsFirstSibling();
+                if (!obj.newQuestion)
+                {
+                    button.transform.SetAsLastSibling();
+                    oldQuestions.Add(button.transform);
+                }
                 button.GetComponent<ButtonLogic>().question = obj;
             }
+        }
+
+        foreach (Transform t in oldQuestions)
+        {
+            t.SetAsLastSibling();
         }
     }
 
@@ -309,6 +321,8 @@ public class UIManager : MonoBehaviour
             {
                 if (currentQuestion != null) // If there is a current question
                 {
+                    leaveObj.SetActive(false);
+                    examineObj.SetActive(false);
                     // set portrait
                     GameManager.Ins.character = currentQuestion.character;
                     SetPortrait();
@@ -413,9 +427,6 @@ public class UIManager : MonoBehaviour
                     textProgress = 0;
                     RefreshQuestions();
                     //if(GameManager.Ins.townSquareUnlocked)leaveObj.SetActive(true);
-                    leaveObj.SetActive(GameManager.Ins.townSquareUnlocked);
-                    print("Check if we can unlock leave button");
-
                 }
 
                 if (GetCurrentLocationProgress() >= currentTextList.Count)
@@ -427,7 +438,6 @@ public class UIManager : MonoBehaviour
             }
             else // NOT in Question Mode (text mode)
             {
-                //if(GameManager.Ins.townSquareUnlocked)leaveObj.SetActive(true);
                 leaveObj.SetActive(false);
                 examineObj.SetActive(false);
                 // if we have more text segments to go..
@@ -497,6 +507,51 @@ public class UIManager : MonoBehaviour
         SelectQuestion(itemQuestion);
         //notesification.UpdateNotification();
         UpdateNotes();
+    }
+
+    public void GoToLocation(Location location) // ONLY TO BE ACCESSED BY GAMEMANAGER SCRIPT OF SAME NAME
+    {
+        GameManager.Ins.location = location;
+        GameManager.Ins.character = Character.None;
+        switch (location)
+        {
+            case Location.Entrance:
+                currentTextList = entranceTextList;
+                currentQuestionList = entranceQuestionList;
+                break;
+            case Location.TownSquare:
+                currentTextList = townSquareTextList;
+                currentQuestionList = townSquareQuestionList;
+                break;
+            case Location.MayorsOffice:
+                currentTextList = mayorsOfficeTextList;
+                currentQuestionList = mayorsOfficeQuestionList;
+                break;
+            case Location.Docks:
+                currentTextList = docksTextList;
+                currentQuestionList = docksQuestionList;
+                break;
+            case Location.Suburbs:
+                currentTextList = suburbsTextList;
+                currentQuestionList = suburbsQuestionList;
+                break;
+            case Location.ArtStudio:
+                currentTextList = artStudioTextList;
+                currentQuestionList = artStudioQuestionList;
+                break;
+            case Location.Shack:
+                currentTextList = shackTextList;
+                currentQuestionList = shackQuestionList;
+                break;
+            case Location.Park:
+                currentTextList = parkTextList;
+                currentQuestionList = parkQuestionList;
+                break;
+        }
+        mainText = currentTextList[0].text[0];
+        textProgress = 0;
+        questionMode = false;
+        AnimateText();
     }
 
     public void Examine()

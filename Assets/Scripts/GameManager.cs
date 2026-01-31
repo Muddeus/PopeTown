@@ -68,12 +68,70 @@ public class GameManager : MonoBehaviour
         //location = Location.Entrance;
     }
 
+    public void GoToEntrance()
+    {
+        UIManager.Ins.GoToLocation(Location.Entrance);
+    }
+
+    public void GoToTownSquare()
+    {
+        UIManager.Ins.GoToLocation(Location.TownSquare);
+    }
+
+    public void GoToMayorsOffice()
+    {
+        UIManager.Ins.GoToLocation(Location.MayorsOffice);
+    }
+
+    public void GoToDocks()
+    {
+        UIManager.Ins.GoToLocation(Location.Docks);
+    }
+
+    public void GoToSuburbs()
+    {
+        UIManager.Ins.GoToLocation(Location.Suburbs);
+    }
+
+    public void GoToArtStudio()
+    {
+        UIManager.Ins.GoToLocation(Location.ArtStudio);
+    }
+
+    public void GoToShack()
+    {
+        UIManager.Ins.GoToLocation(Location.Shack);
+    }
+
+    public void GoToPark()
+    {
+        UIManager.Ins.GoToLocation(Location.Park);
+    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            UIManager.Ins.NextText();
-            
+            Vector2 mouseWorldPos=
+                Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            RaycastHit2D hit = Physics2D.Raycast(
+                mouseWorldPos,
+                Vector2.zero,
+                0f,
+                LayerMask.GetMask("QuestionsBox")
+            );
+
+            if (hit.collider !=null)
+            {
+                UIManager.Ins.NextText();
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                UIManager.Ins.NextText();
+            }
         }
     }
 
