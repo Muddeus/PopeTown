@@ -61,6 +61,10 @@ public class UIManager : MonoBehaviour
     public Image nameBox;
     public Transform notesBox;
     public Image handsBox;
+    public Texture2D hands;
+
+    private int portraitIndex;
+    private Image portraitImage;
     public GameObject currentPortrait;
     public GameObject portraitPanel;
     public GameObject guardPortrait;
@@ -98,6 +102,7 @@ public class UIManager : MonoBehaviour
         nameBox.enabled = false;
         leaveObj.SetActive(false);
         examineObj.SetActive(false);
+        portraitIndex = 0;
         ClearNotes();
         notesification = FindFirstObjectByType<Notesification>();
         allTextArray = Resources.LoadAll<TextObj>("");
@@ -184,16 +189,37 @@ public class UIManager : MonoBehaviour
             AnimateText();
         }
     }
-
+    private float handsTimer = 0;
     void Update()
     {
+        // hands animation
         handsBox.enabled = questionMode;
+        if (questionMode)
+        {
+            // show hands
+            if (textAnimating)
+            {
+                // animate hands
+                
+            }
+        }
         if (textAnimating && (!questionMode || currentQuestion !=null))//&& textTimer > textSpeed)
         {
             // text animation
             if(!(GameManager.Ins.character == Character.None)) PlayTextSound();
             textPosition = (int)(textTimer / textSpeed);
             textPosition = Math.Clamp(textPosition, 0, textLength);
+            
+            // portrait animation
+            if (currentPortrait != null)
+            {
+                portraitImage = currentPortrait.GetComponent<Image>();
+                //portraitImage.sprite.
+            }
+            else //
+            {
+                
+            }
 
             if (mainText.Length == 0)
             {
@@ -284,7 +310,7 @@ public class UIManager : MonoBehaviour
                     GameManager.Ins.character = currentQuestion.character;
                     SetPortrait();
                     
-                    // Check if item to unlock
+                    // Check if item to unlock (multiple items ahead)
                     if (currentQuestion.itemReceived != null)
                     {
                         if (textProgress >= currentQuestion.itemUnlockAt)
@@ -304,6 +330,50 @@ public class UIManager : MonoBehaviour
                             {
                                 currentQuestion.itemReceived.newItem = true; // makes items marked true by default
                                 ownedItemList.Add(currentQuestion.itemReceived);
+                            }
+                        }
+                    }
+                    if (currentQuestion.itemReceived2 != null)
+                    {
+                        if (textProgress >= currentQuestion.itemUnlockAt2)
+                        {
+                            // add itemReceived2 to ownedItemsList
+                            bool dupe = false;
+                            foreach (Item i in ownedItemList) // check if it's already there
+                            {
+                                if (i == currentQuestion.itemReceived2) // dupe exists, don't add
+                                {
+                                    dupe = true;
+                                    print("Already own item " + currentQuestion.itemReceived2);
+                                }
+                            }
+
+                            if (!dupe)
+                            {
+                                currentQuestion.itemReceived2.newItem = true; // makes items marked true by default
+                                ownedItemList.Add(currentQuestion.itemReceived2);
+                            }
+                        }
+                    }
+                    if (currentQuestion.itemReceived3 != null)
+                    {
+                        if (textProgress >= currentQuestion.itemUnlockAt3)
+                        {
+                            // add itemReceived3 to ownedItemsList
+                            bool dupe = false;
+                            foreach (Item i in ownedItemList) // check if it's already there
+                            {
+                                if (i == currentQuestion.itemReceived3) // dupe exists, don't add
+                                {
+                                    dupe = true;
+                                    print("Already own item " + currentQuestion.itemReceived3);
+                                }
+                            }
+
+                            if (!dupe)
+                            {
+                                currentQuestion.itemReceived3.newItem = true; // makes items marked true by default
+                                ownedItemList.Add(currentQuestion.itemReceived3);
                             }
                         }
                     }

@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 14baa5f531f25b14387526591574b4dd
+guid: 3b064177f389cb244a3a4b62374a47d7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4857575975973897250
-    second: handNotes2_0
+      213: 3467348167123427508
+    second: mayorsOffice_0
   - first:
-      213: 7558572368871603353
-    second: handNotes2_1
+      213: 2788080109183624123
+    second: mayorsOffice_1
   - first:
-      213: -9168831214627326911
-    second: handNotes2_2
+      213: -8815557961375804369
+    second: mayorsOffice_2
   - first:
-      213: 2001709425132372191
-    second: handNotes2_3
+      213: -2211832699981907982
+    second: mayorsOffice_3
   - first:
-      213: 5150353467148045597
-    second: handNotes2_4
+      213: 9184629710896901174
+    second: mayorsOffice_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -96,59 +96,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -164,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: handNotes2_0
+      name: mayorsOffice_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 84
-        height: 59
+        x: 10
+        y: 102
+        width: 39
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: edbba9ae26c669cb0800000000000000
-      internalID: -4857575975973897250
+      spriteID: 4b06ef589ce7e1030800000000000000
+      internalID: 3467348167123427508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: handNotes2_1
+      name: mayorsOffice_1
       rect:
         serializedVersion: 2
-        x: 147
-        y: 0
-        width: 84
-        height: 64
+        x: 123
+        y: 135
+        width: 85
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 99cbcafb58175e860800000000000000
-      internalID: 7558572368871603353
+      spriteID: bb3e831661041b620800000000000000
+      internalID: 2788080109183624123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: handNotes2_2
+      name: mayorsOffice_2
       rect:
         serializedVersion: 2
-        x: 262
-        y: 0
-        width: 84
-        height: 59
+        x: 133
+        y: 109
+        width: 21
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 144ff9eb694c1c080800000000000000
-      internalID: -9168831214627326911
+      spriteID: f24145fadb8d8a580800000000000000
+      internalID: -8815557961375804369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: handNotes2_3
+      name: mayorsOffice_3
       rect:
         serializedVersion: 2
-        x: 377
-        y: 0
-        width: 84
-        height: 60
+        x: 16
+        y: 62
+        width: 46
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd0019cdd1087cb10800000000000000
-      internalID: 2001709425132372191
+      spriteID: 2f73cfec0edfd41e0800000000000000
+      internalID: -2211832699981907982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: handNotes2_4
+      name: mayorsOffice_4
       rect:
         serializedVersion: 2
-        x: 492
-        y: 0
-        width: 83
-        height: 84
+        x: 149
+        y: 71
+        width: 24
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d1d8f0dc03bb97740800000000000000
-      internalID: 5150353467148045597
+      spriteID: 63c228f4f0c567f70800000000000000
+      internalID: 9184629710896901174
       vertices: []
       indices: 
       edges: []
@@ -277,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -287,11 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      handNotes2_0: -4857575975973897250
-      handNotes2_1: 7558572368871603353
-      handNotes2_2: -9168831214627326911
-      handNotes2_3: 2001709425132372191
-      handNotes2_4: 5150353467148045597
+      mayorsOffice_0: 3467348167123427508
+      mayorsOffice_1: 2788080109183624123
+      mayorsOffice_2: -8815557961375804369
+      mayorsOffice_3: -2211832699981907982
+      mayorsOffice_4: 9184629710896901174
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

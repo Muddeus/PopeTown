@@ -19,6 +19,10 @@ public class Question : ScriptableObject
     public Character character;
     public Item itemReceived;
     public int itemUnlockAt;
+    public Item itemReceived2;
+    public int itemUnlockAt2;
+    public Item itemReceived3;
+    public int itemUnlockAt3;
 
     public Dialogue[] dialogue;
     
