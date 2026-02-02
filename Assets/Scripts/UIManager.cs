@@ -408,7 +408,7 @@ public class UIManager : MonoBehaviour
                         // Check prerequisites
                         foreach (Question q in allQuestionArray)
                         {
-                            if (q.exploredIDs != null && q.necessaryItems != null)
+                            if (true)//q.exploredIDs != null && q.necessaryItems != null)
                             {
                                 bool unlocked = true;
                                 // we will check questions first...
@@ -419,7 +419,12 @@ public class UIManager : MonoBehaviour
                                     // otherwise, continue
                                 }
                                 //...then check items
-                                foreach (Item n in q.necessaryItems) // each necessary item
+                                List<Item> necessaryItems = new List<Item>();
+                                if(q.itemPresent)necessaryItems.Add(q.itemPresent);
+                                if(q.itemPresent2)necessaryItems.Add(q.itemPresent2);
+                                if(q.itemPresent3)necessaryItems.Add(q.itemPresent3);
+                                print("necessary item count for '" + q.name + "': " + necessaryItems.Count);
+                                foreach (Item n in necessaryItems) // each necessary item
                                 {
                                     bool unlocked2 = false;
                                     foreach (Item o in ownedItemList) // is checked if it's owned
