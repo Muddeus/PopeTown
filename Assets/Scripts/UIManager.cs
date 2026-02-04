@@ -418,8 +418,8 @@ public class UIManager : MonoBehaviour
                         //CHECK QUESTION ACTUALLY OVER BEFORE MARKING IT AS READ
                         if (textProgress >= currentQuestion.conversation.Count)
                         {
-                            print("current question count: " + currentQuestion.conversation.Count + "\ntextProgress: " + textProgress);
-                            print("Marking question as read!" + currentQuestion.questionText);
+                            //print("current question count: " + currentQuestion.conversation.Count + "\ntextProgress: " + textProgress);
+                            //print("Marking question as read!" + currentQuestion.name);
                             currentQuestion.newQuestion = false;
                         }
                         
@@ -696,7 +696,6 @@ public class UIManager : MonoBehaviour
 
     public void SelectItem(Item item)
     {
-        // Take the text back a step if it's not done
         int currentTextLength = currentTextList.Count;
         if (GetCurrentLocationProgress() < currentTextLength)
         {

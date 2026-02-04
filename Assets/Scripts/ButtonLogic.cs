@@ -39,7 +39,7 @@ public class ButtonLogic : MonoBehaviour
     public void OnClick()
     {
         UIManager.Ins.SelectQuestion(question);
-        question.newQuestion = false;
+        //question.newQuestion = false;
         UIManager.Ins.UpdateNotes();
     }
 }
