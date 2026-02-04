@@ -142,7 +142,11 @@ public class UIManager : MonoBehaviour
         {
             // (re)Sets unlocked and newQuestion fields
             obj.newQuestion = true;
-            if (obj.exploredIDs.Count == 0 && obj.necessaryItems.Count == 0)
+            List<Item> necessaryItems = new List<Item>();
+            if(obj.itemPresent)necessaryItems.Add(obj.itemPresent);
+            if(obj.itemPresent2)necessaryItems.Add(obj.itemPresent2);
+            if(obj.itemPresent3)necessaryItems.Add(obj.itemPresent3);
+            if (obj.exploredIDs.Count == 0 && necessaryItems.Count == 0) // FIX THIS
             {
                 obj.unlocked = true;
             }
@@ -732,18 +736,25 @@ public class UIManager : MonoBehaviour
                 SelectQuestion(GameManager.Ins.examineEntrance);
                 break;
             case Location.TownSquare:
+                SelectQuestion(GameManager.Ins.corpseRetrieved?GameManager.Ins.examineTownSquare2:GameManager.Ins.examineTownSquare);
                 break;
             case Location.MayorsOffice:
+                SelectQuestion(GameManager.Ins.examineMayorsOffice);
                 break;
             case Location.Docks:
+                SelectQuestion(GameManager.Ins.examineDocks);
                 break;
             case Location.Suburbs:
+                SelectQuestion(GameManager.Ins.examineSuburbs);
                 break;
             case Location.ArtStudio:
+                SelectQuestion(GameManager.Ins.examineArtStudio);
                 break;
             case Location.Shack:
+                SelectQuestion(GameManager.Ins.examineShack);
                 break;
             case Location.Park:
+                SelectQuestion(GameManager.Ins.examinePark);
                 break;
         }
     }

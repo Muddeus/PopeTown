@@ -26,5 +26,13 @@ MonoBehaviour:
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}
   itemUnlockAt3: 0
+  itemPresent: {fileID: 0}
+  itemPresentAt: 0
+  itemPresent2: {fileID: 0}
+  itemPresentAt2: 0
+  itemPresent3: {fileID: 0}
+  itemPresentAt3: 0
+  checkToUnlockLocation: 0
+  unlockLocation: 0
   exploredIDs:
   - {fileID: 11400000, guid: ef0988c6c8f6baf4d859b8e5e5b5053f, type: 2}

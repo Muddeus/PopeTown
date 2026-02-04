@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: The Rotten Bunch
   productName: PopeTown
   defaultCursor: {fileID: 2800000, guid: c03be5032e31b6d459ff23c2b38217e6, type: 3}
   cursorHotspot: {x: 0, y: 0}
