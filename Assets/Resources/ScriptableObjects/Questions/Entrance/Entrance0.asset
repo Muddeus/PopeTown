@@ -20,8 +20,8 @@ MonoBehaviour:
   - "Beyond that I... I don\u2019t know."
   - I like... sport?
   - But not that much.
-  unlocked: 0
-  newQuestion: 0
+  unlocked: 1
+  newQuestion: 1
   location: 0
   character: 7
   itemReceived: {fileID: 0}
@@ -30,5 +30,13 @@ MonoBehaviour:
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}
   itemUnlockAt3: 0
+  itemPresent: {fileID: 0}
+  itemPresentAt: 0
+  itemPresent2: {fileID: 0}
+  itemPresentAt2: 0
+  itemPresent3: {fileID: 0}
+  itemPresentAt3: 0
+  checkToUnlockLocation: 0
   unlockLocation: 0
   exploredIDs: []
+  devNotes: 

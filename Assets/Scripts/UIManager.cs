@@ -60,6 +60,7 @@ public class UIManager : MonoBehaviour
     public TMP_Text nameBoxText;
     public Image nameBox;
     public Transform notesBox;
+    [FormerlySerializedAs("notesBox")] public Transform notesBoxContent;
     public Image handsBox;
     public Texture2D hands;
 
@@ -255,6 +256,7 @@ public class UIManager : MonoBehaviour
         {
             
         }
+        //print("textProgress: " + textProgress);
     }
 
     private float textTimer;
@@ -323,7 +325,7 @@ public class UIManager : MonoBehaviour
             // Update the log here, text has been read
             SetPortrait();
             UpdateNotes();
-            emptyNotesText.SetActive(notesBox.childCount == 0); // Get rid of EMPTY text if not empty
+            emptyNotesText.SetActive(notesBoxContent.childCount == 0); // Get rid of EMPTY text if not empty
             
             textProgress++;
             
@@ -331,6 +333,8 @@ public class UIManager : MonoBehaviour
             {
                 if (currentQuestion != null) // If there is a current question
                 {
+                    notesBox.gameObject.SetActive(false);
+                    notesification.UpdateUnderline(notesBox.gameObject);
                     leaveObj.SetActive(false);
                     examineObj.SetActive(false);
                     // set portrait
@@ -405,13 +409,20 @@ public class UIManager : MonoBehaviour
                         }
                     }
                     
-                    if ((textProgress - 1) < currentQuestion.conversation.Count)
+                    if ((textProgress - 1) < currentQuestion.conversation.Count) // WAIT THIS LOOKS WRONG WHY DOES IT WORK??
                     {
                         mainText = currentQuestion.conversation[textProgress-1]; // start from 1 in question mode
                     }
                     else // question over, update changes and return to questions
                     {
-                        currentQuestion.newQuestion = false;
+                        //CHECK QUESTION ACTUALLY OVER BEFORE MARKING IT AS READ
+                        if (textProgress >= currentQuestion.conversation.Count)
+                        {
+                            print("current question count: " + currentQuestion.conversation.Count + "\ntextProgress: " + textProgress);
+                            print("Marking question as read!" + currentQuestion.questionText);
+                            currentQuestion.newQuestion = false;
+                        }
+                        
                         // Check prerequisites
                         foreach (Question q in allQuestionArray)
                         {
@@ -445,14 +456,21 @@ public class UIManager : MonoBehaviour
                             }
                         }
                         currentQuestion = null;
+                        textProgress = -1; // to ensure text starts from actual start as it is technically triggered by a NextText
                         RefreshQuestions();
                     }
                 }
                 else // If there is no current question
                 {
-                    
                     textProgress = 0;
-                    RefreshQuestions();
+                    if (GetCurrentLocationProgress() < currentTextList.Count) // if there is still unread text, continue text mode
+                    {
+                        questionMode = false;
+                    }
+                    else
+                    {
+                        RefreshQuestions();
+                    }
                     //if(GameManager.Ins.townSquareUnlocked)leaveObj.SetActive(true);
                 }
 
@@ -462,12 +480,17 @@ public class UIManager : MonoBehaviour
                     //print("RETURN TO QUESTION SCREEN");
                     questionMode = true;
                 }
+                else
+                {
+                    questionMode = false;
+                    textProgress = -1;
+                }
             }
             else // NOT in Question Mode (text mode)
             {
                 leaveObj.SetActive(false);
                 examineObj.SetActive(false);
-                
+                if(GetCurrentLocationProgress() < 0) SetCurrentLocationProgress(0);
                 AddItemFromText();
                 
                 // if we have more text segments to go..
@@ -667,11 +690,18 @@ public class UIManager : MonoBehaviour
         textProgress = 0;
         ClearQuestions();
         textAnimating = false;
+        questionMode = true;
         NextText();
     }
 
     public void SelectItem(Item item)
     {
+        // Take the text back a step if it's not done
+        int currentTextLength = currentTextList.Count;
+        if (GetCurrentLocationProgress() < currentTextLength)
+        {
+            //SetCurrentLocationProgress(GetCurrentLocationProgress()-1);
+        }
         Question itemQuestion = ScriptableObject.CreateInstance<Question>();
         itemQuestion.conversation = new List<string>();
         itemQuestion.character = GameManager.Ins.character;
@@ -775,22 +805,22 @@ public class UIManager : MonoBehaviour
 
     public void ClearNotes()
     {
-        for (int i = 0; i < notesBox.childCount; i++)
+        for (int i = 0; i < notesBoxContent.childCount; i++)
         {
-            Destroy(notesBox.GetChild(i).gameObject);
+            Destroy(notesBoxContent.GetChild(i).gameObject);
         }
     }
     public void UpdateNotes()
     {
-        for (int i = 0; i < notesBox.childCount; i++)
+        for (int i = 0; i < notesBoxContent.childCount; i++)
         {
-            Destroy(notesBox.GetChild(i).gameObject);
+            Destroy(notesBoxContent.GetChild(i).gameObject);
         }
 
         bool unreadNotes = false;
         foreach (Item i in ownedItemList)
         {
-            GameObject note = Instantiate(notePrefab, notesBox);
+            GameObject note = Instantiate(notePrefab, notesBoxContent);
             ItemLogic itemLogic = note.GetComponent<ItemLogic>();
             itemLogic.item = i;
             if (i.newItem == true)
@@ -807,7 +837,7 @@ public class UIManager : MonoBehaviour
             
         }
 
-        emptyNotesText.SetActive(notesBox.childCount == 0);
+        emptyNotesText.SetActive(notesBoxContent.childCount == 0);
     }
 
     public void ClearPortrait()

@@ -9399,7 +9399,8 @@ MonoBehaviour:
   ownedItemList: []
   nameBoxText: {fileID: 1938791537}
   nameBox: {fileID: 1428344490}
-  notesBox: {fileID: 375643737}
+  notesBox: {fileID: 680892155}
+  notesBoxContent: {fileID: 375643737}
   handsBox: {fileID: 23415827}
   hands: {fileID: 2800000, guid: 14baa5f531f25b14387526591574b4dd, type: 3}
   currentPortrait: {fileID: 0}
@@ -13168,7 +13169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1612659060
 RectTransform:
   m_ObjectHideFlags: 0
