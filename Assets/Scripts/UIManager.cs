@@ -326,6 +326,7 @@ public class UIManager : MonoBehaviour
             emptyNotesText.SetActive(notesBox.childCount == 0); // Get rid of EMPTY text if not empty
             
             textProgress++;
+            
             if (questionMode)
             {
                 if (currentQuestion != null) // If there is a current question
@@ -581,69 +582,69 @@ public class UIManager : MonoBehaviour
     public void AddItemFromText()
     {
         // Check if item to unlock (multiple items ahead)
-                    if (currentTextList[GetCurrentLocationProgress()].itemReceived != null)
+        if (currentTextList[GetCurrentLocationProgress()].itemReceived != null)
+        {
+            if (textProgress >= currentTextList[GetCurrentLocationProgress()].itemUnlockAfter)
+            {
+                // add itemReceived to ownedItemsList
+                bool dupe = false;
+                foreach (Item i in ownedItemList) // check if it's already there
+                {
+                    if (i == currentTextList[GetCurrentLocationProgress()].itemReceived) // dupe exists, don't add
                     {
-                        if (textProgress >= currentTextList[GetCurrentLocationProgress()].itemUnlockAfter)
-                        {
-                            // add itemReceived to ownedItemsList
-                            bool dupe = false;
-                            foreach (Item i in ownedItemList) // check if it's already there
-                            {
-                                if (i == currentTextList[GetCurrentLocationProgress()].itemReceived) // dupe exists, don't add
-                                {
-                                    dupe = true;
-                                }
-                            }
-
-                            if (!dupe)
-                            {
-                                currentTextList[GetCurrentLocationProgress()].itemReceived.newItem = true; // makes items marked true by default
-                                ownedItemList.Add(currentTextList[GetCurrentLocationProgress()].itemReceived);
-                            }
-                        }
+                        dupe = true;
                     }
-                    if (currentTextList[GetCurrentLocationProgress()].itemReceived2 != null)
+                }
+
+                if (!dupe)
+                {
+                    currentTextList[GetCurrentLocationProgress()].itemReceived.newItem = true; // makes items marked true by default
+                    ownedItemList.Add(currentTextList[GetCurrentLocationProgress()].itemReceived);
+                }
+            }
+        }
+        if (currentTextList[GetCurrentLocationProgress()].itemReceived2 != null)
+        {
+            if (textProgress >= currentTextList[GetCurrentLocationProgress()].itemUnlockAfter2)
+            {
+                // add itemReceived2 to ownedItemsList
+                bool dupe = false;
+                foreach (Item i in ownedItemList) // check if it's already there
+                {
+                    if (i == currentTextList[GetCurrentLocationProgress()].itemReceived2) // dupe exists, don't add
                     {
-                        if (textProgress >= currentTextList[GetCurrentLocationProgress()].itemUnlockAfter2)
-                        {
-                            // add itemReceived2 to ownedItemsList
-                            bool dupe = false;
-                            foreach (Item i in ownedItemList) // check if it's already there
-                            {
-                                if (i == currentTextList[GetCurrentLocationProgress()].itemReceived2) // dupe exists, don't add
-                                {
-                                    dupe = true;
-                                }
-                            }
-
-                            if (!dupe)
-                            {
-                                currentTextList[GetCurrentLocationProgress()].itemReceived2.newItem = true; // makes items marked true by default
-                                ownedItemList.Add(currentTextList[GetCurrentLocationProgress()].itemReceived2);
-                            }
-                        }
+                        dupe = true;
                     }
-                    if (currentTextList[GetCurrentLocationProgress()].itemReceived3 != null)
+                }
+
+                if (!dupe)
+                {
+                    currentTextList[GetCurrentLocationProgress()].itemReceived2.newItem = true; // makes items marked true by default
+                    ownedItemList.Add(currentTextList[GetCurrentLocationProgress()].itemReceived2);
+                }
+            }
+        }
+        if (currentTextList[GetCurrentLocationProgress()].itemReceived3 != null)
+        {
+            if (textProgress >= currentTextList[GetCurrentLocationProgress()].itemUnlockAfter3)
+            {
+                // add itemReceived3 to ownedItemsList
+                bool dupe = false;
+                foreach (Item i in ownedItemList) // check if it's already there
+                {
+                    if (i == currentTextList[GetCurrentLocationProgress()].itemReceived3) // dupe exists, don't add
                     {
-                        if (textProgress >= currentTextList[GetCurrentLocationProgress()].itemUnlockAfter3)
-                        {
-                            // add itemReceived3 to ownedItemsList
-                            bool dupe = false;
-                            foreach (Item i in ownedItemList) // check if it's already there
-                            {
-                                if (i == currentTextList[GetCurrentLocationProgress()].itemReceived3) // dupe exists, don't add
-                                {
-                                    dupe = true;
-                                }
-                            }
-
-                            if (!dupe)
-                            {
-                                currentTextList[GetCurrentLocationProgress()].itemReceived3.newItem = true; // makes items marked true by default
-                                ownedItemList.Add(currentTextList[GetCurrentLocationProgress()].itemReceived3);
-                            }
-                        }
+                        dupe = true;
                     }
+                }
+
+                if (!dupe)
+                {
+                    currentTextList[GetCurrentLocationProgress()].itemReceived3.newItem = true; // makes items marked true by default
+                    ownedItemList.Add(currentTextList[GetCurrentLocationProgress()].itemReceived3);
+                }
+            }
+        }
     }
 
     private float soundTimer = 0;
@@ -689,7 +690,6 @@ public class UIManager : MonoBehaviour
         questionMode = false;
         questionsBox.SetActive(false); // This could mess up something.
         ClearQuestions();
-        ClearPortrait();
         switch (location)
         {
             case Location.Entrance:
@@ -725,8 +725,20 @@ public class UIManager : MonoBehaviour
                 currentQuestionList = parkQuestionList;
                 break;
         }
-        mainText = currentTextList[0].text[0];
         textProgress = 0;
+        // Make it impossible to go out of bounds
+        //int currentTextLength = currentTextList[GetCurrentLocationProgress()].text.Length;
+        int currentTextLength = currentTextList.Count;
+        if (GetCurrentLocationProgress() >= currentTextLength)
+        {
+            SetCurrentLocationProgress(currentTextLength);
+            questionMode = true;
+            RefreshQuestions();
+            SetPortrait();
+            return; // THIS MIGHT BE CAUSING BUGS??
+        }
+        ClearPortrait();
+        mainText = currentTextList[GetCurrentLocationProgress()].text[0];
         AnimateText();
     }
 
