@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
-  m_Name: Entrance1.1
+  m_Name: TS2
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  titleText: 
-  text: The guard seems nervous and is sweating profusely
-  newItem: 0
+  titleText: NO TEETH
+  text: The corpse is missing all of its teeth.
+  newItem: 1
   mayorResponseText: 
   mayorConversation: []
   sexWorkerResponseText: 
@@ -28,4 +28,5 @@ MonoBehaviour:
   handywomanResponseText: 
   handywomanConversation: []
   unlocked: 0
-  exploredIDs: []
+  exploredIDs:
+  - {fileID: 11400000, guid: e5435f604ac100e4283c80f2442c33d0, type: 2}

@@ -18,7 +18,7 @@ MonoBehaviour:
     including a church, an art studio, and most notably, the mayor\u2019s office,
     before which the body is strung upon the power lines. It is charred beyond recognition."
   unlocked: 0
-  newQuestion: 0
+  newQuestion: 1
   location: 1
   character: 0
   itemReceived: {fileID: 0}
@@ -34,5 +34,6 @@ MonoBehaviour:
   itemPresent3: {fileID: 0}
   itemPresentAt3: 0
   checkToUnlockLocation: 0
-  unlockLocation: 1
-  exploredIDs: []
+  unlockLocation: 0
+  exploredIDs:
+  - {fileID: 11400000, guid: ef0988c6c8f6baf4d859b8e5e5b5053f, type: 2}

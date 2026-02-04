@@ -21,7 +21,7 @@ MonoBehaviour:
     is missing all of its teeth. \\n2) A single bullet wound is present within the
     victim\u2019s chest."
   unlocked: 0
-  newQuestion: 0
+  newQuestion: 1
   location: 1
   character: 0
   itemReceived: {fileID: 0}
@@ -38,4 +38,5 @@ MonoBehaviour:
   itemPresentAt3: 0
   checkToUnlockLocation: 0
   unlockLocation: 0
-  exploredIDs: []
+  exploredIDs:
+  - {fileID: 11400000, guid: ef0988c6c8f6baf4d859b8e5e5b5053f, type: 2}

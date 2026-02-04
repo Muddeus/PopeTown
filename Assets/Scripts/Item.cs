@@ -41,4 +41,6 @@ public class Item : ScriptableObject
     
     [Header("Prerequisite explored questions")]
     public List<Question> exploredIDs;
+
+    public string devNote;
 }

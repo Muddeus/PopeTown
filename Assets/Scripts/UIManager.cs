@@ -104,6 +104,8 @@ public class UIManager : MonoBehaviour
         examineObj.SetActive(false);
         portraitIndex = 0;
         ClearNotes();
+        ownedItemList = GameManager.Ins.startingItems;
+        emptyNotesText.SetActive(false); //disables EMPTY text
         notesification = FindFirstObjectByType<Notesification>();
         allTextArray = Resources.LoadAll<TextObj>("");
         foreach (TextObj obj in allTextArray)
@@ -273,7 +275,7 @@ public class UIManager : MonoBehaviour
         //evidenceCount = 0; // resets for next evidence. could be cause of bug..
         currentQuestion = null;
         questionsBox.SetActive(true);
-        leaveObj.SetActive(GameManager.Ins.townSquareUnlocked);
+        leaveObj.SetActive(GameManager.Ins.townSquareUnlocked); // once town hall is unlocked, permanently unlock the leave button
         examineObj.SetActive(true);
         mainText = "";
         mainTextDisplay.text = "";
@@ -427,7 +429,7 @@ public class UIManager : MonoBehaviour
                                 if(q.itemPresent)necessaryItems.Add(q.itemPresent);
                                 if(q.itemPresent2)necessaryItems.Add(q.itemPresent2);
                                 if(q.itemPresent3)necessaryItems.Add(q.itemPresent3);
-                                print("necessary item count for '" + q.name + "': " + necessaryItems.Count);
+                                //print("necessary item count for '" + q.name + "': " + necessaryItems.Count);
                                 foreach (Item n in necessaryItems) // each necessary item
                                 {
                                     bool unlocked2 = false;
@@ -768,7 +770,6 @@ public class UIManager : MonoBehaviour
     }
     public void UpdateNotes()
     {
-        emptyNotesText.SetActive(notesBox.childCount == 0);
         for (int i = 0; i < notesBox.childCount; i++)
         {
             Destroy(notesBox.GetChild(i).gameObject);
@@ -794,7 +795,7 @@ public class UIManager : MonoBehaviour
             
         }
 
-        
+        emptyNotesText.SetActive(notesBox.childCount == 0);
     }
 
     public void ClearPortrait()

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -54,6 +55,8 @@ public class GameManager : MonoBehaviour
     public bool shackUnlocked;
     public bool parkUnlocked;
 
+    public List<Item> startingItems;
+    
     public Question examineEntrance;
     public Question examineTownSquare;
     public Question examineTownSquare2;

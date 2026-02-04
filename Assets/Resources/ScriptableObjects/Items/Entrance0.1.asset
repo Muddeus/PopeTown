@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
+  m_Name: Entrance0.1
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  titleText: TWINSKIN BEHAVIOUR
+  text: The Twinskin is a demon that will copy the appearance, behaviour and mannerisms
+    of its victim and dispatch them in order to take their place.
+  newItem: 0
+  mayorResponseText: 
+  mayorConversation: []
+  sexWorkerResponseText: 
+  sexWorkerConversation: []
+  homelessResponseText: 
+  homelessConversation: []
+  artistResponseText: 
+  artistConversation: []
+  punkResponseText: 
+  punkConversation: []
+  handywomanResponseText: 
+  handywomanConversation: []
+  unlocked: 0
+  exploredIDs: []
+  devNote: 

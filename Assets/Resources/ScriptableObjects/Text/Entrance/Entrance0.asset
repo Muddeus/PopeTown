@@ -26,9 +26,9 @@ MonoBehaviour:
   - "Time to find out who\u2019s pretending."
   unlocked: 1
   itemReceived: {fileID: 0}
-  itemUnlockAt: 0
+  itemUnlockAfter: 0
   itemReceived2: {fileID: 11400000, guid: 8e281bab4442ddb4e9975fa6f9b18719, type: 2}
-  itemUnlockAt2: 2
+  itemUnlockAfter2: 2
   itemReceived3: {fileID: 0}
-  itemUnlockAt3: 0
+  itemUnlockAfter3: 0
   exploredIDs: []
