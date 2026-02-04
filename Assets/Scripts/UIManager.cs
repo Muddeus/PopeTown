@@ -46,6 +46,7 @@ public class UIManager : MonoBehaviour
     private Notesification notesification;
 
     public bool questionMode;
+    public bool presentingMode;
     public GameObject questionsBox;
     public GameObject contentBox; // Where the question buttons go
     public GameObject examineObj;
