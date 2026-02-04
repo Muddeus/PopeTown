@@ -756,7 +756,7 @@ public class UIManager : MonoBehaviour
                 SelectQuestion(GameManager.Ins.examineMayorsOffice);
                 break;
             case Location.Docks:
-                SelectQuestion(GameManager.Ins.examineDocks);
+                SelectQuestion(GameManager.Ins.punkRevealed?GameManager.Ins.examineDocks2:GameManager.Ins.examineDocks);
                 break;
             case Location.Suburbs:
                 SelectQuestion(GameManager.Ins.examineSuburbs);

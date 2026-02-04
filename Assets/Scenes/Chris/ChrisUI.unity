@@ -10952,12 +10952,14 @@ MonoBehaviour:
   examineEntrance: {fileID: 11400000, guid: e77bd23e36f27404fb1eb6884c1b3b08, type: 2}
   examineTownSquare: {fileID: 11400000, guid: e5435f604ac100e4283c80f2442c33d0, type: 2}
   examineTownSquare2: {fileID: 11400000, guid: 85d51041ee0acfb4f9c8d6408fc48c8d, type: 2}
-  examineMayorsOffice: {fileID: 0}
-  examineDocks: {fileID: 0}
-  examineSuburbs: {fileID: 0}
-  examineArtStudio: {fileID: 0}
-  examineShack: {fileID: 0}
-  examinePark: {fileID: 0}
+  examineMayorsOffice: {fileID: 11400000, guid: dcb249418b87a0749abbd71f9390c14f, type: 2}
+  examineDocks: {fileID: 11400000, guid: 8ca6f14789159ee4e932c1c756d19e8e, type: 2}
+  examineDocks2: {fileID: 11400000, guid: 74e3a244920f78c418b7c61bf6b90943, type: 2}
+  examineSuburbs: {fileID: 11400000, guid: 633868bba6480864f99e0cdb48bb1318, type: 2}
+  examineArtStudio: {fileID: 11400000, guid: 914b6a6f69661004bb6304fae5a50cf3, type: 2}
+  examineShack: {fileID: 11400000, guid: c6b41f26105723c4b98c363a3dd25c25, type: 2}
+  examinePark: {fileID: 11400000, guid: 99adf2412d9e3184cba909ae8248354a, type: 2}
+  punkRevealed: 0
   corpseRetrieved: 0
 --- !u!1001 &1233061284
 PrefabInstance:

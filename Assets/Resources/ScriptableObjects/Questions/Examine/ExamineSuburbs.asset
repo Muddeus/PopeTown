@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
-  m_Name: ExamineEntrance
+  m_Name: ExamineSuburbs
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: 
   conversation:
-  - A small guardhouse, operated by a lone guard.
-  - He appears nervous and is sweating profusely.
+  - The East District is rather dense, and seems somewhat shady.
+  - Some buildings appear quite new. Others border on decrepit.
   unlocked: 0
   newQuestion: 1
-  location: 0
-  character: 7
-  itemReceived: {fileID: 11400000, guid: 4a44b0ea9545cba4d83780808363e350, type: 2}
-  itemUnlockAt: 2
+  location: 4
+  character: 2
+  itemReceived: {fileID: 0}
+  itemUnlockAt: 0
   itemReceived2: {fileID: 0}
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}

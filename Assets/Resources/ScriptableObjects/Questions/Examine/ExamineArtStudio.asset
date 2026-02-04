@@ -10,18 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
-  m_Name: ExamineEntrance
+  m_Name: ExamineArtStudio
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: 
   conversation:
-  - A small guardhouse, operated by a lone guard.
-  - He appears nervous and is sweating profusely.
+  - The store is cluttered with art supplies and artworks, each at varying stages
+    of completion.
+  - A pleasant odour of cinnamon incense permeates the air, and  a kiln stands within
+    the back of the shop.
+  - The owner appears rather tired.
   unlocked: 0
   newQuestion: 1
-  location: 0
-  character: 7
-  itemReceived: {fileID: 11400000, guid: 4a44b0ea9545cba4d83780808363e350, type: 2}
-  itemUnlockAt: 2
+  location: 5
+  character: 4
+  itemReceived: {fileID: 0}
+  itemUnlockAt: 0
   itemReceived2: {fileID: 0}
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}
@@ -36,4 +39,5 @@ MonoBehaviour:
   unlockLocation: 0
   exploredIDs:
   - {fileID: 11400000, guid: ef0988c6c8f6baf4d859b8e5e5b5053f, type: 2}
-  devNotes: 
+  devNotes: "Gain \u201CThe Handyma\u2019am is clearly trying to look at pornography.\u201D
+    and unlock question"

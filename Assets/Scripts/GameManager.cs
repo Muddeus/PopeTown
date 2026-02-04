@@ -62,11 +62,13 @@ public class GameManager : MonoBehaviour
     public Question examineTownSquare2;
     public Question examineMayorsOffice;
     public Question examineDocks;
+    public Question examineDocks2;
     public Question examineSuburbs;
     public Question examineArtStudio;
     public Question examineShack;
     public Question examinePark;
 
+    public bool punkRevealed;
     public bool corpseRetrieved;
     
     void Start()
