@@ -696,6 +696,7 @@ public class UIManager : MonoBehaviour
 
     public void SelectItem(Item item)
     {
+        ClearPortrait(); // So that it looks like you're reading your note and not someone else talking
         int currentTextLength = currentTextList.Count;
         if (GetCurrentLocationProgress() < currentTextLength)
         {
