@@ -70,10 +70,11 @@ public class GameManager : MonoBehaviour
 
     public bool punkRevealed;
     public bool corpseRetrieved;
+    public bool shattering;
     
     void Start()
     {
-        //location = Location.Entrance;
+        
     }
 
     public void GoToEntrance()

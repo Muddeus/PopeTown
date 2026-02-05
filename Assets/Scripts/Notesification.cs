@@ -13,11 +13,6 @@ public class Notesification : MonoBehaviour
         alert.SetActive(false);
     }
 
-    void Update()
-    {
-        
-    }
-
     public void UpdateNotification()
     {
         alert.SetActive(notified);
@@ -25,6 +20,12 @@ public class Notesification : MonoBehaviour
         {
             anim.Play("Note Get");
         }
+    }
+
+    public void Notify()
+    {
+        notified = true;
+        anim.Play("Note Get");
     }
     public void UpdateNotification(bool notify)
     {
@@ -43,5 +44,4 @@ public class Notesification : MonoBehaviour
             text.fontStyle = FontStyles.Normal;
         }
     }
-    
 }

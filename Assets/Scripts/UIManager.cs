@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using Unity.Mathematics;
 using Unity.VisualScripting;
@@ -58,6 +59,7 @@ public class UIManager : MonoBehaviour
     public Question currentQuestion;
 
     public List<Item> ownedItemList;
+    private int lastOwnedItemListCount;
     
     public TMP_Text nameBoxText;
     public Image nameBox;
@@ -336,6 +338,7 @@ public class UIManager : MonoBehaviour
     }
 
     private bool presentPassed = false;
+    private bool playAnimNext = false;
     public void NextText()
     {
         if (textAnimating) // if text still coming out..
@@ -346,6 +349,17 @@ public class UIManager : MonoBehaviour
         }
         else // if moving to next text/screen
         {
+            /*if (playAnimNext)
+            {
+                anim.Play("Hand Writing");
+                notesification.Notify();
+                playAnimNext = false;
+            }
+            if (lastOwnedItemListCount != ownedItemList.Count) // play the animation
+            {
+                playAnimNext = true;
+            }
+            lastOwnedItemListCount = ownedItemList.Count;*/
             //PresentEvidenceCheck(emptyItem);
             bool expectedItem = false;
             if (currentQuestion == null || presentPassed)
@@ -907,6 +921,8 @@ public class UIManager : MonoBehaviour
             Destroy(notesBoxContent.GetChild(i).gameObject);
         }
     }
+
+    private int lastOwnedListCount = 0;
     public void UpdateNotes()
     {
         for (int i = 0; i < notesBoxContent.childCount; i++)
@@ -926,18 +942,28 @@ public class UIManager : MonoBehaviour
                 //itemLogic.item.titleText = itemLogic.item.titleText + "(!)";
             }
         }
-        //print(notesification);
         // Updats notification only if it needs updating (result differs from expected)
         if (notesification.notified != unreadNotes)
         {
             notesification.UpdateNotification(unreadNotes);
-            //handAnim.Play("Hand Writing");
+            print("last count: " + lastOwnedListCount);
+            print("current count: " + ownedItemList.Count);
+            //if(unreadNotes || lastOwnedListCount != ownedItemList.Count)handAnim.Play("Hand Writing");
         }
         if (unreadNotes)
         {
-            
+            if (lastOwnedListCount != ownedItemList.Count)
+            {
+                handAnim.Play("Hand Writing");
+                notesification.Notify();
+            }
         }
 
+        if (lastOwnedListCount != ownedItemList.Count)
+        {
+            //anim.Play("Hand Writing");
+        }
+        lastOwnedListCount = ownedItemList.Count;
         emptyNotesText.SetActive(notesBoxContent.childCount == 0);
     }
 

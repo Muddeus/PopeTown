@@ -8526,7 +8526,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1022666741}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.50566685
+  m_Size: 0.5056668
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11012,6 +11012,7 @@ MonoBehaviour:
   examinePark: {fileID: 11400000, guid: 99adf2412d9e3184cba909ae8248354a, type: 2}
   punkRevealed: 0
   corpseRetrieved: 0
+  shattering: 0
 --- !u!1001 &1233061284
 PrefabInstance:
   m_ObjectHideFlags: 0
