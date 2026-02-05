@@ -10997,7 +10997,6 @@ MonoBehaviour:
   shackUnlocked: 0
   parkUnlocked: 0
   startingItems:
-  - {fileID: 11400000, guid: 80458dae2b4f8064b91d289eddac063f, type: 2}
   - {fileID: 11400000, guid: 1095a56a53fa1d24fba3a2df5b3dc697, type: 2}
   - {fileID: 11400000, guid: 52db1079796cb1c47bf492a247266007, type: 2}
   - {fileID: 11400000, guid: 9e829c78f2493b2439e3c0b1d78e89c6, type: 2}
