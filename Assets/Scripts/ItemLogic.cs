@@ -38,7 +38,7 @@ public class ItemLogic : MonoBehaviour
     public void OnClick()
     {
         print("item click: " + item);
-        item.newItem = false;
+        if(!UIManager.Ins.GetPresentingMode())item.newItem = false;
         UIManager.Ins.SelectItem(item);
     }
 }

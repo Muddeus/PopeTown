@@ -371,9 +371,8 @@ public class UIManager : MonoBehaviour
             if (expectedItem)
             {
                 RefreshQuestions();
-                presentPassed = false;
             }
-            
+            presentPassed = false;
             // Update the log here, text has been read
             SetPortrait();
             UpdateNotes();
@@ -803,6 +802,11 @@ public class UIManager : MonoBehaviour
     public void SetPresentingMode(bool set)
     {
         presentingMode = set;
+    }
+
+    public bool GetPresentingMode()
+    {
+        return presentingMode;
     }
     
 
