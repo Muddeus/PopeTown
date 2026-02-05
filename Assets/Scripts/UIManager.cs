@@ -234,7 +234,7 @@ public class UIManager : MonoBehaviour
             // text animation
             textSpeedMult = textLength < 20 ? 0.3f : 1f;
             if (textLength < 10) textSpeedMult = 0.05f;
-            if(!(GameManager.Ins.character == Character.None)) PlayTextSound();
+            if(GameManager.Ins.character != Character.None) PlayTextSound();
             textPosition = (int)(textTimer / textSpeed * textSpeedMult);
             textPosition = Math.Clamp(textPosition, 0, textLength);
             
@@ -577,7 +577,10 @@ public class UIManager : MonoBehaviour
             match = true;
         }
 
-        if (presentedItem == null) match = false;
+        if (presentedItem == null)
+        {
+            match = false;
+        }
 
         if (match) // EVIDENCE PRESENTED CORRECTLY
         {
@@ -585,6 +588,11 @@ public class UIManager : MonoBehaviour
         }
         else // INCORRECT EVIDENCE
         {
+            if (presentedItem == null)
+            {
+                //RefreshQuestions();
+                return;
+            }
             // give character response and then refresh questions
             Question wrongEvidenceResponse = ScriptableObject.CreateInstance<Question>();
             wrongEvidenceResponse.conversation = new List<string>();
@@ -715,20 +723,23 @@ public class UIManager : MonoBehaviour
 
     public void SelectItem(Item item)
     {
-        ClearPortrait(); // So that it looks like you're reading your note and not someone else talking
-        int currentTextLength = currentTextList.Count;
-        if (GetCurrentLocationProgress() < currentTextLength)
+        if (presentable) // Presenting evidence
         {
-            //SetCurrentLocationProgress(GetCurrentLocationProgress()-1);
+            
         }
-        Question itemQuestion = ScriptableObject.CreateInstance<Question>();
-        itemQuestion.conversation = new List<string>();
-        itemQuestion.character = GameManager.Ins.character;
-        itemQuestion.location = GameManager.Ins.location;
-        itemQuestion.conversation.Add(item.text);
-        SelectQuestion(itemQuestion);
-        //notesification.UpdateNotification();
-        UpdateNotes();
+        else // Reading Note
+        {
+            ClearPortrait(); // So that it looks like you're reading your note and not someone else talking
+            Question itemQuestion = ScriptableObject.CreateInstance<Question>();
+            itemQuestion.conversation = new List<string>();
+            itemQuestion.character = GameManager.Ins.character;
+            itemQuestion.location = GameManager.Ins.location;
+            itemQuestion.conversation.Add(item.text);
+            SelectQuestion(itemQuestion);
+            //notesification.UpdateNotification();
+            UpdateNotes();
+        }
+        
     }
 
     public void FaceClick()
@@ -926,7 +937,8 @@ public class UIManager : MonoBehaviour
                 //nameBoxText.text = "Periwinkle";
                 break;
             case Location.TownSquare:
-                currentPortrait = null;
+                //currentPortrait = null;
+                currentPortrait = mayorPortrait;
                 nameBoxText.text = "Town Square";
                 break;
             case Location.MayorsOffice:
