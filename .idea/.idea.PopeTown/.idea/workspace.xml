@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7285e2cb-2db6-429d-b2e4-ccad62700fa0" name="Changes" comment="" />
+    <list default="true" id="7285e2cb-2db6-429d-b2e4-ccad62700fa0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PopeTown/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/MayorPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/MayorPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HandNotes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HandNotes.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/handNotes2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/handNotes2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,6 +106,7 @@
       <workItem from="1769790022217" duration="43131000" />
       <workItem from="1769917457374" duration="5216000" />
       <workItem from="1770248551638" duration="54000" />
+      <workItem from="1770263419649" duration="23000" />
     </task>
     <servers />
   </component>

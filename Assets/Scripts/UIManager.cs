@@ -109,9 +109,14 @@ public class UIManager : MonoBehaviour
     public List<Question> artStudioQuestionList;
     public List<Question> shackQuestionList;
     public List<Question> parkQuestionList;
+    
+    //Animation stuff
+    private Animator anim;
+    public Animator handAnim;
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         presentable = false;
         textProgress = 0;
         questionMode = false;
@@ -650,6 +655,7 @@ public class UIManager : MonoBehaviour
                 {
                     currentTextList[GetCurrentLocationProgress()].itemReceived.newItem = true; // makes items marked true by default
                     ownedItemList.Add(currentTextList[GetCurrentLocationProgress()].itemReceived);
+                    //notesification.UpdateNotification();
                 }
             }
         }
@@ -671,6 +677,7 @@ public class UIManager : MonoBehaviour
                 {
                     currentTextList[GetCurrentLocationProgress()].itemReceived2.newItem = true; // makes items marked true by default
                     ownedItemList.Add(currentTextList[GetCurrentLocationProgress()].itemReceived2);
+                    //notesification.UpdateNotification();
                 }
             }
         }
@@ -692,6 +699,7 @@ public class UIManager : MonoBehaviour
                 {
                     currentTextList[GetCurrentLocationProgress()].itemReceived3.newItem = true; // makes items marked true by default
                     ownedItemList.Add(currentTextList[GetCurrentLocationProgress()].itemReceived3);
+                    //notesification.UpdateNotification();
                 }
             }
         }
@@ -723,7 +731,7 @@ public class UIManager : MonoBehaviour
 
     public void SelectItem(Item item)
     {
-        if (presentable) // Presenting evidence
+        if (presentingMode) // Presenting evidence
         {
             
         }
@@ -874,7 +882,11 @@ public class UIManager : MonoBehaviour
         }
         //print(notesification);
         // Updats notification only if it needs updating (result differs from expected)
-        if(notesification.notified != unreadNotes)notesification.UpdateNotification(unreadNotes);
+        if (notesification.notified != unreadNotes)
+        {
+            notesification.UpdateNotification(unreadNotes);
+            //handAnim.Play("Hand Writing");
+        }
         if (unreadNotes)
         {
             

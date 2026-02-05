@@ -1,22 +1,40 @@
 fileFormatVersion: 2
-guid: 14baa5f531f25b14387526591574b4dd
+guid: a57508cccc858b44d86bd6cba1f47765
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4857575975973897250
-    second: handNotes2_0
+      213: 840646258966214153
+    second: MaskBreak_0
   - first:
-      213: 7558572368871603353
-    second: handNotes2_1
+      213: 3477764240023527304
+    second: MaskBreak_1
   - first:
-      213: -9168831214627326911
-    second: handNotes2_2
+      213: 6598644077582147119
+    second: MaskBreak_2
   - first:
-      213: 2001709425132372191
-    second: handNotes2_3
+      213: 907203181382071071
+    second: MaskBreak_3
   - first:
-      213: 5150353467148045597
-    second: handNotes2_4
+      213: 5065078920933440137
+    second: MaskBreak_4
+  - first:
+      213: -6054398616914453131
+    second: MaskBreak_5
+  - first:
+      213: 6572372546663860781
+    second: MaskBreak_6
+  - first:
+      213: -1484672994768719035
+    second: MaskBreak_7
+  - first:
+      213: 4646776147344344061
+    second: MaskBreak_8
+  - first:
+      213: -1710637248270408342
+    second: MaskBreak_9
+  - first:
+      213: -7807023140266814154
+    second: MaskBreak_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -164,13 +182,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: handNotes2_0
+      name: MaskBreak_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 115
-        height: 84
+        width: 273
+        height: 126
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: edbba9ae26c669cb0800000000000000
-      internalID: -4857575975973897250
+      spriteID: 906317f81539aab00800000000000000
+      internalID: 840646258966214153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: handNotes2_1
+      name: MaskBreak_1
       rect:
         serializedVersion: 2
-        x: 115
+        x: 273
         y: 0
-        width: 115
-        height: 84
+        width: 273
+        height: 126
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,20 +219,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 99cbcafb58175e860800000000000000
-      internalID: 7558572368871603353
+      spriteID: 88f982b7620834030800000000000000
+      internalID: 3477764240023527304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: handNotes2_2
+      name: MaskBreak_2
       rect:
         serializedVersion: 2
-        x: 230
+        x: 546
         y: 0
-        width: 115
-        height: 84
+        width: 273
+        height: 126
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,52 +241,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 144ff9eb694c1c080800000000000000
-      internalID: -9168831214627326911
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: handNotes2_3
-      rect:
-        serializedVersion: 2
-        x: 345
-        y: 0
-        width: 115
-        height: 84
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fd0019cdd1087cb10800000000000000
-      internalID: 2001709425132372191
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: handNotes2_4
-      rect:
-        serializedVersion: 2
-        x: 460
-        y: 0
-        width: 115
-        height: 84
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d1d8f0dc03bb97740800000000000000
-      internalID: 5150353467148045597
+      spriteID: f2ed483d3d7139b50800000000000000
+      internalID: 6598644077582147119
       vertices: []
       indices: 
       edges: []
@@ -277,7 +251,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 84d2f02deeaf1c54f8b85d0599c67eb4
+    spriteID: 11559be54c6d800439e526f1c9486884
     internalID: 0
     vertices: []
     indices: 
@@ -287,13 +261,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":1.0},"gridSpriteSize":{"x":115.0,"y":84.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":1.0},"gridSpriteSize":{"x":273.0,"y":126.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      handNotes2_0: -4857575975973897250
-      handNotes2_1: 7558572368871603353
-      handNotes2_2: -9168831214627326911
-      handNotes2_3: 2001709425132372191
-      handNotes2_4: 5150353467148045597
+      MaskBreak_0: 840646258966214153
+      MaskBreak_1: 3477764240023527304
+      MaskBreak_2: 6598644077582147119
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
