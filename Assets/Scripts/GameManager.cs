@@ -200,6 +200,7 @@ public enum Location
     Park
 }
 
+[System.Serializable]
 public struct Dialogue
 {
     public string text;

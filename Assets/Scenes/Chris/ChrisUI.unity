@@ -9472,6 +9472,7 @@ MonoBehaviour:
   parkQuestionList: []
   handAnim: {fileID: 23415829}
   textSpeed: 0.02
+  emptyItem: {fileID: 11400000, guid: c481816de58a96545ab420fa82d72deb, type: 2}
 --- !u!95 &829410573
 Animator:
   serializedVersion: 7

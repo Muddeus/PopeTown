@@ -334,7 +334,8 @@ public class UIManager : MonoBehaviour
     {
         foreach(Transform child in contentBox.transform) Destroy(child.gameObject);
     }
-    
+
+    private bool presentPassed = false;
     public void NextText()
     {
         if (textAnimating) // if text still coming out..
@@ -345,6 +346,34 @@ public class UIManager : MonoBehaviour
         }
         else // if moving to next text/screen
         {
+            //PresentEvidenceCheck(emptyItem);
+            bool expectedItem = false;
+            if (currentQuestion == null || presentPassed)
+            {
+            
+            }
+            else
+            {
+                if (currentQuestion.itemPresent != null && textProgress-1 == currentQuestion.itemPresentAt)
+                {
+                    expectedItem = true;
+                }
+                else if (currentQuestion.itemPresent2 != null && textProgress-1 == currentQuestion.itemPresentAt2)
+                {
+                    expectedItem = true;
+                }
+                else if (currentQuestion.itemPresent3 != null && textProgress-1 == currentQuestion.itemPresentAt3)
+                {
+                    expectedItem = true;
+                }
+            }
+
+            if (expectedItem)
+            {
+                RefreshQuestions();
+                presentPassed = false;
+            }
+            
             // Update the log here, text has been read
             SetPortrait();
             UpdateNotes();
@@ -553,6 +582,7 @@ public class UIManager : MonoBehaviour
 
     //private int evidencesRequired;
     //private int evidenceCount = 0; // make sure this is reset each question
+    public Item emptyItem;
     public void PresentEvidenceCheck(Item presentedItem)
     {
         //print("Evidence count: " + evidenceCount);
@@ -568,28 +598,39 @@ public class UIManager : MonoBehaviour
         if (currentQuestion.itemPresent3 != null) addUp++;
         evidencesRequired = addUp;
             */
-        
-        if (currentQuestion.itemPresent == presentedItem && textProgress == currentQuestion.itemPresentAt)
+        if (currentQuestion == null)
         {
-            match = true;
+            
         }
-        else if (currentQuestion.itemPresent2 == presentedItem && textProgress == currentQuestion.itemPresentAt2)
+        else
         {
-            match = true;
-        }
-        else if (currentQuestion.itemPresent3 == presentedItem && textProgress == currentQuestion.itemPresentAt3)
-        {
-            match = true;
+            if (currentQuestion.itemPresent == presentedItem && textProgress-1 == currentQuestion.itemPresentAt)
+            {
+                match = true;
+            }
+            else if (currentQuestion.itemPresent2 == presentedItem && textProgress-1 == currentQuestion.itemPresentAt2)
+            {
+                match = true;
+            }
+            else if (currentQuestion.itemPresent3 == presentedItem && textProgress-1 == currentQuestion.itemPresentAt3)
+            {
+                match = true;
+            }
         }
 
-        if (presentedItem == null)
-        {
-            match = false;
-        }
+        bool nothingPresented = presentedItem == emptyItem;
 
         if (match) // EVIDENCE PRESENTED CORRECTLY
         {
             // continue on with the question convo
+            print("CORRECT EVIDENCE!");
+            presentPassed = true;
+            NextText();
+        } 
+        else if (nothingPresented)
+        {
+            print("Nothing presented");
+            //NextText();
         }
         else // INCORRECT EVIDENCE
         {
@@ -733,7 +774,8 @@ public class UIManager : MonoBehaviour
     {
         if (presentingMode) // Presenting evidence
         {
-            
+            //TODO
+            PresentEvidenceCheck(item);
         }
         else // Reading Note
         {

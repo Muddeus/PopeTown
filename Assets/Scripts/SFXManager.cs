@@ -67,6 +67,7 @@ public class SFXManager : MonoBehaviour
         Destroy(audioSource.gameObject, clipLength);
     }
 }
+[System.Serializable]
 public enum Sound
 {
     None,

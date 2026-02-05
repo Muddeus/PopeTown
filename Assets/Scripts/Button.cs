@@ -31,6 +31,17 @@ public class Button : MonoBehaviour
                 break;
         }
     }
+    public void PlaySound(Sound sound)
+    {
+        switch (sound)
+        {
+            case Sound.None:
+                break;
+            case Sound.Notes:
+                SFXManager.instance.PlaySound(SFXManager.instance.notes1, transform, 1f);
+                break;
+        }
+    }
 }
 
 
