@@ -260,6 +260,12 @@ public class UIManager : MonoBehaviour
             {
                 mainTextDisplay.text = "";
             }
+            else if (mainText == "[MASK SHATTERS]")
+            {
+                mainTextDisplay.text = "";
+                ShatterMask();
+                GameManager.Ins.shattering = true;
+            }
             else
             {
                 mainTextDisplay.text = mainText.Substring(0, textPosition);
@@ -965,6 +971,14 @@ public class UIManager : MonoBehaviour
         }
         lastOwnedListCount = ownedItemList.Count;
         emptyNotesText.SetActive(notesBoxContent.childCount == 0);
+    }
+
+    private Animator shatterAnim;
+    public void ShatterMask()
+    {
+        
+        shatterAnim = portraitPanel.GetComponentInChildren<Animator>();
+        shatterAnim.Play("Mask Shitter");
     }
 
     public void ClearPortrait()
