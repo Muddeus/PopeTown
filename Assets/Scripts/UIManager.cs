@@ -46,7 +46,8 @@ public class UIManager : MonoBehaviour
     private Notesification notesification;
 
     public bool questionMode;
-    public bool presentingMode;
+    [SerializeField] private bool presentingMode;
+    [SerializeField] private bool presentable;
     public GameObject questionsBox;
     public GameObject contentBox; // Where the question buttons go
     public GameObject examineObj;
@@ -69,7 +70,21 @@ public class UIManager : MonoBehaviour
     private Image portraitImage;
     public GameObject currentPortrait;
     public GameObject portraitPanel;
-    public GameObject guardPortrait;
+    public GameObject currentBG;
+    public GameObject guardPortrait; // no entranceBG
+    public GameObject mayorPortrait;
+    public GameObject sexWorkerPortrait;
+    public GameObject homelessPortrait;
+    public GameObject artistPortrait;
+    public GameObject punkPortrait;
+    public GameObject handywomanPortrait;
+    public GameObject townSquareBG;
+    public GameObject mayorsOfficeBG;
+    public GameObject docksBG;
+    public GameObject suburbsBG;
+    public GameObject artStudioBG;
+    public GameObject shackBG;
+    public GameObject parkBG;
 
     public TextObj[] allTextArray;
     public List<TextObj> currentTextList;
@@ -97,6 +112,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        presentable = false;
         textProgress = 0;
         questionMode = false;
         questionsBox.SetActive(false);
@@ -276,6 +292,7 @@ public class UIManager : MonoBehaviour
     public void RefreshQuestions()
     {
         //evidenceCount = 0; // resets for next evidence. could be cause of bug..
+        presentable = true;
         currentQuestion = null;
         questionsBox.SetActive(true);
         leaveObj.SetActive(GameManager.Ins.townSquareUnlocked); // once town hall is unlocked, permanently unlock the leave button
@@ -489,6 +506,7 @@ public class UIManager : MonoBehaviour
             }
             else // NOT in Question Mode (text mode)
             {
+                presentable = false;
                 leaveObj.SetActive(false);
                 examineObj.SetActive(false);
                 if(GetCurrentLocationProgress() < 0) SetCurrentLocationProgress(0);
@@ -712,6 +730,19 @@ public class UIManager : MonoBehaviour
         //notesification.UpdateNotification();
         UpdateNotes();
     }
+
+    public void FaceClick()
+    {
+        UpdateNotes();
+        notesBox.gameObject.SetActive(true);
+        notesification.UpdateUnderline(notesBox.gameObject);
+        SetPresentingMode(true);
+    }
+
+    public void SetPresentingMode(bool set)
+    {
+        presentingMode = set;
+    }
     
 
     public void GoToLocation(Location location) // ONLY TO BE ACCESSED BY GAMEMANAGER SCRIPT OF SAME NAME
@@ -855,9 +886,7 @@ public class UIManager : MonoBehaviour
     public void SetPortrait() // and name
     {
         nameBoxText.text = "";
-        
-        
-        
+
         switch (GameManager.Ins.character)
         {
             case Character.Guard:
@@ -865,25 +894,29 @@ public class UIManager : MonoBehaviour
                 nameBoxText.text = "Periwinkle";
                 break;
             case Character.Handywoman:
-                nameBoxText.text = "";
+                nameBoxText.text = "The Handyma'am";
                 break;
             case Character.Punk:
-                nameBoxText.text = "";
+                nameBoxText.text = "Eddie";
                 break;
             case Character.Artist:
-                nameBoxText.text = "";
+                nameBoxText.text = "Gemini";
                 break;
             case Character.Homeless:
-                nameBoxText.text = "";
+                nameBoxText.text = "Fishburn";
                 break;
             case Character.SexWorker:
-                nameBoxText.text = "";
+                nameBoxText.text = "Spider";
                 break;
             case Character.Mayor:
-                nameBoxText.text = "";
+                nameBoxText.text = "Mayor Bunyon";
                 break;
             case Character.None:
                 nameBoxText.text = "";
+                break;
+            case Character.Twinskin:
+                nameBoxText.text = "The Twinskin";
+                //nameBoxText.text = "T̵̢͙̻̼̠̺̬̗̭̹̹̝̹͖͖̻̺̯̬͐͊ͪ̿ͧͦ̽ͪ̑̋ͫͯ̓͘͜͜͡h̹̯̻͍̟̥ͯͫͨͨ́͒ͬ̃͑͗͒ͅͅe̶̢͈̹͓̖̖̗̮͙͔̦͎̠̲̠̜͆ͩ͗̊ͦ̏̎̍̂̂̑ͦ̔̍͑͂̂̈̚̕͞ͅ T͚̦̂ͪẃ̸̢̛̦̮̬̻̹͍͍̣̹̮̝͙̀ͬ̍ͪ̂ͫ̊͐ͥͯ̊́͋̀̌̒͐͌̽̿̈́ͦ͘͜͡͞i̘̭͛͛̅ńͥş͇͙͕̱̎͑ͨ̔̓̌̔̚͞͡ͅk̵̨̨͓͎̝͕̎__̧͚͉̤̅̎̏̂̾̒͘̚͞ͅi̤̺̞͍̯̞͈͕̊́̔ͨ͐͐͗͘͠n̡̗̝̣̬̦̠̞̼͎̤ͭ͗ͤ͘͡";
                 break;
         }
         switch (GameManager.Ins.location)

@@ -185,6 +185,7 @@ public enum Character
     Punk,
     Handywoman,
     Guard,
+    Twinskin,
 }
 
 public enum Location
