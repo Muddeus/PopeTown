@@ -270,6 +270,8 @@ public class UIManager : MonoBehaviour
             else
             {
                 mainTextDisplay.text = mainText.Substring(0, textPosition);
+                mainTextDisplay.text = "<line-height=100%>" + mainTextDisplay.text + "</line-height>";
+                //mainTextDisplay.
             }
             
             if(textPosition >= textLength) textAnimating = false;
