@@ -224,7 +224,8 @@ public class UIManager : MonoBehaviour
     private float textSpeedMult;
     void Update()
     {
-        if (nameBoxText.text == "") nameBox.enabled = false;
+        //if (nameBoxText.text == "") nameBox.enabled = false;
+        nameBox.enabled = !(nameBoxText.text == "");
         // hands animation
         handsBox.enabled = questionMode;
         if (questionMode)
@@ -240,7 +241,7 @@ public class UIManager : MonoBehaviour
         {
             // text animation
             textSpeedMult = textLength < 20 ? 0.3f : 1f;
-            if (textLength < 10) textSpeedMult = 0.05f;
+            if (textLength < 10) textSpeedMult = 0.07f;
             if(GameManager.Ins.character != Character.None) PlayTextSound();
             textPosition = (int)(textTimer / textSpeed * textSpeedMult);
             textPosition = Math.Clamp(textPosition, 0, textLength);
@@ -394,7 +395,7 @@ public class UIManager : MonoBehaviour
             }
             presentPassed = false;
             // Update the log here, text has been read
-            SetPortrait();
+            //SetPortrait();
             UpdateNotes();
             emptyNotesText.SetActive(notesBoxContent.childCount == 0); // Get rid of EMPTY text if not empty
             
@@ -410,7 +411,7 @@ public class UIManager : MonoBehaviour
                     examineObj.SetActive(false);
                     // set portrait
                     GameManager.Ins.character = currentQuestion.character;
-                    SetPortrait();
+                    //SetPortrait();
                     //PresentEvidenceCheck();
                     // Check if item to unlock (multiple items ahead)
                     if (currentQuestion.itemReceived != null)
@@ -492,6 +493,37 @@ public class UIManager : MonoBehaviour
                             //print("current question count: " + currentQuestion.conversation.Count + "\ntextProgress: " + textProgress);
                             //print("Marking question as read!" + currentQuestion.name);
                             currentQuestion.newQuestion = false;
+                            if (currentQuestion.checkToUnlockLocation)
+                            {
+                                switch (currentQuestion.unlockLocation)
+                                {
+                                    case Location.Entrance:
+                                        break;
+                                    case Location.TownSquare:
+                                        GameManager.Ins.townSquareUnlocked = true;
+                                        break;
+                                    case Location.MayorsOffice:
+                                        GameManager.Ins.mayorsOfficeUnlocked = true;
+                                        break;
+                                    case Location.Docks:
+                                        GameManager.Ins.docksUnlocked = true;
+                                        break;
+                                    case Location.Suburbs:
+                                        GameManager.Ins.suburbsUnlocked = true;
+                                        break;
+                                    case Location.ArtStudio:
+                                        GameManager.Ins.artStudioUnlocked = true;
+                                        break;
+                                    case Location.Shack:
+                                        GameManager.Ins.shackUnlocked = true;
+                                        break;
+                                    case Location.Park:
+                                        GameManager.Ins.parkUnlocked = true;
+                                        break;
+                                    default:
+                                        throw new ArgumentOutOfRangeException();
+                                }
+                            }
                         }
                         
                         // Check prerequisites
@@ -799,6 +831,7 @@ public class UIManager : MonoBehaviour
         else // Reading Note
         {
             ClearPortrait(); // So that it looks like you're reading your note and not someone else talking
+            nameBoxText.text = "";
             Question itemQuestion = ScriptableObject.CreateInstance<Question>();
             itemQuestion.conversation = new List<string>();
             itemQuestion.character = GameManager.Ins.character;
@@ -976,9 +1009,15 @@ public class UIManager : MonoBehaviour
     private Animator shatterAnim;
     public void ShatterMask()
     {
-        
+        //disable name
+        shatterAnim = null;
         shatterAnim = portraitPanel.GetComponentInChildren<Animator>();
         shatterAnim.Play("Mask Shitter");
+    }
+
+    public void PostShatterRestore()
+    {
+        // restore name
     }
 
     public void ClearPortrait()
@@ -994,6 +1033,7 @@ public class UIManager : MonoBehaviour
 
     public void SetPortrait() // and name
     {
+        print("Set Portrait...");
         nameBoxText.text = "";
 
         switch (GameManager.Ins.character)
@@ -1059,7 +1099,7 @@ public class UIManager : MonoBehaviour
                 break;
         }
 
-        nameBox.enabled = !(nameBoxText.text == ""); // Hides box when no text
+        //nameBox.enabled = !(nameBoxText.text == ""); // Hides box when no text
         //if(portraitPanel.transform.childCount > 0) Destroy(portraitPanel.transform.GetChild(0).gameObject); // DOES THIS CAUSE ERROR?
         
         if (currentPortrait == null)

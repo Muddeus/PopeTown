@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7285e2cb-2db6-429d-b2e4-ccad62700fa0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PopeTown/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/MayorPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/MayorPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HandNotes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HandNotes.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/handNotes2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/handNotes2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PopeTown/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PopeTown/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FontTests/alagard SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FontTests/alagard SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Render Texture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Render Texture.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/GuardPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/GuardPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Questions/Entrance/Entrance2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Questions/Entrance/Entrance2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chris/ChrisUI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chris/ChrisUI.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Animations/Mask Shitter.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Animations/Mask Shitter.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Animations/MayorPrefab.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Animations/MayorPrefab.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
@@ -22,6 +26,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EndShattering.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Notesification.cs" root0="FORCE_HIGHLIGHTING" />
@@ -38,24 +43,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\3dcc4c3465acea00\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\3dcc4c3465acea00\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\3dcc4c3465acea00\\AppData\\Local\\Symbols\\src"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.10f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity 6000.2.10f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\3dcc4c3465acea00\Documents\GitHub\PopeTown -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\3dcc4c3465acea00\Documents\GitHub\PopeTown" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -63,7 +75,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.10f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity 6000.2.10f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\3dcc4c3465acea00\Documents\GitHub\PopeTown -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\3dcc4c3465acea00\Documents\GitHub\PopeTown" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -107,6 +119,8 @@
       <workItem from="1769917457374" duration="5216000" />
       <workItem from="1770248551638" duration="54000" />
       <workItem from="1770263419649" duration="23000" />
+      <workItem from="1770334441642" duration="146000" />
+      <workItem from="1770334600068" duration="5188000" />
     </task>
     <servers />
   </component>

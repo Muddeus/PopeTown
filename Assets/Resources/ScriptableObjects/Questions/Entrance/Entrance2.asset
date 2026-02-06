@@ -23,8 +23,19 @@ MonoBehaviour:
   - "And you don\u2019t have any just reason to think I\u2019m lying, now do you?
     I\u2019ve got nothing to hide! I\u2019m just here, doing my job."
   - '[MASK SHATTERS]'
-  unlocked: 0
-  newQuestion: 1
+  - "That\u2019s... it\u2019s..."
+  - "Look, it\u2019s a warm Autumn is all, and..."
+  - "...oh, alright then. Yes. There\u2019s been some... some foul play. Mayor Bunyon
+    told me to be wary of people poking around."
+  - Some sorry sod got tossed from the mayor's balcony and got fried on the power
+    lines.
+  - Can't even tell who they are anymore. Or, well, were.
+  - "So just... head on through to the Mayor's Office by the Town Square. He\u2019ll
+    fill you in."
+  - "Tell him you... snuck past? Maybe? I don\u2019t know, I guess that\u2019s not
+    much better."
+  unlocked: 1
+  newQuestion: 0
   location: 0
   character: 7
   itemReceived: {fileID: 0}
@@ -39,6 +50,8 @@ MonoBehaviour:
   itemPresentAt2: 4
   itemPresent3: {fileID: 0}
   itemPresentAt3: 0
-  checkToUnlockLocation: 0
-  unlockLocation: 0
+  checkToUnlockLocation: 1
+  unlockLocation: 1
+  dialogue: []
   exploredIDs: []
+  devNotes: 
