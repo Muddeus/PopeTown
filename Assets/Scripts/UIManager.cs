@@ -275,7 +275,7 @@ public class UIManager : MonoBehaviour
             {
                 mainText = mainText.Replace('’', '\'');
                 mainTextDisplay.text = mainText.Substring(0, textPosition);
-                //if(mainTextDisplay.text.EndsWith('\\'))mainTextDisplay.text = mainTextDisplay.text.Substring(0, mainText.Length - 1);
+                if(mainTextDisplay.text.EndsWith('\\'))mainTextDisplay.text = mainTextDisplay.text.Substring(0, mainTextDisplay.text.Length - 1);
                 dialogueBox.transform.SetAsLastSibling();
                 //mainTextDisplay.text = "<line-height=11.18>" + mainTextDisplay.text + "</line-height>";
                 //preferred height 11.18
