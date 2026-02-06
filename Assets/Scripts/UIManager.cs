@@ -848,6 +848,7 @@ public class UIManager : MonoBehaviour
         {
             //TODO
             PresentEvidenceCheck(item);
+            handAnim.Play("Hand QUESTION");
         }
         else // Reading Note
         {
