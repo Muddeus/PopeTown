@@ -275,6 +275,7 @@ public class UIManager : MonoBehaviour
             {
                 mainText = mainText.Replace('’', '\'');
                 mainTextDisplay.text = mainText.Substring(0, textPosition);
+                //if(mainTextDisplay.text.EndsWith('\\'))mainTextDisplay.text = mainTextDisplay.text.Substring(0, mainText.Length - 1);
                 dialogueBox.transform.SetAsLastSibling();
                 //mainTextDisplay.text = "<line-height=11.18>" + mainTextDisplay.text + "</line-height>";
                 //preferred height 11.18
@@ -415,7 +416,7 @@ public class UIManager : MonoBehaviour
             }
             presentPassed = false;
             // Update the log here, text has been read
-            //SetPortrait();
+            if(!GameManager.Ins.shattering)SetPortrait();
             UpdateNotes();
             emptyNotesText.SetActive(notesBoxContent.childCount == 0); // Get rid of EMPTY text if not empty
             
@@ -940,6 +941,7 @@ public class UIManager : MonoBehaviour
             return; // THIS MIGHT BE CAUSING BUGS??
         }
         ClearPortrait();
+        SetPortrait();
         mainText = currentTextList[GetCurrentLocationProgress()].text[0];
         AnimateText();
     }
@@ -1082,6 +1084,7 @@ public class UIManager : MonoBehaviour
                 nameBoxText.text = "Spider";
                 break;
             case Character.Mayor:
+                currentPortrait = mayorPortrait;
                 nameBoxText.text = "Mayor Bunyon";
                 break;
             case Character.None:
@@ -1104,7 +1107,7 @@ public class UIManager : MonoBehaviour
                 nameBoxText.text = "Town Square";
                 break;
             case Location.MayorsOffice:
-                nameBoxText.text = "";
+                //nameBoxText.text = "";
                 break;
             case Location.Docks:
                 nameBoxText.text = "";
