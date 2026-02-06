@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using TMPro;
@@ -50,6 +51,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private bool presentingMode;
     [SerializeField] private bool presentable;
     public GameObject questionsBox;
+    public GameObject dialogueBox;
     public GameObject contentBox; // Where the question buttons go
     public GameObject examineObj;
     public GameObject leaveObj;
@@ -222,10 +224,12 @@ public class UIManager : MonoBehaviour
     }
     private float handsTimer = 0;
     private float textSpeedMult;
+
+    public Scrollbar scrollbar;
     void Update()
     {
         //if (nameBoxText.text == "") nameBox.enabled = false;
-        nameBox.enabled = !(nameBoxText.text == "");
+        nameBox.enabled = nameBoxText.text != "";
         // hands animation
         handsBox.enabled = questionMode;
         if (questionMode)
@@ -245,7 +249,7 @@ public class UIManager : MonoBehaviour
             if(GameManager.Ins.character != Character.None) PlayTextSound();
             textPosition = (int)(textTimer / textSpeed * textSpeedMult);
             textPosition = Math.Clamp(textPosition, 0, textLength);
-            
+            scrollbar.value = 0;
             // portrait animation
             if (currentPortrait != null)
             {
@@ -269,12 +273,19 @@ public class UIManager : MonoBehaviour
             }
             else
             {
+                mainText = mainText.Replace('’', '\'');
                 mainTextDisplay.text = mainText.Substring(0, textPosition);
-                mainTextDisplay.text = "<line-height=100%>" + mainTextDisplay.text + "</line-height>";
-                //mainTextDisplay.
+                dialogueBox.transform.SetAsLastSibling();
+                //mainTextDisplay.text = "<line-height=11.18>" + mainTextDisplay.text + "</line-height>";
+                //preferred height 11.18
+                //mainTextDisplay.layout
             }
-            
-            if(textPosition >= textLength) textAnimating = false;
+
+            if (textPosition >= textLength)
+            {
+                if (textAnimating) StartCoroutine(SetScrollbarPos(0.01f));
+                textAnimating = false;
+            }
             
 
             textTimer += Time.deltaTime;
@@ -290,6 +301,12 @@ public class UIManager : MonoBehaviour
             
         }
         //print("textProgress: " + textProgress);
+    }
+    IEnumerator SetScrollbarPos(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        scrollbar.value = 0;
     }
 
     private float textTimer;
@@ -308,6 +325,7 @@ public class UIManager : MonoBehaviour
     public void RefreshQuestions()
     {
         //evidenceCount = 0; // resets for next evidence. could be cause of bug..
+        questionsBox.transform.SetAsLastSibling();
         presentable = true;
         currentQuestion = null;
         questionsBox.SetActive(true);

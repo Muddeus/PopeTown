@@ -160,7 +160,7 @@ public class GameManager : MonoBehaviour
                 LayerMask.GetMask("QuestionsBox")
             );
 
-            if (hit.collider !=null)
+            if (hit.collider !=null && !hit.collider.CompareTag("ClickBlocker"))
             {
                 UIManager.Ins.NextText();
             }
