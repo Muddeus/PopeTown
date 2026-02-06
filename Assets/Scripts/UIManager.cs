@@ -231,7 +231,7 @@ public class UIManager : MonoBehaviour
         //if (nameBoxText.text == "") nameBox.enabled = false;
         nameBox.enabled = nameBoxText.text != "";
         // hands animation
-        handsBox.enabled = questionMode;
+        handsBox.enabled = questionMode && !GameManager.Ins.shattering;
         if (questionMode)
         {
             // show hands
@@ -1035,6 +1035,8 @@ public class UIManager : MonoBehaviour
         shatterAnim = null;
         shatterAnim = portraitPanel.GetComponentInChildren<Animator>();
         shatterAnim.Play("Mask Shitter");
+        handsBox.enabled = false;
+        nameBoxText.text = "";
     }
 
     public void PostShatterRestore()

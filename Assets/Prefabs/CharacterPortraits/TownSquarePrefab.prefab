@@ -444,6 +444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FaceButton
       objectReference: {fileID: 0}
+    - target: {fileID: 4408092052638377515, guid: 1d6910cda24ecd34789d7a06d837877f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
