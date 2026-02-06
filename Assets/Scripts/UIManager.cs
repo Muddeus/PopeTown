@@ -869,6 +869,8 @@ public class UIManager : MonoBehaviour
         GameManager.Ins.character = Character.None;
         questionMode = false;
         questionsBox.SetActive(false); // This could mess up something.
+        leaveObj.SetActive(false);
+        examineObj.SetActive(false);
         ClearQuestions();
         switch (location)
         {
