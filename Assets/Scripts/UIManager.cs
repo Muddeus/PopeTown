@@ -1076,7 +1076,7 @@ public class UIManager : MonoBehaviour
                 break;
             case Location.TownSquare:
                 //currentPortrait = null;
-                currentPortrait = mayorPortrait;
+                currentPortrait = townSquareBG;
                 nameBoxText.text = "Town Square";
                 break;
             case Location.MayorsOffice:
@@ -1183,3 +1183,10 @@ public class UIManager : MonoBehaviour
         }
     }
 }
+/*
+
+414
+398
+Set Portraits commented out at these lines to allow for name to be cleared while reading items
+
+*/

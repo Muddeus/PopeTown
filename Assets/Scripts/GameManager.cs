@@ -71,7 +71,8 @@ public class GameManager : MonoBehaviour
     public bool punkRevealed;
     public bool corpseRetrieved;
     public bool shattering;
-    
+
+    public GameObject clickBlocker;
     void Start()
     {
         
@@ -146,6 +147,7 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
+        clickBlocker.SetActive(shattering);
         if (Input.GetMouseButtonDown(0) && !shattering)
         {
             Vector2 mouseWorldPos=
