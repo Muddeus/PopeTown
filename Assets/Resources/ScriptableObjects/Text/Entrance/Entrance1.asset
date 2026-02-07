@@ -17,8 +17,14 @@ MonoBehaviour:
   location: 0
   text:
   - ...
-  - Woah there! No visitors in Aberdeen today.
-  - Sorry... sister? Detective?
-  - "You\u2019ll- uh, you\u2019ll have to turn around."
+  - Woah, hey there! No visitors in Aberdeen today.
+  - Sorry Sister... or, uh... <i>Detective</i>?
+  - "Uh, either way, you\u2019ll- you\u2019ll have to turn around."
   unlocked: 1
+  itemReceived: {fileID: 0}
+  itemUnlockAfter: 0
+  itemReceived2: {fileID: 0}
+  itemUnlockAfter2: 0
+  itemReceived3: {fileID: 0}
+  itemUnlockAfter3: 0
   exploredIDs: []

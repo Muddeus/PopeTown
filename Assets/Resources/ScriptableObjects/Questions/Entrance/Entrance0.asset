@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: Tell me about yourself
   conversation:
-  - Um... what? Why?
+  - Um... what? <i>Why</i>?
   - "I mean I\u2019m... the name\u2019s Periwinkle. I work here at the guardhouse,
-    obviously."
+    <i>obviously</i>."
   - "Beyond that I... I don\u2019t know."
   - I like... sport?
   - But not that much.
@@ -38,5 +38,6 @@ MonoBehaviour:
   itemPresentAt3: 0
   checkToUnlockLocation: 0
   unlockLocation: 0
+  dialogue: []
   exploredIDs: []
   devNotes: 

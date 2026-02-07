@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
   m_Name: MayorsOffice4
   m_EditorClassIdentifier: Assembly-CSharp::Question
-  questionText: Do you think anyone might be looking to frame you?
+  questionText: Might anyone be looking to frame you?
   conversation:
   - Broadly speaking? Many.
   - "See, most people who end up in my position, they\u2019re either weasels or pencil
@@ -29,7 +29,7 @@ MonoBehaviour:
   - "Real nerve on the guy, getting uppity about new houses when he can\u2019t even
     be bothered to get his own."
   unlocked: 0
-  newQuestion: 0
+  newQuestion: 1
   location: 2
   character: 1
   itemReceived: {fileID: 11400000, guid: d4c9313030bfd00469c29d3ff00f727d, type: 2}
@@ -49,4 +49,4 @@ MonoBehaviour:
   dialogue: []
   exploredIDs:
   - {fileID: 11400000, guid: 2c462bc31f5257c4ca9cb89d57a75ff1, type: 2}
-  devNotes: 
+  devNotes: 'was: Do you think anyone might be looking to frame you?'

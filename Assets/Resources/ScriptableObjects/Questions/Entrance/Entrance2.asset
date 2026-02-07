@@ -14,28 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: "I\u2019m here to investigate the murder from last night"
   conversation:
-  - "Wh\u2014what\u2019s that now? Murder? Last night? What are you on about?"
+  - "Wh\u2014what\u2019s that now? Murder? <i>Last night</i>? What are you on about?"
   - "I\u2019m sure you\u2019ve got no right reason to go thinking there's been a-
-    a murder of all things, here in our little town of Aberdeen!"
-  - "What? A \u2014 a call? Well that... that hardly proves a thing now does it?"
-  - "Listen, I know what I\u2019m talking about, because I actually live here, right?
-    And I\u2019m not some- some anonymous, lying nobody."
+    a <i>murder</i> of all things, here in our little town of Aberdeen!"
+  - "What? A \u2014 a <i>call</i>? An <i>anonymous</i> call? Well that hardly proves
+    anything, now does it?"
+  - "Listen, I know what I\u2019m talking about, because I actually <i>live</i> here,
+    right? And I\u2019m not some- some anonymous, <i>lying</i> nobody."
   - "And you don\u2019t have any just reason to think I\u2019m lying, now do you?
     I\u2019ve got nothing to hide! I\u2019m just here, doing my job."
   - '[MASK SHATTERS]'
   - "That\u2019s... it\u2019s..."
-  - "Look, it\u2019s a warm Autumn is all, and..."
-  - "...oh, alright then. Yes. There\u2019s been some... some foul play. Mayor Bunyon
-    told me to be wary of people poking around."
+  - "<i>Look</i>, it\u2019s a warm Autumn is all, and..."
+  - "...oh, <i>alright</i> then. <i>Yes</i>. There\u2019s been some... some <i>foul
+    play</i>. Mayor Bunyon told me to be wary of people poking around."
   - Some sorry sod got tossed from the mayor's balcony and got fried on the power
     lines.
-  - Can't even tell who they are anymore. Or, well, were.
+  - Can't even tell who they are anymore. Or, well, <i>were</i>.
   - "So just... head on through to the Mayor's Office by the Town Square. He\u2019ll
     fill you in."
-  - "Tell him you... snuck past? Maybe? I don\u2019t know, I guess that\u2019s not
-    much better."
-  unlocked: 1
-  newQuestion: 0
+  - "Tell him you... <i>snuck past</i>? <i>Maybe</i>? I don\u2019t know, I guess
+    that\u2019s not much better."
+  unlocked: 0
+  newQuestion: 1
   location: 0
   character: 7
   itemReceived: {fileID: 0}

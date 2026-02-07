@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: Why no visitors?
   conversation:
-  - "We\u2019ve just had a few\u2014 uh... a few odd characters about, that\u2019s
+  - "We\u2019ve just had a few\u2014 uh... a few <i>odd characters about</i>, that\u2019s
     all."
   - "You\u2019ll have to come back some other time."
-  unlocked: 0
-  newQuestion: 0
+  unlocked: 1
+  newQuestion: 1
   location: 0
   character: 7
   itemReceived: {fileID: 0}
@@ -27,5 +27,14 @@ MonoBehaviour:
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}
   itemUnlockAt3: 0
+  itemPresent: {fileID: 0}
+  itemPresentAt: 0
+  itemPresent2: {fileID: 0}
+  itemPresentAt2: 0
+  itemPresent3: {fileID: 0}
+  itemPresentAt3: 0
+  checkToUnlockLocation: 0
   unlockLocation: 0
+  dialogue: []
   exploredIDs: []
+  devNotes: 

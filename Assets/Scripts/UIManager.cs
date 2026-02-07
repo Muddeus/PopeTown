@@ -577,8 +577,12 @@ public class UIManager : MonoBehaviour
                                     case Location.MayorsOffice:
                                         GameManager.Ins.mayorsOfficeUnlocked = true;
                                         break;
-                                    case Location.Docks:
+                                    case Location.Docks: // All locations unlocked after Mayor's Office chat
                                         GameManager.Ins.docksUnlocked = true;
+                                        GameManager.Ins.suburbsUnlocked = true;
+                                        GameManager.Ins.artStudioUnlocked = true;
+                                        GameManager.Ins.shackUnlocked = true;
+                                        GameManager.Ins.parkUnlocked = true;
                                         break;
                                     case Location.Suburbs:
                                         GameManager.Ins.suburbsUnlocked = true;

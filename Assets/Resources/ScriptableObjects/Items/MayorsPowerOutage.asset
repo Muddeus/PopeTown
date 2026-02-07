@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
   m_Name: MayorsPowerOutage
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  titleText: POWER OUTAGE
+  titleText: POWER\nOUTAGE
   text: "The town\u2019s power was put out by the incident."
-  newItem: 1
+  newItem: 0
   mayorResponseText: 
   mayorConversation: []
   sexWorkerResponseText: 

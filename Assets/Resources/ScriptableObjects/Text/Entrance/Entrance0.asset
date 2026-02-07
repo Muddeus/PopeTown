@@ -18,8 +18,9 @@ MonoBehaviour:
   text:
   - "When a murder occurs, and the body can\u2019t be identified, then check to see
     who\u2019s missing."
-  - "When things don\u2019t make sense, because no one is missing, then you\u2019re
-    dealing with a Twin Skin."
+  - "When things don\u2019t make sense, because <i>no one is missing</i>, then you\u2019re
+    dealing with a \\n<color=#FF0000><size=15>Twinskin</size></color>."
+  - September 8th, 1991.
   - "You\u2019ve received an anonymous call that a murder occurred last night in
     the little town of Aberdeen."
   - "The body can\u2019t be identified, and everyone is accounted for."
@@ -28,7 +29,7 @@ MonoBehaviour:
   itemReceived: {fileID: 0}
   itemUnlockAfter: 0
   itemReceived2: {fileID: 11400000, guid: 8e281bab4442ddb4e9975fa6f9b18719, type: 2}
-  itemUnlockAfter2: 2
+  itemUnlockAfter2: 3
   itemReceived3: {fileID: 0}
   itemUnlockAfter3: 0
   exploredIDs: []
