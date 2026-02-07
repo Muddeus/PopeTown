@@ -313,8 +313,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4915134800109299540}
   - component: {fileID: 1361698274809102992}
-  - component: {fileID: 4433948722507696764}
   - component: {fileID: 5556472260808205824}
+  - component: {fileID: 4433948722507696764}
   m_Layer: 5
   m_Name: Portrait
   m_TagString: CharacterPortrait
@@ -349,6 +349,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7118773579228128532}
   m_CullTransparentMesh: 1
+--- !u!114 &5556472260808205824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7118773579228128532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f585aa6d04e224fbe3dcf2cec1daca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  idle: {fileID: -4569357066326794538, guid: e711621781ac40444b1dd69ba00aec01, type: 3}
+  talking: {fileID: 1811237931590326294, guid: e711621781ac40444b1dd69ba00aec01, type: 3}
+  timeToTalk: 0.7
 --- !u!114 &4433948722507696764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,20 +394,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5556472260808205824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7118773579228128532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01f585aa6d04e224fbe3dcf2cec1daca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  idle: {fileID: -4569357066326794538, guid: e711621781ac40444b1dd69ba00aec01, type: 3}
-  talking: {fileID: 1811237931590326294, guid: e711621781ac40444b1dd69ba00aec01, type: 3}
 --- !u!1 &8875415955904186374
 GameObject:
   m_ObjectHideFlags: 0
