@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f482a36fca29c64b811a7c771140c06, type: 3}
+  m_Name: MayorsOffice0TEST
+  m_EditorClassIdentifier: Assembly-CSharp::TextObj
+  ID: 0
+  character: 1
+  location: 2
+  text:
+  - Yes. <i>Terrific</i>.
+  - "I ask Periwinkle to turn back any visitors he thinks look \u2018peculiar\u2019,
+    and he hand picks the peculiarist one he can find and sends them to my door."
+  - 1 normal text <i>italic text</i> pretty cool
+  - 2 normal text <i>italic text</i>
+  - 3 normal text <b>bold text</b>
+  - <b>4 bold text</b>
+  - <b>5 bold text</b> cool wow
+  - <b><i>6 bold italic text</i></b> cool wow
+  - 7 normal text <b><i>bold italic text</i></b> cool wow
+  - <b><i>8 bold italic text</i></b>
+  - <b><i>9 bold italic flipped end text</b></i>
+  - <b><i>10 bold italic flipped end text</b></i
+  - <b><i>11 bold italic flipped end text</b></
+  - <b><i>12 bold italic flipped end text</b><
+  - <b><i>13 bold italic flipped end text</b>
+  - <b><i>14 bold italic flipped end text</b
+  - <b><i>15 bold italic flipped end text</
+  - <b><i>16 bold italic flipped end text<
+  - <b><i>17 bold italic flipped end text
+  unlocked: 0
+  itemReceived: {fileID: 0}
+  itemUnlockAfter: 0
+  itemReceived2: {fileID: 0}
+  itemUnlockAfter2: 0
+  itemReceived3: {fileID: 0}
+  itemUnlockAfter3: 0
+  exploredIDs:
+  - {fileID: 11400000, guid: ef0988c6c8f6baf4d859b8e5e5b5053f, type: 2}
