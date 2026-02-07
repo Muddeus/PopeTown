@@ -18,8 +18,14 @@ MonoBehaviour:
   text:
   - Yes. <i><b>Terrific</b></i>.
   - "I ask Periwinkle to turn back any visitors he thinks look \u2018<i><b>peculiar</i></b>\u2019,
-    and he hand picks the <i><b>peculiarist</i></b> one he can find and sends them
-    to my door."
+    and he hand picks the <i>peculiarist</i> one he can find and sends them to my
+    door."
+  - Some sort of... nun... <b><i>detective</b></i>?
+  - "Well, I take it you\u2019re here about the nasty stuff going on \u2014 or that\u2019s
+    <b><i>gone</b></i> on, \u2014 right here on my front porch."
+  - "And given how incriminating this whole thing looks for me, I wouldn\u2019t mind
+    someone taking a stab at setting the whole thing <b><i>straight</b></i>."
+  - </b></i>Ask away then</b></i>.
   unlocked: 1
   itemReceived: {fileID: 0}
   itemUnlockAfter: 0

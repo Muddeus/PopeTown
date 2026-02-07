@@ -392,7 +392,7 @@ public class UIManager : MonoBehaviour
         {
             if (obj.unlocked) // Locked questions will not show up until unlocked and refreshed again
             {
-                GameManager.Ins.character = obj.character;
+                GameManager.Ins.character = obj.character; // was disabled: might be able to bring back later if needed for eddie??
                 SetPortrait();
                 GameObject button = Instantiate(buttonPrefab, contentBox.transform);
                 //button.transform.SetAsFirstSibling();
@@ -645,6 +645,8 @@ public class UIManager : MonoBehaviour
                     else
                     {
                         RefreshQuestions();
+                        SetPortrait();
+                        //this doesnt trigger when returning to entrance, return, bug
                     }
                     //if(GameManager.Ins.townSquareUnlocked)leaveObj.SetActive(true);
                 }
@@ -683,7 +685,7 @@ public class UIManager : MonoBehaviour
                 {
                     SetCurrentLocationProgress(GetCurrentLocationProgress() + 1);
                     textProgress = 0;
-                    GameManager.Ins.character = Character.None;
+                    //GameManager.Ins.character = Character.None; why was this here??
                     SetPortrait();
                 }
                 //print("current loc progress: " + GetCurrentLocationProgress());
@@ -940,6 +942,7 @@ public class UIManager : MonoBehaviour
 
     public void GoToLocation(Location location) // ONLY TO BE ACCESSED BY GAMEMANAGER SCRIPT OF SAME NAME
     {
+        ClearPortrait();
         GameManager.Ins.location = location;
         GameManager.Ins.character = Character.None;
         questionMode = false;
@@ -947,19 +950,24 @@ public class UIManager : MonoBehaviour
         leaveObj.SetActive(false);
         examineObj.SetActive(false);
         ClearQuestions();
+        
         switch (location)
         {
             case Location.Entrance:
                 currentTextList = entranceTextList;
                 currentQuestionList = entranceQuestionList;
+                currentPortrait = guardPortrait;
+                //GameManager.Ins.character = Character.Guard; THIS DOESNT FIX IT
                 break;
             case Location.TownSquare:
                 currentTextList = townSquareTextList;
                 currentQuestionList = townSquareQuestionList;
+                currentPortrait = townSquareBG;
                 break;
             case Location.MayorsOffice:
                 currentTextList = mayorsOfficeTextList;
                 currentQuestionList = mayorsOfficeQuestionList;
+                currentPortrait = mayorPortrait;
                 break;
             case Location.Docks:
                 currentTextList = docksTextList;
@@ -985,18 +993,22 @@ public class UIManager : MonoBehaviour
         textProgress = 0;
         // Make it impossible to go out of bounds
         //int currentTextLength = currentTextList[GetCurrentLocationProgress()].text.Length;
+        
+        ClearPortrait();
+        
         int currentTextLength = currentTextList.Count;
-        if (GetCurrentLocationProgress() >= currentTextLength)
+        if (GetCurrentLocationProgress() >= currentTextLength) // If at end of text already...
         {
+            print("THIS SHOULD TRIGGER WHEN RETURNING TO ENTRANCE");
             SetCurrentLocationProgress(currentTextLength);
             questionMode = true;
             RefreshQuestions();
+            
             SetPortrait();
             return; // THIS MIGHT BE CAUSING BUGS??
         }
-        ClearPortrait();
-        SetPortrait();
         mainText = currentTextList[GetCurrentLocationProgress()].text[0];
+        SetPortrait();
         AnimateText();
     }
 
@@ -1104,8 +1116,7 @@ public class UIManager : MonoBehaviour
     {
         if (portraitPanel.transform.childCount > 0)
         {
-            Destroy(portraitPanel.transform.GetChild(0).gameObject); // CAREFUL THIS IS DANGEROUS
-
+            Destroy(portraitPanel.transform.GetChild(0).gameObject); // CAREFUL THIS IS DANGEROUS Immediate
         }
 
         nameBoxText.text = "";
@@ -1113,7 +1124,6 @@ public class UIManager : MonoBehaviour
 
     public void SetPortrait() // and name
     {
-        print("Set Portrait...");
         nameBoxText.text = "";
 
         switch (GameManager.Ins.character)
@@ -1185,15 +1195,17 @@ public class UIManager : MonoBehaviour
         
         if (currentPortrait == null)
         {
+            print("null portrait. child count: " + portraitPanel.transform.childCount);
             if (portraitPanel.transform.childCount > 0)
             {
-                Destroy(portraitPanel.transform.GetChild(0).gameObject); // CAREFUL THIS IS DANGEROUS
+                Destroy(portraitPanel.transform.GetChild(0).gameObject); // CAREFUL THIS IS DANGEROUS Immediate
 
             }
         }
         else if(portraitPanel.transform.childCount == 0)
         {
             Instantiate(currentPortrait, portraitPanel.transform);
+            print("Set Portrait..." + currentPortrait.name);
         }
     }
 

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
+  m_Name: MayorsOffice2
+  m_EditorClassIdentifier: Assembly-CSharp::Question
+  questionText: What can you tell me about the incident?
+  conversation:
+  - "Some sorry sap \u2014or sapette, or what have you\u2014 flung themselves from
+    my balcony and onto the live-wires sometime last night."
+  - Put the power out too. Lost a good half-tub of rocky road.
+  - "The body was spotted at... when was it\u2014"
+  - "5. Yeah, 5am this morning. Spotted by a \u2018Lady of the night\u2019 as she
+    was passing by."
+  - Scream woke the whole damn town.
+  - "I\u2019d been burning the midnight oil and had taken a nap in the rec room downstairs,
+    so I was the first one out after her."
+  - "Didn\u2019t hear anyone going in or out."
+  unlocked: 1
+  newQuestion: 1
+  location: 2
+  character: 1
+  itemReceived: {fileID: 11400000, guid: 176d0e65b1f592449a720231d246141c, type: 2}
+  itemUnlockAt: 3
+  itemReceived2: {fileID: 11400000, guid: 1fc118094a9b811468806f26328e54ff, type: 2}
+  itemUnlockAt2: 1
+  itemReceived3: {fileID: 0}
+  itemUnlockAt3: 0
+  itemPresent: {fileID: 0}
+  itemPresentAt: 0
+  itemPresent2: {fileID: 0}
+  itemPresentAt2: 0
+  itemPresent3: {fileID: 0}
+  itemPresentAt3: 0
+  checkToUnlockLocation: 0
+  unlockLocation: 0
+  dialogue: []
+  exploredIDs: []
+  devNotes: 

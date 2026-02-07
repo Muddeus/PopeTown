@@ -17,8 +17,8 @@ MonoBehaviour:
   location: 2
   text:
   - Yes. <i>Terrific</i>.
-  - "I ask Periwinkle to turn back any visitors he thinks look \u2018peculiar\u2019,
-    and he hand picks the peculiarist one he can find and sends them to my door."
+  - "I ask Periwinkle to turn back any visitors he thinks look \u2018<i><b>peculiar</i></b>\u2019,
+    and he hand picks the <i><b>peculiarist</i></b> one he can find and sends them to my door."
   - 1 normal text <i>italic text</i> pretty cool
   - 2 normal text <i>italic text</i>
   - 3 normal text <b>bold text</b>
