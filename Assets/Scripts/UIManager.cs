@@ -669,6 +669,8 @@ public class UIManager : MonoBehaviour
                 if(GetCurrentLocationProgress() < 0) SetCurrentLocationProgress(0);
                 AddItemFromText();
                 
+                // Implement locking text here (for prerequisites etc
+                
                 // if we have more text segments to go..
                 if (textProgress < currentTextList[GetCurrentLocationProgress()].text.Length)
                 {

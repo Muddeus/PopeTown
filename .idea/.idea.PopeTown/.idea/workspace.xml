@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7285e2cb-2db6-429d-b2e4-ccad62700fa0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PopeTown/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PopeTown/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FontTests/KiwiSoda SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FontTests/KiwiSoda SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FontTests/alagard SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FontTests/alagard SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Text/MayorsOffice/MayorsOffice1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Text/MayorsOffice/MayorsOffice1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="7285e2cb-2db6-429d-b2e4-ccad62700fa0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,7 +121,7 @@
       <workItem from="1770263419649" duration="23000" />
       <workItem from="1770334441642" duration="146000" />
       <workItem from="1770334600068" duration="17731000" />
-      <workItem from="1770386960432" duration="10352000" />
+      <workItem from="1770386960432" duration="11038000" />
     </task>
     <servers />
   </component>
