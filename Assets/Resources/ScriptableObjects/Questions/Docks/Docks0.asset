@@ -12,12 +12,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
   m_Name: Docks0
   m_EditorClassIdentifier: Assembly-CSharp::Question
-  questionText: 
-  conversation: []
+  questionText: Tell me about yourself
+  conversation:
+  - "Well, <i>let\u2019s see</i>."
+  - "I\u2019m of the Faith. A sister, actually."
+  - "I\u2019m also a detective, which means I\u2019m allowed to ask invasive and
+    pointless questions."
+  - Oh and I love killing people. <i>Looove</i> killing people.
+  - ...
+  - Wait, is it illegal to say that?
+  - "L- like do I have to clarify that I\u2019m only kidding?"
+  - ...
+  - "<i>I\u2019m only kidding?</i>"
+  - .........name's Eddie...
   unlocked: 1
   newQuestion: 1
   location: 3
   character: 5
   itemReceived: {fileID: 0}
   itemUnlockAt: 0
-  exploredIDs: []
+  itemReceived2: {fileID: 0}
+  itemUnlockAt2: 0
+  itemReceived3: {fileID: 0}
+  itemUnlockAt3: 0
+  itemPresent: {fileID: 0}
+  itemPresentAt: 0
+  itemPresent2: {fileID: 0}
+  itemPresentAt2: 0
+  itemPresent3: {fileID: 0}
+  itemPresentAt3: 0
+  checkToUnlockLocation: 0
+  unlockLocation: 0
+  dialogue: []
+  exploredIDs:
+  - {fileID: 11400000, guid: 8ca6f14789159ee4e932c1c756d19e8e, type: 2}
+  devNotes: 

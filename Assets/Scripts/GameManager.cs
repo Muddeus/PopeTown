@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
@@ -127,7 +128,14 @@ public class GameManager : MonoBehaviour
             case Character.Handywoman:
                 return "..?";
             case Character.Punk:
-                return "Huh? What? What are you even saying right now?";
+                string[] response = new string[] { 
+                    "Huh? What? What are you even saying right now?", 
+                    "What the flip..! What.",
+                    "Stop talking weird at me, what the flip...",
+                    "You... are weird???",
+                    "One time I found a rotten Andy under the lake. I felt my foot touch something underwater and it turned out to be the guy that went missing."
+                };
+                return response[Random.Range(0, response.Length)];
             case Character.Artist:
                 return "I... I don’t follow.";
             case Character.Homeless:
@@ -136,7 +144,7 @@ public class GameManager : MonoBehaviour
             case Character.SexWorker:
                 return "Sorry to disappoint hun, but I don’t have anything to hide.";
             case Character.Mayor:
-                return "I think you’re losing the plot woman.";
+                return "I think you’re losing the plot, woman.";
             case Character.None:
                 return "You proclaim to no one.";
             

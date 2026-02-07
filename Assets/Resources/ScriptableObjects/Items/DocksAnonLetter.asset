@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
+  m_Name: DocksAnonLetter
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  titleText: Anonymous letter in bushes
+  text: 'An anonymous letter written with newspaper clippings, found in the bushes
+    by the lake.\nIt reads: Come where the fire dances in the mirror, or my identity
+    will be one for all to see.'
+  newItem: 1
+  mayorResponseText: 
+  mayorConversation: []
+  sexWorkerResponseText: 
+  sexWorkerConversation: []
+  homelessResponseText: 
+  homelessConversation: []
+  artistResponseText: 
+  artistConversation: []
+  punkResponseText: 
+  punkConversation: []
+  handywomanResponseText: 
+  handywomanConversation: []
+  unlocked: 0
+  exploredIDs: []
+  devNote: 

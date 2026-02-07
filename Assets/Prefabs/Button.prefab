@@ -214,7 +214,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: How did you kill the body?
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 37b0fd399c3446c4e97630a6eff82418, type: 2}
   m_sharedMaterial: {fileID: -4080031903546666085, guid: 37b0fd399c3446c4e97630a6eff82418, type: 2}

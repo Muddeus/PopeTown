@@ -119,6 +119,9 @@ public class UIManager : MonoBehaviour
     private Animator anim;
     public Animator handAnim;
 
+    public Sprite mayorIdle;
+    public Sprite mayorTalk;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -223,6 +226,11 @@ public class UIManager : MonoBehaviour
             AnimateText();
         }
     }
+
+    public bool GetTextAnimating()
+    {
+        return textAnimating;
+    }
     private float handsTimer = 0;
     private float textSpeedMult;
 
@@ -235,10 +243,40 @@ public class UIManager : MonoBehaviour
         handsBox.enabled = questionMode && !GameManager.Ins.shattering;
         if (questionMode)
         {
+            // animate character
+            /*if (portraitPanel.transform.childCount > 0)
+            {
+                Image talkAnim = GameObject.FindWithTag("CharacterPortrait").GetComponent<Image>();//portraitPanel.transform.GetChild(0).GetChild(0).GetComponentInChildren<Image>();
+                if (talkAnim != null)
+                {
+                    switch (GameManager.Ins.character)
+                    {
+                        case Character.None:
+                            break;
+                        case Character.Mayor:
+                            talkAnim.sprite = textAnimating?mayorTalk:mayorIdle;
+                            break;
+                        case Character.Artist:
+                            break;
+                        case Character.Guard:
+                            break;
+                        case Character.Handywoman:
+                            break;
+                        case Character.Homeless:
+                            break;
+                        case Character.Punk:
+                            break;
+                        case Character.Twinskin:
+                            break;
+                        case Character.SexWorker:
+                            break;
+                    }
+                }
+            }*/
+            
             // show hands
             if (textAnimating)
             {
-                // animate hands
                 
             }
         }
@@ -976,6 +1014,7 @@ public class UIManager : MonoBehaviour
             case Location.Docks:
                 currentTextList = docksTextList;
                 currentQuestionList = docksQuestionList;
+                currentPortrait = docksBG;
                 break;
             case Location.Suburbs:
                 currentTextList = suburbsTextList;
@@ -1003,7 +1042,6 @@ public class UIManager : MonoBehaviour
         int currentTextLength = currentTextList.Count;
         if (GetCurrentLocationProgress() >= currentTextLength) // If at end of text already...
         {
-            print("THIS SHOULD TRIGGER WHEN RETURNING TO ENTRANCE");
             SetCurrentLocationProgress(currentTextLength);
             questionMode = true;
             RefreshQuestions();
@@ -1011,7 +1049,7 @@ public class UIManager : MonoBehaviour
             SetPortrait();
             return; // THIS MIGHT BE CAUSING BUGS??
         }
-        mainText = currentTextList[GetCurrentLocationProgress()].text[0];
+        mainText = currentTextList[GetCurrentLocationProgress()].text[0]; //if(currentTextList!=null )
         SetPortrait();
         AnimateText();
     }
@@ -1079,8 +1117,8 @@ public class UIManager : MonoBehaviour
         if (notesification.notified != unreadNotes)
         {
             notesification.UpdateNotification(unreadNotes);
-            print("last count: " + lastOwnedListCount);
-            print("current count: " + ownedItemList.Count);
+            //print("last count: " + lastOwnedListCount);
+            //print("current count: " + ownedItemList.Count);
             //if(unreadNotes || lastOwnedListCount != ownedItemList.Count)handAnim.Play("Hand Writing");
         }
         if (unreadNotes)
@@ -1178,18 +1216,23 @@ public class UIManager : MonoBehaviour
                 //nameBoxText.text = "";
                 break;
             case Location.Docks:
+                currentPortrait = docksBG;
                 nameBoxText.text = "";
                 break;
             case Location.Suburbs:
+                currentPortrait = suburbsBG;
                 nameBoxText.text = "";
                 break;
             case Location.ArtStudio:
+                currentPortrait = artStudioBG;
                 nameBoxText.text = "";
                 break;
             case Location.Shack:
+                currentPortrait = shackBG;
                 nameBoxText.text = "";
                 break;
             case Location.Park:
+                currentPortrait = parkBG;
                 nameBoxText.text = "";
                 break;
         }
@@ -1199,7 +1242,7 @@ public class UIManager : MonoBehaviour
         
         if (currentPortrait == null)
         {
-            print("null portrait. child count: " + portraitPanel.transform.childCount);
+            //print("null portrait. child count: " + portraitPanel.transform.childCount);
             if (portraitPanel.transform.childCount > 0)
             {
                 Destroy(portraitPanel.transform.GetChild(0).gameObject); // CAREFUL THIS IS DANGEROUS Immediate
@@ -1209,7 +1252,7 @@ public class UIManager : MonoBehaviour
         else if(portraitPanel.transform.childCount == 0)
         {
             Instantiate(currentPortrait, portraitPanel.transform);
-            print("Set Portrait..." + currentPortrait.name);
+            //print("Set Portrait..." + currentPortrait.name);
         }
     }
 

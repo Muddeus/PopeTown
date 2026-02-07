@@ -12,8 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f482a36fca29c64b811a7c771140c06, type: 3}
   m_Name: Docks1
   m_EditorClassIdentifier: Assembly-CSharp::TextObj
-  character: 4
+  ID: 0
+  character: 0
   location: 3
-  text: 
-  unlocked: 0
+  text:
+  - You arrive at the Docks.
+  unlocked: 1
+  itemReceived: {fileID: 0}
+  itemUnlockAfter: 0
+  itemReceived2: {fileID: 0}
+  itemUnlockAfter2: 0
+  itemReceived3: {fileID: 0}
+  itemUnlockAfter3: 0
   exploredIDs: []
