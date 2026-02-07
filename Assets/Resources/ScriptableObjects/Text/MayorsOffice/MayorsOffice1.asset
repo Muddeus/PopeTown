@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f482a36fca29c64b811a7c771140c06, type: 3}
-  m_Name: TownSquare0
+  m_Name: MayorsOffice1
   m_EditorClassIdentifier: Assembly-CSharp::TextObj
   ID: 0
-  character: 0
-  location: 1
+  character: 1
+  location: 2
   text:
-  - You arrive in the Town Square.
-  unlocked: 1
+  - Yes. <i>Terrific<\i>.
+  - "I ask Periwinkle to turn back any visitors he thinks look \u2018peculiar\u2019,
+    and he hand picks the peculiarist one he can find and sends them to my door."
+  unlocked: 0
   itemReceived: {fileID: 0}
   itemUnlockAfter: 0
   itemReceived2: {fileID: 0}

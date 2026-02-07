@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7285e2cb-2db6-429d-b2e4-ccad62700fa0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PopeTown/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PopeTown/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PopeTown/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PopeTown/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/GuardPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/GuardPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/TownSquarePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/TownSquarePrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chris/ChrisUI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chris/ChrisUI.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FontTests/KiwiSoda SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FontTests/KiwiSoda SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FontTests/alagard SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FontTests/alagard SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Text/TownSquare/TownSquare0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Text/TownSquare/TownSquare0.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Animations/Mask Shitter.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Animations/Mask Shitter.anim" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +21,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EndShattering.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemLogic.cs" root0="FORCE_HIGHLIGHTING" />
@@ -51,18 +56,19 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\3dcc4c3465acea00\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\3dcc4c3465acea00\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\3dcc4c3465acea00\\AppData\\Local\\Symbols\\src"
-    ]
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Build\PopeTown.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Chris\Documents\GitHub\PopeTown\Build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity 6000.2.10f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.10f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\3dcc4c3465acea00\Documents\GitHub\PopeTown -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\3dcc4c3465acea00\Documents\GitHub\PopeTown" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -70,7 +76,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity 6000.2.10f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.10f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\3dcc4c3465acea00\Documents\GitHub\PopeTown -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\3dcc4c3465acea00\Documents\GitHub\PopeTown" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -82,6 +88,9 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -92,6 +101,9 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -116,6 +128,7 @@
       <workItem from="1770263419649" duration="23000" />
       <workItem from="1770334441642" duration="146000" />
       <workItem from="1770334600068" duration="17731000" />
+      <workItem from="1770386960432" duration="6234000" />
     </task>
     <servers />
   </component>

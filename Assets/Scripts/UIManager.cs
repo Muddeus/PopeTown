@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.RegularExpressions;
 using TMPro;
 using Unity.Mathematics;
 using Unity.VisualScripting;
@@ -273,9 +274,7 @@ public class UIManager : MonoBehaviour
             }
             else
             {
-                mainText = mainText.Replace('’', '\'');
-                mainTextDisplay.text = mainText.Substring(0, textPosition);
-                if(mainTextDisplay.text.EndsWith('\\'))mainTextDisplay.text = mainTextDisplay.text.Substring(0, mainTextDisplay.text.Length - 1);
+                FormatTextDisplay();
                 dialogueBox.transform.SetAsLastSibling();
                 //mainTextDisplay.text = "<line-height=11.18>" + mainTextDisplay.text + "</line-height>";
                 //preferred height 11.18
@@ -308,6 +307,78 @@ public class UIManager : MonoBehaviour
         yield return new WaitForSeconds(time);
 
         scrollbar.value = 0;
+    }
+
+    private void FormatTextDisplay()
+    {
+        // Check for bad characters to replace
+        mainText = mainText.Replace('’', '\'');
+        // Only show as much of the string as as been revealed so far in the animation.
+        mainTextDisplay.text = mainText.Substring(0, textPosition);
+        // Remove \ from end
+        if(mainTextDisplay.text.EndsWith('\\'))mainTextDisplay.text = mainTextDisplay.text.Substring(0, mainTextDisplay.text.Length - 1);
+        int mTextDisPos = 0;
+        int clearedText = 0;
+        bool textValid = true;
+        // Dealing with incomplete/broken blocks (<, <b, </i, etc...)
+        foreach (char c in mainTextDisplay.text)
+        {
+            if (c == '<')
+            {
+                textValid = false;
+                int totalBrackets = 1;
+                if (mTextDisPos < mainTextDisplay.text.Length)
+                {
+                    int pairedBrackets = 1; // < increases count, > decreases count. if 0 at end then all are pairs.
+                    int lastOpenBracket = 0;
+                    foreach (char c2 in mainTextDisplay.text.Substring(mTextDisPos + 1)) // check characters after the <
+                    {
+                        if (c2 == '>')
+                        {
+                            pairedBrackets--;
+                            totalBrackets++;
+                        }
+
+                        if (c2 == '<')
+                        {
+                            pairedBrackets++;
+                            totalBrackets++;
+                        }
+                    }
+
+                    if (pairedBrackets != 0) //if uneven
+                    {
+                        // Remove text from last bracket segment onwards
+                        int badPastIndex = mainTextDisplay.text.LastIndexOf('<');
+                        mainTextDisplay.text = mainTextDisplay.text.Substring(0, badPastIndex);
+                    }
+                }
+                else // string ending with <
+                {
+                    mainTextDisplay.text = mainTextDisplay.text.Substring(mTextDisPos);
+                }
+            }
+            mTextDisPos++;
+        }
+
+        if (textValid)
+        {
+            // no < so should be no formatting at all. Skip further checks.
+            return;
+        }
+        
+        // dealing with complete blocks (<x>, </x>, etc...) but still bad formatting
+        string[] formatTypes = new string[] { "i", "b" };
+        foreach (string formatType in formatTypes)
+        {
+            // if the number of <x> doesn't match the number of </x> then (formatting is bad)...
+            if (Regex.Matches(mainTextDisplay.text, "<" + formatType + ">") != Regex.Matches(mainTextDisplay.text, "</" + formatType + ">"))
+            {
+                int badPastIndex = mainTextDisplay.text.LastIndexOf("<" + formatType + ">");
+                mainTextDisplay.text = mainTextDisplay.text.Substring(0, badPastIndex);
+            }
+        }
+        
     }
 
     private float textTimer;
@@ -1037,7 +1108,7 @@ public class UIManager : MonoBehaviour
         //disable name
         shatterAnim = null;
         shatterAnim = portraitPanel.GetComponentInChildren<Animator>();
-        shatterAnim.Play("Mask Shitter");
+        shatterAnim.Play("Mask Shitter 2");
         handsBox.enabled = false;
         nameBoxText.text = "";
     }
