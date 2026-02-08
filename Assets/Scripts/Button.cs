@@ -27,7 +27,7 @@ public class Button : MonoBehaviour
             case Sound.None:
                 break;
             case Sound.Notes:
-                SFXManager.instance.PlaySound(SFXManager.instance.notes1, transform, 1f);
+                SFXManager.instance.PlaySound(SFXManager.instance.notes1, transform, 0.2f);
                 break;
         }
     }
@@ -38,7 +38,7 @@ public class Button : MonoBehaviour
             case Sound.None:
                 break;
             case Sound.Notes:
-                SFXManager.instance.PlaySound(SFXManager.instance.notes1, transform, 1f);
+                SFXManager.instance.PlaySound(SFXManager.instance.notes1, transform, 0.2f);
                 break;
         }
     }

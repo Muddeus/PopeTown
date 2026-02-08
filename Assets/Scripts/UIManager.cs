@@ -122,9 +122,13 @@ public class UIManager : MonoBehaviour
 
     public Sprite mayorIdle;
     public Sprite mayorTalk;
+    private Character currentCharacter;
+    private Location currentLocation;
 
     void Start()
     {
+        currentCharacter = Character.None;
+        currentLocation = Location.Entrance;
         anim = GetComponent<Animator>();
         presentable = false;
         talking = true;
@@ -1045,7 +1049,7 @@ public class UIManager : MonoBehaviour
         leaveObj.SetActive(false);
         examineObj.SetActive(false);
         ClearQuestions();
-        
+        currentLocation = location; //currentLocation is for audio management only
         switch (location)
         {
             case Location.Entrance:
@@ -1058,11 +1062,13 @@ public class UIManager : MonoBehaviour
                 currentTextList = townSquareTextList;
                 currentQuestionList = townSquareQuestionList;
                 currentPortrait = townSquareBG;
+                MusicManager.ins.PlayTownSquare();
                 break;
             case Location.MayorsOffice:
                 currentTextList = mayorsOfficeTextList;
                 currentQuestionList = mayorsOfficeQuestionList;
                 currentPortrait = mayorPortrait;
+                MusicManager.ins.PlayMayor();
                 break;
             case Location.Docks:
                 currentTextList = docksTextList;
