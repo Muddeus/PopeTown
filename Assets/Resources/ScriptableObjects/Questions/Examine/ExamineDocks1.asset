@@ -17,7 +17,7 @@ MonoBehaviour:
   - The lake is quiet and peaceful.
   - The mild hubbub of the town is but a faint murmur.
   - However, you happen to spot something strange.
-  - In the bushes you spot a strange note, written with newspaper clippings.
+  - In the bushes you spot a suspicious note, written with newspaper clippings.
   - After taking the note however, you notice something <i>else</i> amongst the bushes.
     Somebody is hiding.
   - "Shit. Okay, <i>okay</i>. I\u2019m coming out."
@@ -26,7 +26,7 @@ MonoBehaviour:
   - "I promise I\u2019ll do my daily prayers.\\n\\n\\n<i><i><i></i></i></i>                
     ...Just some other day."
   unlocked: 0
-  newQuestion: 0
+  newQuestion: 1
   location: 3
   character: 0
   itemReceived: {fileID: 11400000, guid: e31fa2b84276ad54eb6e5fb72dfbe45e, type: 2}

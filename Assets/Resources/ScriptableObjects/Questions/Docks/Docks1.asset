@@ -10,22 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
-  m_Name: Docks0
+  m_Name: Docks1
   m_EditorClassIdentifier: Assembly-CSharp::Question
-  questionText: Tell me about yourself
+  questionText: Is there anything you know about the incident?
   conversation:
-  - "Well, <i>let\u2019s see</i>."
-  - "I\u2019m of the Faith. A sister, actually."
-  - "I\u2019m also a detective, which means I\u2019m allowed to ask invasive and
-    pointless questions."
-  - Oh and I love killing people. <i>Looove</i> killing people.
+  - "...It\u2019s exciting? <i>I guess</i>?"
+  - "I mean maybe I\u2019ll feel bad when I find out who it is, but since we don\u2019t
+    know, then it still feels kinda... <i>distant</i>? You know?"
+  - "Like it might as well have happened in some other part of the world, and I just
+    heard it over the news. Like \u2018Wow, some guy got roasted on power lines in
+    China or whatever, sick\u2019."
+  - "Like I\u2019m not saying it\u2019s <i>funny</i>, because that would be fucked
+    up, and I don\u2019t wanna go to hell or whatever."
   - ...
-  - Wait, is it illegal to say that?
-  - "L- like do I have to say I\u2019m only kidding?"
-  - ...
-  - "<i>I\u2019m only kidding?</i>"
-  - .........The name's Eddie...
-  unlocked: 0
+  - But yeah.
+  unlocked: 1
   newQuestion: 1
   location: 3
   character: 5
@@ -44,6 +43,5 @@ MonoBehaviour:
   checkToUnlockLocation: 0
   unlockLocation: 0
   dialogue: []
-  exploredIDs:
-  - {fileID: 11400000, guid: 8ca6f14789159ee4e932c1c756d19e8e, type: 2}
+  exploredIDs: []
   devNotes: 

@@ -301,7 +301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PortraitTalk
   idle: {fileID: -2634768772706347326, guid: 928fdfa494b35474294b35a49d3cc84c, type: 3}
   talking: {fileID: -8537571845789344264, guid: 928fdfa494b35474294b35a49d3cc84c, type: 3}
-  timeToTalk: 0.3
+  timeToTalk: 0.2
 --- !u!114 &4433948722507696764
 MonoBehaviour:
   m_ObjectHideFlags: 0

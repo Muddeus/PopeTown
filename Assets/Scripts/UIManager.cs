@@ -51,6 +51,7 @@ public class UIManager : MonoBehaviour
     public bool questionMode;
     [SerializeField] private bool presentingMode;
     [SerializeField] private bool presentable;
+    private bool talking;
     public GameObject questionsBox;
     public GameObject dialogueBox;
     public GameObject contentBox; // Where the question buttons go
@@ -126,6 +127,7 @@ public class UIManager : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         presentable = false;
+        talking = true;
         textProgress = 0;
         questionMode = false;
         questionsBox.SetActive(false);
@@ -347,6 +349,11 @@ public class UIManager : MonoBehaviour
         scrollbar.value = 0;
     }
 
+    public void SetTalking(bool t)
+    {
+        talking = t;
+    }
+
     private void FormatTextDisplay()
     {
         // Check for bad characters to replace
@@ -414,6 +421,7 @@ public class UIManager : MonoBehaviour
 
     public void RefreshQuestions()
     {
+        talking = true;
         //evidenceCount = 0; // resets for next evidence. could be cause of bug..
         questionsBox.transform.SetAsLastSibling();
         presentable = true;
@@ -456,7 +464,7 @@ public class UIManager : MonoBehaviour
 
     private bool presentPassed = false;
     private bool playAnimNext = false;
-    public void NextText()
+    public void NextText() // @@@@@[[[[[[[[[[[@@@@@]]]]]]]]]]]]@@@@@
     {
         if (textAnimating) // if text still coming out..
         {
@@ -478,6 +486,7 @@ public class UIManager : MonoBehaviour
             }
             lastOwnedItemListCount = ownedItemList.Count;*/
             //PresentEvidenceCheck(emptyItem);
+            if(talking)print("1");
             bool expectedItem = false;
             if (currentQuestion == null || presentPassed)
             {
@@ -502,6 +511,7 @@ public class UIManager : MonoBehaviour
             if (expectedItem)
             {
                 RefreshQuestions();
+                if(talking)print("2");
             }
             presentPassed = false;
             // Update the log here, text has been read
@@ -510,7 +520,7 @@ public class UIManager : MonoBehaviour
             emptyNotesText.SetActive(notesBoxContent.childCount == 0); // Get rid of EMPTY text if not empty
             
             textProgress++;
-            
+            if(talking)print("3");
             if (questionMode)
             {
                 if (currentQuestion != null) // If there is a current question
@@ -524,6 +534,7 @@ public class UIManager : MonoBehaviour
                     //SetPortrait();
                     //PresentEvidenceCheck();
                     // Check if item to unlock (multiple items ahead)
+                    if(talking)print("4");
                     if (currentQuestion.itemReceived != null)
                     {
                         if (textProgress >= currentQuestion.itemUnlockAt)
@@ -639,7 +650,7 @@ public class UIManager : MonoBehaviour
                                 }
                             }
                         }
-                        
+                        if(talking)print("5");
                         // Check prerequisites
                         foreach (Question q in allQuestionArray)
                         {
@@ -675,6 +686,7 @@ public class UIManager : MonoBehaviour
                         currentQuestion = null;
                         textProgress = -1; // to ensure text starts from actual start as it is technically triggered by a NextText
                         RefreshQuestions();
+                        if(talking)print("6");
                     }
                 }
                 else // If there is no current question
@@ -690,6 +702,7 @@ public class UIManager : MonoBehaviour
                         SetPortrait();
                         //this doesnt trigger when returning to entrance, return, bug
                     }
+                    if(talking)print("7");
                     //if(GameManager.Ins.townSquareUnlocked)leaveObj.SetActive(true);
                 }
 
@@ -704,15 +717,16 @@ public class UIManager : MonoBehaviour
                     questionMode = false;
                     textProgress = -1;
                 }
+                if(talking)print("8");
             }
             else // NOT in Question Mode (text mode)
             {
                 presentable = false;
+                talking = false;
                 leaveObj.SetActive(false);
                 examineObj.SetActive(false);
                 if(GetCurrentLocationProgress() < 0) SetCurrentLocationProgress(0);
                 AddItemFromText();
-                
                 // Implement locking text here (for prerequisites etc
                 
                 // if we have more text segments to go..
@@ -731,7 +745,6 @@ public class UIManager : MonoBehaviour
                     SetPortrait();
                 }
                 //print("current loc progress: " + GetCurrentLocationProgress());
-                
                 if (GetCurrentLocationProgress() >= currentTextList.Count)
                 {
                     // Return to questions screen if no more text available
@@ -923,6 +936,7 @@ public class UIManager : MonoBehaviour
         {
             soundTimer = 0;
             SFXManager sfx = SFXManager.instance;
+            // only if !talking
             sfx.PlayRandomSound(sfx.periwinkleSpeaks,transform,0.1f);
         }
 
