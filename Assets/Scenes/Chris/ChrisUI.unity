@@ -5905,6 +5905,22 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c18c6d8ca1875994f82e1b6f04fda333, type: 3}
   - {fileID: 8300000, guid: ba0f821c6dd9c61498594dc7c60a8a9e, type: 3}
   - {fileID: 8300000, guid: 0011e9773b211654ca0f5dcb07f051f6, type: 3}
+  handywomanSpeaks:
+  - {fileID: 8300000, guid: 14ccb650e74050c48854c8fdaec4fe7a, type: 3}
+  punkSpeaks:
+  - {fileID: 8300000, guid: 56c133285a3ad924496a8920a682cd46, type: 3}
+  homelessSpeaks:
+  - {fileID: 8300000, guid: b072f45c8add19d459b885dfa2d879e5, type: 3}
+  artistSpeaks:
+  - {fileID: 8300000, guid: e9453ecbeb8465f4e9655124a28d5c35, type: 3}
+  mayorSpeaks:
+  - {fileID: 8300000, guid: b962a3d38182f634badfd207532b943c, type: 3}
+  sexWorkerSpeaks:
+  - {fileID: 8300000, guid: aea4a67d05912d148adf433fb63059b6, type: 3}
+  text:
+  - {fileID: 8300000, guid: e54ee343126dceb46a599cbd0d9eb751, type: 3}
+  twinskinSpeaks:
+  - {fileID: 8300000, guid: dea7641920e62d0458c57f75e413c32d, type: 3}
   sFXObject: {fileID: 8761177432083639136, guid: cd419cabaa8972044929e58e262592f6, type: 3}
 --- !u!1 &233884790
 GameObject:

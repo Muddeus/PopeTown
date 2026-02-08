@@ -282,11 +282,12 @@ public class UIManager : MonoBehaviour
                 
             }
         }
-        if (textAnimating && (!questionMode || currentQuestion !=null))//&& textTimer > textSpeed)
+        if (textAnimating && (!questionMode || currentQuestion !=null))//&& textTimer > textSpeed) COME BACK HERE FOR TALKING AND SOUND
         {
             // text animation
             textSpeedMult = textLength < 20 ? 0.3f : 1f;
-            if (textLength < 10) textSpeedMult = 0.07f;
+            if (textLength < 10) textSpeedMult = 0.1f;
+            if(GameManager.Ins.character == Character.None) PlayTextSound();
             if(GameManager.Ins.character != Character.None) PlayTextSound();
             textPosition = (int)(textTimer / textSpeed * textSpeedMult);
             textPosition = Math.Clamp(textPosition, 0, textLength);
@@ -931,13 +932,51 @@ public class UIManager : MonoBehaviour
     private float soundTimer = 0;
     public void PlayTextSound()
     {
+        print("PlayTextSound");
         float textSoundMult = textSpeedMult == 1 ? 1f : 1.5f;
         if (soundTimer > textSpeed / (textSpeedMult * textSoundMult) * 4f)
         {
             soundTimer = 0;
             SFXManager sfx = SFXManager.instance;
-            // only if !talking
-            sfx.PlayRandomSound(sfx.periwinkleSpeaks,transform,0.1f);
+            // if not question mode then text sound
+
+            if (!questionMode) // text mode
+            {
+                sfx.PlayRandomSound(sfx.text,transform,0.1f);
+                print("Text Sound Played");
+            }
+            else
+            {
+                switch (GameManager.Ins.character)
+                {
+                    case Character.Guard:
+                        sfx.PlayRandomSound(sfx.periwinkleSpeaks,transform,0.1f);
+                        break;
+                    case Character.Handywoman:
+                        sfx.PlayRandomSound(sfx.handywomanSpeaks,transform,0.1f);
+                        break;
+                    case Character.Punk:
+                        sfx.PlayRandomSound(sfx.punkSpeaks,transform,0.1f);
+                        break;
+                    case Character.Artist:
+                        sfx.PlayRandomSound(sfx.artistSpeaks,transform,0.1f);
+                        break;
+                    case Character.Homeless:
+                        sfx.PlayRandomSound(sfx.homelessSpeaks,transform,0.1f);
+                        break;
+                    case Character.SexWorker:
+                        sfx.PlayRandomSound(sfx.sexWorkerSpeaks,transform,0.1f);
+                        break;
+                    case Character.Mayor:
+                        sfx.PlayRandomSound(sfx.mayorSpeaks,transform,0.1f);
+                        break;
+                    case Character.None:
+                        break;
+            
+                    // ADD TWINSKIN "Now we’re really falling apart, aren’t we?"
+                }
+            }
+                //sfx.PlayRandomSound(sfx.periwinkleSpeaks,transform,0.1f);
         }
 
         soundTimer += Time.deltaTime;

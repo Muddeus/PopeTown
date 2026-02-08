@@ -4,12 +4,21 @@ using UnityEngine.Rendering;
 
 public class SFXManager : MonoBehaviour
 {
+    // USE FRUITY CONVOLUTER FOR CHURCH and FX PIANO DOWN
     public static SFXManager instance;
 
     public AudioClip notes1; // Sound 1
 
 
     public AudioClip[] periwinkleSpeaks;
+    public AudioClip[] handywomanSpeaks;
+    public AudioClip[] punkSpeaks;
+    public AudioClip[] homelessSpeaks;
+    public AudioClip[] artistSpeaks;
+    public AudioClip[] mayorSpeaks;
+    public AudioClip[] sexWorkerSpeaks;
+    public AudioClip[] text;
+    public AudioClip[] twinskinSpeaks;
     
 
     [SerializeField] private AudioSource sFXObject;
