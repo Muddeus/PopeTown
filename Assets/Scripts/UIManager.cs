@@ -530,6 +530,28 @@ public class UIManager : MonoBehaviour
             {
                 if (currentQuestion != null) // If there is a current question
                 {
+                    ////////// SPECIAL CASES FIRST
+                    
+                    
+                    if (currentQuestion.name == "ExamineDocks1" && textProgress == 6)
+                    {
+                        nameBoxText.text = "???";
+                    }
+                    if (currentQuestion.name == "ExamineDocks1" && textProgress == 7)
+                    {
+                        print("EXAMINE DOCKS REVEAL EDDIE");
+                        GameManager.Ins.punkRevealed = true;
+                    }
+
+                    if (GameManager.Ins.punkRevealed && !GameManager.Ins.punkNameRevealed &&
+                        GameManager.Ins.location == Location.Docks)
+                    {
+                        nameBoxText.text = "???";
+                    }
+
+                    if (currentQuestion.name == "Docks0" && textProgress == 10) GameManager.Ins.punkNameRevealed = true;
+                    ////////// END SPECIAL CASES
+                    
                     notesBox.gameObject.SetActive(false);
                     notesification.UpdateUnderline(notesBox.gameObject);
                     leaveObj.SetActive(false);
@@ -936,7 +958,6 @@ public class UIManager : MonoBehaviour
     private float soundTimer = 0;
     public void PlayTextSound()
     {
-        print("PlayTextSound");
         float textSoundMult = textSpeedMult == 1 ? 1f : 1.5f;
         if (soundTimer > textSpeed / (textSpeedMult * textSoundMult) * 4f)
         {
@@ -947,7 +968,6 @@ public class UIManager : MonoBehaviour
             if (!questionMode) // text mode
             {
                 sfx.PlayRandomSound(sfx.text,transform,0.1f);
-                print("Text Sound Played");
             }
             else
             {
@@ -1128,6 +1148,7 @@ public class UIManager : MonoBehaviour
                 break;
             case Location.Docks:
                 SelectQuestion(GameManager.Ins.punkRevealed?GameManager.Ins.examineDocks2:GameManager.Ins.examineDocks);
+                //GameManager.Ins.punkRevealed = true;
                 break;
             case Location.Suburbs:
                 SelectQuestion(GameManager.Ins.examineSuburbs);
@@ -1237,7 +1258,7 @@ public class UIManager : MonoBehaviour
                 nameBoxText.text = "The Handyma'am";
                 break;
             case Character.Punk:
-                nameBoxText.text = "Eddie";
+                if(GameManager.Ins.punkNameRevealed)nameBoxText.text = "Eddie";
                 break;
             case Character.Artist:
                 nameBoxText.text = "Gemini";
@@ -1276,7 +1297,8 @@ public class UIManager : MonoBehaviour
                 break;
             case Location.Docks:
                 currentPortrait = docksBG;
-                nameBoxText.text = "";
+                //nameBoxText.text = "";
+                if (GameManager.Ins.punkRevealed && !GameManager.Ins.punkNameRevealed) nameBoxText.text = "???";
                 break;
             case Location.Suburbs:
                 currentPortrait = suburbsBG;

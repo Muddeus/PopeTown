@@ -43,5 +43,6 @@ MonoBehaviour:
   checkToUnlockLocation: 0
   unlockLocation: 0
   dialogue: []
-  exploredIDs: []
+  exploredIDs:
+  - {fileID: 11400000, guid: 8ca6f14789159ee4e932c1c756d19e8e, type: 2}
   devNotes: 

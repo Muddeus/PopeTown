@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour
     public Question examinePark;
 
     public bool punkRevealed;
+    public bool punkNameRevealed;
     public bool corpseRetrieved;
     public bool shattering;
 
