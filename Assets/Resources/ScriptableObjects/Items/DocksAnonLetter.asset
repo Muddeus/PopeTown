@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
   m_Name: DocksAnonLetter
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  titleText: Anonymous letter in bushes
+  titleText: ANONYMOUS LETTER IN BUSHES
   text: 'An anonymous letter written with newspaper clippings, found in the bushes
     by the lake.\nIt reads: Come where the fire dances in the mirror, or my identity
     will be one for all to see.'
-  newItem: 1
+  newItem: 0
   mayorResponseText: 
   mayorConversation: []
   sexWorkerResponseText: 

@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
+  m_Name: Docks2
+  m_EditorClassIdentifier: Assembly-CSharp::Question
+  questionText: Do you have anything to do with the fireworks going off?
+  conversation:
+  - Uhhh...
+  - "Okay, I get that you\u2019re supposed to be some kind of detective, but since
+    you\u2019re also a <i>nun</i>, that means this is all confidential, right?"
+  - "And you\u2019re only here for the murder, right?"
+  - And not other... smaller... crimes.
+  - <i>...right?</i>
+  - ...
+  - "Because yeah that\u2019s been me I\u2019ve been setting those off."
+  - "But I\u2019m allowed to! Well\u2013 uh \u2013<i>sort of</i>."
+  - "There\u2019s... <i>look</i>, I\u2019m not allowed to say who it is, but there\u2019s
+    someone who makes people look the other way."
+  - "So it\u2019s <i>practically</i> legal."
+  unlocked: 0
+  newQuestion: 0
+  location: 3
+  character: 5
+  itemReceived: {fileID: 0}
+  itemUnlockAt: 0
+  itemReceived2: {fileID: 0}
+  itemUnlockAt2: 0
+  itemReceived3: {fileID: 0}
+  itemUnlockAt3: 0
+  itemPresent: {fileID: 0}
+  itemPresentAt: 0
+  itemPresent2: {fileID: 0}
+  itemPresentAt2: 0
+  itemPresent3: {fileID: 0}
+  itemPresentAt3: 0
+  checkToUnlockLocation: 0
+  unlockLocation: 0
+  dialogue: []
+  exploredIDs: []
+  devNotes: 

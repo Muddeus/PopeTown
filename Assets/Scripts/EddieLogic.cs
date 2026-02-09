@@ -3,6 +3,7 @@ using UnityEngine;
 public class EddieLogic : MonoBehaviour
 {
     public GameObject portrait;
+    public GameObject button;
 
     private Animator anim;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -14,6 +15,7 @@ public class EddieLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(portrait.activeInHierarchy != button.activeInHierarchy)button.SetActive(portrait.activeInHierarchy);
         if (portrait.gameObject.activeSelf != GameManager.Ins.punkRevealed)
         {
             print(GameManager.Ins.punkRevealed);
