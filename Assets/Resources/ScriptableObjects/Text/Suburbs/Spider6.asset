@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
+  m_Name: Spider6
+  m_EditorClassIdentifier: Assembly-CSharp::Question
+  questionText: What were you doing in the Town Square when you found the body?
+  conversation:
+  - ...
+  - I like you hun.
+  - "I can tell the way a person judges me the moment they first look at me. And
+    you look at me like I\u2019m just the baker, or the postman. Just another person
+    doing their job."
+  - A part of that job, is <i>confidentiality.</i>
+  - "I\u2019m not hiding any of my own secrets."
+  - "But I\u2019m still hiding <i>plenty of secrets.</i>"
+  - I know someone who likes to stick things in mousetraps.
+  - I know someone who likes to be stoned. The biblical kind.
+  - "And I bet you\u2019ve never even heard of gum-play."
+  - "And I\u2019ll tell you all about it. Just stick around for my deathbed."
+  - "For now, all I\u2019ll tell you for your investigation is this:"
+  - "I only leave the East District if I\u2019m called."
+  unlocked: 1
+  newQuestion: 1
+  location: 4
+  character: 2
+  itemReceived: {fileID: 0}
+  itemUnlockAt: 0
+  itemReceived2: {fileID: 0}
+  itemUnlockAt2: 0
+  itemReceived3: {fileID: 0}
+  itemUnlockAt3: 0
+  itemPresent: {fileID: 0}
+  itemPresentAt: 0
+  itemPresent2: {fileID: 0}
+  itemPresentAt2: 0
+  itemPresent3: {fileID: 0}
+  itemPresentAt3: 0
+  checkToUnlockLocation: 0
+  unlockLocation: 4
+  dialogue: []
+  exploredIDs:
+  - {fileID: 11400000, guid: 2813ab4b5f77b734d85c0cc66825cccb, type: 2}
+  devNotes: 

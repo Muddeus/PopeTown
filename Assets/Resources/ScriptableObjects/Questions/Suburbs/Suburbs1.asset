@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f482a36fca29c64b811a7c771140c06, type: 3}
+  m_Name: Suburbs1
+  m_EditorClassIdentifier: Assembly-CSharp::TextObj
+  ID: 0
+  character: 2
+  location: 4
+  text:
+  - Morning sister.
+  - "If you\u2019re here about the murder, then I\u2019ll give you a minute."
+  - "If you\u2019re here for anything else, then I\u2019ll give you ten."
+  - "...<i>kidding.</i> I know your type can\u2019t go in for that."
+  unlocked: 1
+  itemReceived: {fileID: 0}
+  itemUnlockAfter: 0
+  itemReceived2: {fileID: 0}
+  itemUnlockAfter2: 0
+  itemReceived3: {fileID: 0}
+  itemUnlockAfter3: 0
+  exploredIDs:
+  - {fileID: 0}
