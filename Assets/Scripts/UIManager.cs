@@ -1256,6 +1256,7 @@ public class UIManager : MonoBehaviour
                 break;
             case Character.Handywoman:
                 nameBoxText.text = "The Handyma'am";
+                
                 break;
             case Character.Punk:
                 if(GameManager.Ins.punkNameRevealed)nameBoxText.text = "Eddie";
@@ -1301,20 +1302,20 @@ public class UIManager : MonoBehaviour
                 if (GameManager.Ins.punkRevealed && !GameManager.Ins.punkNameRevealed) nameBoxText.text = "???";
                 break;
             case Location.Suburbs:
-                currentPortrait = suburbsBG;
-                nameBoxText.text = "";
+                currentPortrait = sexWorkerPortrait;
+                nameBoxText.text = "SPIDER";
                 break;
             case Location.ArtStudio:
-                currentPortrait = artStudioBG;
-                nameBoxText.text = "";
+                currentPortrait = artistPortrait;
+                nameBoxText.text = "GEMINI";
                 break;
             case Location.Shack:
-                currentPortrait = shackBG;
-                nameBoxText.text = "";
+                currentPortrait = handywomanPortrait;
+                nameBoxText.text = "HANDYMA'AM";
                 break;
             case Location.Park:
-                currentPortrait = parkBG;
-                nameBoxText.text = "";
+                currentPortrait = homelessPortrait;
+                nameBoxText.text = "FISHBURN";
                 break;
         }
 
