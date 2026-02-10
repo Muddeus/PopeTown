@@ -1,16 +1,28 @@
 fileFormatVersion: 2
-guid: 30ac1bf247f9c6a4491c38becbfadad7
+guid: ea3b050b80d187a40b54532b2347e9da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4140729806230153740
-    second: Fishburn_0
+      213: -7997628599919806254
+    second: Fishburn Park_0
   - first:
-      213: -5966904228686816326
-    second: Fishburn_1
+      213: 4153419300287172386
+    second: Fishburn Park_1
   - first:
-      213: 6211107861064110154
-    second: Fishburn_2
+      213: 368099007876768283
+    second: Fishburn Park_2
+  - first:
+      213: -5909000286410804544
+    second: Fishburn Park_3
+  - first:
+      213: -3235847451302945338
+    second: Fishburn Park_4
+  - first:
+      213: -5779358077751666589
+    second: Fishburn Park_5
+  - first:
+      213: -6356732940303361659
+    second: Fishburn Park_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +64,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -90,19 +102,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -117,6 +116,19 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -158,67 +170,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fishburn_0
+      name: Fishburn Park_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 320
-        height: 180
+        x: 10
+        y: 118
+        width: 21
+        height: 51
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c0a683bf1d3d67930800000000000000
-      internalID: 4140729806230153740
+      spriteID: 2d876406927b20190800000000000000
+      internalID: -7997628599919806254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fishburn_1
+      name: Fishburn Park_1
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
-        width: 320
-        height: 180
+        x: 12
+        y: 162
+        width: 23
+        height: 13
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: abb9850d73c413da0800000000000000
-      internalID: -5966904228686816326
+      spriteID: 22f4edc09d8e3a930800000000000000
+      internalID: 4153419300287172386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fishburn_2
+      name: Fishburn Park_2
       rect:
         serializedVersion: 2
-        x: 640
-        y: 0
-        width: 320
-        height: 180
+        x: 32
+        y: 131
+        width: 37
+        height: 37
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a40dc5811b9423650800000000000000
-      internalID: 6211107861064110154
+      spriteID: b122baee810cb1500800000000000000
+      internalID: 368099007876768283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishburn Park_3
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 166
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c27dc6fb830ffda0800000000000000
+      internalID: -5909000286410804544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishburn Park_4
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 114
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd1cb523e5f713d0800000000000000
+      internalID: -3235847451302945338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishburn Park_5
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 116
+        width: 120
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 368d3d9d2789bcfa0800000000000000
+      internalID: -5779358077751666589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishburn Park_6
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 65
+        width: 43
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5899139f11958c7a0800000000000000
+      internalID: -6356732940303361659
       vertices: []
       indices: 
       edges: []
@@ -227,7 +327,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a1ccccbfec06c8a41830e297e57fe388
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -235,13 +335,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":1.0},"gridSpriteSize":{"x":320.0,"y":180.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Fishburn_0: 4140729806230153740
-      Fishburn_1: -5966904228686816326
-      Fishburn_2: 6211107861064110154
+      Fishburn Park_0: -7997628599919806254
+      Fishburn Park_1: 4153419300287172386
+      Fishburn Park_2: 368099007876768283
+      Fishburn Park_3: -5909000286410804544
+      Fishburn Park_4: -3235847451302945338
+      Fishburn Park_5: -5779358077751666589
+      Fishburn Park_6: -6356732940303361659
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
