@@ -134,7 +134,8 @@ public class GameManager : MonoBehaviour
                     "What the flip..! What.",
                     "Stop talking weird at me, what the flip...",
                     "You... are weird???",
-                    "One time I found a rotten Andy under the lake. I felt my foot touch something underwater and it turned out to be the guy that went missing."
+                    "One time I found a rotten Andy under the lake. I felt my foot touch something underwater and it turned out to be the guy that went missing.",
+                    "...You smell like sweet apple. Bad.",
                 };
                 return response[Random.Range(0, response.Length)];
             case Character.Artist:

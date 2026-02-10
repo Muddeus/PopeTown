@@ -15,10 +15,10 @@ MonoBehaviour:
   questionText: Do you recognise this note?
   conversation:
   - "Uh...no. No I don\u2019t."
-  - Is this supposed to sound cool by the way?
+  - Is it supposed to sound cool by the way?
   - "Because it really <i>doesn\u2019t</i>."
-  unlocked: 0
-  newQuestion: 0
+  unlocked: 1
+  newQuestion: 1
   location: 0
   character: 0
   itemReceived: {fileID: 0}
