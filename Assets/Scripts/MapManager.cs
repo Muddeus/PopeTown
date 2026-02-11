@@ -12,7 +12,10 @@ public class MapManager : MonoBehaviour
 
     void OnEnable()
     {
+        newTS = false; newMO = false; newShack = false; newPark = false; newDocks = false; newED = false; newAS = false;
+        
         foreach(GameObject obj in disableOnEnable) obj.SetActive(false);
+        
         townSquare.SetActive(GameManager.Ins.townSquareUnlocked);
         mayorsOffice.SetActive(GameManager.Ins.mayorsOfficeUnlocked);
         shack.SetActive(GameManager.Ins.shackUnlocked);
