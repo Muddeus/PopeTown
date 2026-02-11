@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
   m_Name: Entrance0.2
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  titleText: TWINSKIN LIMITATIONS
-  text: The Twinskin is unable to duplicate anything artificial.
+  titleText: <color=#FF0000>TWINSKIN</color> LIMITATIONS
+  text: The <color=#FF0000>Twinskin</color> is unable to duplicate anything artificial.
   newItem: 0
   mayorResponseText: 
   mayorConversation: []
