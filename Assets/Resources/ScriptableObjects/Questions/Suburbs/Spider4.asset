@@ -30,10 +30,10 @@ MonoBehaviour:
     for him when he was on the street. He and I are tight."
   - "So after the mayor set him up there, that put me at ease a little. So there\u2019s
     that at least."
-  unlocked: 0
+  unlocked: 1
   newQuestion: 0
-  location: 0
-  character: 0
+  location: 4
+  character: 2
   itemReceived: {fileID: 0}
   itemUnlockAt: 0
   itemReceived2: {fileID: 0}
