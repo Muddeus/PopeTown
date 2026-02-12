@@ -10,6 +10,9 @@ public class Notesification : MonoBehaviour
     public GameObject notesBox;
     void Start()
     {
+        string notifyColor = "#" + ColorUtility.ToHtmlStringRGB(GameManager.Ins.notifyColor);
+        TMP_Text notifText = alert.GetComponent<TMP_Text>();
+        notifText.text = notifText.text.Replace("notiCol", notifyColor);
         alert.SetActive(false);
     }
 

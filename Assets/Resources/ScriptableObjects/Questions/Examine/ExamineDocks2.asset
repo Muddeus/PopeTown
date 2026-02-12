@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: 
   conversation:
-  - andy write this part
+  - The lake is quiet and peaceful.
+  - The mild hubbub of the town is but a faint murmur.
   unlocked: 0
-  newQuestion: 1
+  newQuestion: 0
   location: 3
   character: 5
   itemReceived: {fileID: 0}
@@ -33,6 +34,7 @@ MonoBehaviour:
   itemPresentAt3: 0
   checkToUnlockLocation: 0
   unlockLocation: 0
+  dialogue: []
   exploredIDs:
   - {fileID: 11400000, guid: ef0988c6c8f6baf4d859b8e5e5b5053f, type: 2}
   devNotes: after eddie reveal

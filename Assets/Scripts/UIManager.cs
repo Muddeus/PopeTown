@@ -9,6 +9,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using ColorUtility = UnityEngine.ColorUtility;
 
 public class UIManager : MonoBehaviour
 {
@@ -364,6 +365,9 @@ public class UIManager : MonoBehaviour
         // Check for bad characters to replace
         mainText = mainText.Replace('’', '\'');
         mainText = mainText.Replace('‘', '’');
+        string notifyColor = "#" + ColorUtility.ToHtmlStringRGB(GameManager.Ins.notifyColor);
+        mainText = mainText.Replace("notiCol", notifyColor);
+        
         // Only show as much of the string as as been revealed so far in the animation.
         mainTextDisplay.text = mainText.Substring(0, textPosition);
         // Remove \ from end
@@ -395,7 +399,7 @@ public class UIManager : MonoBehaviour
             }
             mTextDisPos++;
         }
-        
+
         /*// dealing with complete blocks (<x>, </x>, etc...) but still bad formatting
         string[] formatTypes = new string[] { "i", "b" };
         foreach (string formatType in formatTypes)

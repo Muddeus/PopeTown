@@ -551,7 +551,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (!)
+  m_text: (<color=notiCol>!</color>)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f142aed3be055284eb5c991cfa702ca5, type: 2}
   m_sharedMaterial: {fileID: -1204510001096136984, guid: f142aed3be055284eb5c991cfa702ca5, type: 2}
@@ -12096,6 +12096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b169980adbed6a8428d0084f403bd33f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  notifyColor: {r: 0.7490196, g: 0.71156865, b: 0.71156865, a: 1}
   location: 0
   character: 0
   entranceTextProgress: 0
@@ -15428,7 +15429,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1682927419
 RectTransform:
   m_ObjectHideFlags: 0
