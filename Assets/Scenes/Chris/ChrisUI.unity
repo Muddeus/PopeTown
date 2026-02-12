@@ -12112,7 +12112,7 @@ MonoBehaviour:
   suburbsUnlocked: 0
   artStudioUnlocked: 0
   shackUnlocked: 0
-  parkUnlocked: 0
+  parkUnlocked: 1
   startingItems:
   - {fileID: 11400000, guid: 1095a56a53fa1d24fba3a2df5b3dc697, type: 2}
   - {fileID: 11400000, guid: 52db1079796cb1c47bf492a247266007, type: 2}

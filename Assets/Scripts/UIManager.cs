@@ -1333,7 +1333,12 @@ public class UIManager : MonoBehaviour
         }
         else if(portraitPanel.transform.childCount == 0)
         {
-            Instantiate(currentPortrait, portraitPanel.transform);
+            GameObject obj = Instantiate(currentPortrait, portraitPanel.transform);
+            print("Portrait instantiated position: " + obj.transform.position);
+            obj.GetComponent<RectTransform>().localPosition = new Vector3(0, obj.GetComponent<yOffset>().offset, 0f);
+            
+            //obj.GetComponent<RectTransform>().position = new Vector3(obj.transform.position.x, obj.transform.position.y + obj.GetComponent<yOffset>().offset, 0f);
+            //obj.GetComponent<RectTransform>().position
             //print("Set Portrait..." + currentPortrait.name);
         }
     }

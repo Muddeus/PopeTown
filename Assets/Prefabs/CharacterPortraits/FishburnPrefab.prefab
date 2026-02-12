@@ -175,6 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3774394406157928266}
   - component: {fileID: 8939367296460886952}
+  - component: {fileID: 3521549106402417818}
   m_Layer: 5
   m_Name: FishburnPrefab
   m_TagString: Untagged
@@ -228,6 +229,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3521549106402417818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3374946544918211022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715f8a98bcc163742984bff57c7e7ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::yOffset
+  offset: -5
 --- !u!1 &4736019061069717006
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,11 +566,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195691373633361090, guid: 1d6910cda24ecd34789d7a06d837877f, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 60.49
+      value: 71.0655
       objectReference: {fileID: 0}
     - target: {fileID: 1195691373633361090, guid: 1d6910cda24ecd34789d7a06d837877f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 49.58
+      value: 67.0646
       objectReference: {fileID: 0}
     - target: {fileID: 1195691373633361090, guid: 1d6910cda24ecd34789d7a06d837877f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -568,7 +582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195691373633361090, guid: 1d6910cda24ecd34789d7a06d837877f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2299.7205
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1195691373633361090, guid: 1d6910cda24ecd34789d7a06d837877f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -588,11 +602,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195691373633361090, guid: 1d6910cda24ecd34789d7a06d837877f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 88.25
+      value: 96.4989
       objectReference: {fileID: 0}
     - target: {fileID: 1195691373633361090, guid: 1d6910cda24ecd34789d7a06d837877f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 78.17
+      value: 93.96254
       objectReference: {fileID: 0}
     - target: {fileID: 1195691373633361090, guid: 1d6910cda24ecd34789d7a06d837877f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

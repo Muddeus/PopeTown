@@ -175,6 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3774394406157928266}
   - component: {fileID: 8939367296460886952}
+  - component: {fileID: 2743120387579922856}
   m_Layer: 5
   m_Name: SpiderPrefab
   m_TagString: Untagged
@@ -228,6 +229,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2743120387579922856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3374946544918211022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715f8a98bcc163742984bff57c7e7ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::yOffset
+  offset: -5
 --- !u!1 &4736019061069717006
 GameObject:
   m_ObjectHideFlags: 0

@@ -192,6 +192,7 @@ GameObject:
   - component: {fileID: 8939367296460886952}
   - component: {fileID: 2759693170192368449}
   - component: {fileID: 7770962626577098087}
+  - component: {fileID: 2497965505473980484}
   m_Layer: 5
   m_Name: TownSquarePrefab
   m_TagString: Untagged
@@ -355,6 +356,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2497965505473980484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3374946544918211022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715f8a98bcc163742984bff57c7e7ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::yOffset
+  offset: 0
 --- !u!1 &7118773579228128532
 GameObject:
   m_ObjectHideFlags: 0
