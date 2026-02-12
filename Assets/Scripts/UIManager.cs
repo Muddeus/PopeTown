@@ -1227,6 +1227,21 @@ public class UIManager : MonoBehaviour
         mainTextDisplay.text = text;
     }
 
+    public Item[] tutorialItems;
+    public void ClearTutorialItems()
+    {
+        if (tutorialItems == null) return;
+        foreach (Item i in tutorialItems)
+        {
+            for (int x = ownedItemList.Count-1; x >= 0; x-- )
+            {
+                if (i == ownedItemList[x]) ownedItemList.RemoveAt(x);
+            }
+        }
+
+        tutorialItems = null;
+    }
+
     private Animator shatterAnim;
     public void ShatterMask()
     {

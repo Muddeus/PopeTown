@@ -6109,6 +6109,18 @@ MonoBehaviour:
           m_StringArgument: Town Map.
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 829410572}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: ClearTutorialItems
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &233884793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9969,6 +9981,9 @@ MonoBehaviour:
   scrollbar: {fileID: 1590379303}
   textSpeed: 0.02
   emptyItem: {fileID: 11400000, guid: c481816de58a96545ab420fa82d72deb, type: 2}
+  tutorialItems:
+  - {fileID: 11400000, guid: 4a44b0ea9545cba4d83780808363e350, type: 2}
+  - {fileID: 11400000, guid: 8e281bab4442ddb4e9975fa6f9b18719, type: 2}
 --- !u!95 &829410573
 Animator:
   serializedVersion: 7
