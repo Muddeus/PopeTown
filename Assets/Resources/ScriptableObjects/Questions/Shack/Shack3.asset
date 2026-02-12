@@ -10,19 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
-  m_Name: ExamineArtStudio
+  m_Name: Shack3
   m_EditorClassIdentifier: Assembly-CSharp::Question
-  questionText: 
+  questionText: "What\u2019s that on your computer?"
   conversation:
-  - The store is cluttered with art supplies and artworks, each at varying stages
-    of completion.
-  - A pleasant odour of cinnamon incense permeates the air, and a kiln stands within
-    the back of the shop.
-  - The owner appears rather tired.
-  unlocked: 0
+  - ...
+  - ...
+  - <i>...I wonder?</i>
+  unlocked: 1
   newQuestion: 1
-  location: 5
-  character: 4
+  location: 0
+  character: 0
   itemReceived: {fileID: 0}
   itemUnlockAt: 0
   itemReceived2: {fileID: 0}
@@ -38,6 +36,5 @@ MonoBehaviour:
   checkToUnlockLocation: 0
   unlockLocation: 0
   dialogue: []
-  exploredIDs:
-  - {fileID: 11400000, guid: ef0988c6c8f6baf4d859b8e5e5b5053f, type: 2}
+  exploredIDs: []
   devNotes: 

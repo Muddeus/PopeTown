@@ -10,26 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
-  m_Name: Spider6
+  m_Name: Spider3
   m_EditorClassIdentifier: Assembly-CSharp::Question
-  questionText: What were you doing in the Town Square when you found the body?
+  questionText: Do you feel safe here?
   conversation:
-  - ...
-  - I like you hun.
-  - "I can tell the way a person judges me the moment they first look at me. And
-    you look at me like I\u2019m just the baker, or the postman. Just another person
-    doing their job."
-  - A part of that job, is <i>confidentiality.</i>
-  - "I\u2019m not hiding any of my own secrets."
-  - "But I\u2019m still hiding <i>plenty of secrets.</i>"
-  - I know someone who likes to stick things in mousetraps.
-  - I know someone who likes to be stoned. The biblical kind.
-  - "And I bet you\u2019ve never even heard of gum-play."
-  - "And I\u2019ll tell you all about it. Just stick around for my deathbed."
-  - "For now, all I\u2019ll tell you for your investigation is this:"
-  - "I only leave the East District if I\u2019m called."
+  - Well, I used to feel <i>safer.</i>
+  - "And I\u2019m not referring to the murder. Although that obviously hasn\u2019t
+    helped."
+  - No, some asswipe ass-swiped my <i>gun.</i>
+  - "That or I dropped it. Either way, now there\u2019s some asshole running around
+    with my Colt Delta Elite and I\u2019m stuck with bear mace."
+  - And yeah, <i>sure</i>, there are plenty of street corners in the safer parts
+    of Aberdeen, but not as much action either.
+  - "So if you\u2019re gonna be poking around anyway, mind keeping an eye out for
+    my gun?"
   unlocked: 1
-  newQuestion: 1
+  newQuestion: 0
   location: 4
   character: 2
   itemReceived: {fileID: 0}

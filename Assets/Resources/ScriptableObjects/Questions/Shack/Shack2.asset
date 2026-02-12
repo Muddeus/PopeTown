@@ -10,24 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
-  m_Name: Spider4
+  m_Name: Shack2
   m_EditorClassIdentifier: Assembly-CSharp::Question
-  questionText: Do you feel safe here?
+  questionText: Is there anything you know about the incident?
   conversation:
-  - Well, I used to feel <i>safer.</i>
-  - "And I\u2019m not referring to the murder. Although that obviously hasn\u2019t
-    helped."
-  - No, some asswipe ass-swiped my <i>gun.</i>
-  - "That or I dropped it. Either way, now there\u2019s some asshole running around
-    with my Colt Delta Elite and I\u2019m stuck with bear mace."
-  - And <i>yeah</i>, sure, there are plenty of street corners in the safer parts
-    of Aberdeen, but not as much action either.
-  - "So if you\u2019re gonna be poking around anyway, mind keeping an eye out for
-    my gun?"
+  - ...
+  - ...
+  - ...oh the murder...
+  - ...
+  - ...
+  - ...no.
   unlocked: 1
   newQuestion: 1
-  location: 4
-  character: 2
+  location: 6
+  character: 6
   itemReceived: {fileID: 0}
   itemUnlockAt: 0
   itemReceived2: {fileID: 0}
@@ -41,8 +37,7 @@ MonoBehaviour:
   itemPresent3: {fileID: 0}
   itemPresentAt3: 0
   checkToUnlockLocation: 0
-  unlockLocation: 4
+  unlockLocation: 0
   dialogue: []
-  exploredIDs:
-  - {fileID: 11400000, guid: 2813ab4b5f77b734d85c0cc66825cccb, type: 2}
+  exploredIDs: []
   devNotes: 

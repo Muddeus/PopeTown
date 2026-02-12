@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
+  m_Name: Spider4
+  m_EditorClassIdentifier: Assembly-CSharp::Question
+  questionText: What do you think of the East District development?
+  conversation:
+  - "Well on paper it\u2019s good, but so\u2019s half the stuff Bunyon promises,
+    and that\u2019s where most of it stays."
+  - "We still don\u2019t have a physician, but you know what we have <i>two of</i>
+    now?"
+  - Squash courts.
+  - "And I don\u2019t mean he expanded the one court into <i>two</i>. We now have
+    <i>two</i> separate squash courts, owned by <i>two</i> separate people."
+  - "What I <i>really don\u2019t</i> care for is what it\u2019s all doing to the
+    sky, because of the... <i>what do you call it...</i>"
+  - "Light pollution, that\u2019s it. It\u2019s ruining the view at night. Which
+    is a shame, since that\u2019s when I\u2019m the most busy."
+  - "The one <i>good</i> thing he\u2019s done with it all is the Youth Housing."
+  - "Eddie, that punk teenager you might\u2019ve seen running around, I looked out
+    for him when he was on the street. He and I are tight."
+  - "So after the mayor set him up there, that put me at ease a little. So there\u2019s
+    that at least."
+  unlocked: 0
+  newQuestion: 0
+  location: 0
+  character: 0
+  itemReceived: {fileID: 0}
+  itemUnlockAt: 0
+  itemReceived2: {fileID: 0}
+  itemUnlockAt2: 0
+  itemReceived3: {fileID: 0}
+  itemUnlockAt3: 0
+  itemPresent: {fileID: 0}
+  itemPresentAt: 0
+  itemPresent2: {fileID: 0}
+  itemPresentAt2: 0
+  itemPresent3: {fileID: 0}
+  itemPresentAt3: 0
+  checkToUnlockLocation: 0
+  unlockLocation: 0
+  dialogue: []
+  exploredIDs: []
+  devNotes: 

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: 
   conversation:
-  - "The Handyma\u2019am\u2019s shack is...cosy."
+  - "The Handyma\u2019am\u2019s shack is...<i>cosy</i>."
   - "There\u2019s a computer on her desk."
   - "The Handyma\u2019am is unabashedly trying to look at internet pornography."
   unlocked: 0
@@ -35,6 +35,7 @@ MonoBehaviour:
   itemPresentAt3: 0
   checkToUnlockLocation: 0
   unlockLocation: 0
+  dialogue: []
   exploredIDs:
   - {fileID: 11400000, guid: ef0988c6c8f6baf4d859b8e5e5b5053f, type: 2}
   devNotes: 

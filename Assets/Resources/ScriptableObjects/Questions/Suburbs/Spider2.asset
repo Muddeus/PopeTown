@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
-  m_Name: Spider3
+  m_Name: Spider2
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: Is there anything you know about the incident?
   conversation:
@@ -20,7 +20,7 @@ MonoBehaviour:
   - "<i>Ooo</i>, that\u2019s exciting."
   - "I was obviously shocked when I found it, but in the big picture, it\u2019s not
     particularly unexpected. At least not for what Aberdeen\u2019s becoming."
-  - "Bunyon\u2019s being really lax with his whole \u2018East development project\u2019.
+  - "Bunyon\u2019s being really lax with his whole \u2018East Development Project\u2019.
     Not enough\u2019s being put into keeping the expanding neighbourhood safe."
   - "So the East District\u2019s getting dangerous, and it\u2019s only a hop and
     a skip away from the heart of Aberdeen."
