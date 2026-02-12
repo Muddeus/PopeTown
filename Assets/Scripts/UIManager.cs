@@ -1222,6 +1222,11 @@ public class UIManager : MonoBehaviour
         emptyNotesText.SetActive(notesBoxContent.childCount == 0);
     }
 
+    public void SetMainTextDisplay(string text)
+    {
+        mainTextDisplay.text = text;
+    }
+
     private Animator shatterAnim;
     public void ShatterMask()
     {

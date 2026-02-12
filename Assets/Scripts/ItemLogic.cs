@@ -30,7 +30,7 @@ public class ItemLogic : MonoBehaviour
         else // After initialisation
         {
             //buttonText.text = item.titleText + (newItem?" (!)":"");
-            buttonText.text = item.titleText + (item.titleText.Length>13?(newItem?"(<color=notiCol>!</color>)":""):(newItem?" (<color=notiCol>!</color>)":""));
+            buttonText.text = item.titleText + (item.titleText.Length>30?(newItem?"(<color=notiCol>!</color>)":""):(newItem?" (<color=notiCol>!</color>)":"")); // WAS item.titleText.Length>13?
             string notifyColor = "#" + ColorUtility.ToHtmlStringRGB(GameManager.Ins.notifyColor);
             buttonText.text = buttonText.text.Replace("notiCol", notifyColor);
         }

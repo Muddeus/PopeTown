@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
+  m_Name: ArtStudio3
+  m_EditorClassIdentifier: Assembly-CSharp::Question
+  questionText: Why were you awake the entire night?
+  conversation:
+  - I... <i>um...</i>
+  - Oh dear.
+  - I suppose this sort of <i>hesitance</i> isn't a good look now is it?
+  - Alright, well to tell the truth, I was waiting for my husband to come home.
+  - "The, um\u2014 the <i>Mayor</i>, that is."
+  - "I can assume you\u2019ve already spoken with him. He\u2019s been spending so
+    many nights at the office. <i>Too many</i>."
+  - "And I\u2019m... I..."
+  - "There\u2019s just a bit of tension is all. Sorry, but that\u2019s all I want
+    to say on that."
+  unlocked: 0
+  newQuestion: 0
+  location: 5
+  character: 4
+  itemReceived: {fileID: 0}
+  itemUnlockAt: 0
+  itemReceived2: {fileID: 0}
+  itemUnlockAt2: 0
+  itemReceived3: {fileID: 0}
+  itemUnlockAt3: 0
+  itemPresent: {fileID: 0}
+  itemPresentAt: 0
+  itemPresent2: {fileID: 0}
+  itemPresentAt2: 0
+  itemPresent3: {fileID: 0}
+  itemPresentAt3: 0
+  checkToUnlockLocation: 0
+  unlockLocation: 0
+  dialogue: []
+  exploredIDs:
+  - {fileID: 11400000, guid: 7a3fed853d2570846b5d34caef8ce29b, type: 2}
+  devNotes: 
