@@ -12196,7 +12196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b169980adbed6a8428d0084f403bd33f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  notifyColor: {r: 0.7490196, g: 0.71156865, b: 0.71156865, a: 1}
+  notifyColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
   location: 0
   character: 0
   entranceTextProgress: 0
