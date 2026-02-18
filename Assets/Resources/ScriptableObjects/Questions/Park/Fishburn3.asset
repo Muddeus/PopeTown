@@ -12,18 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
   m_Name: Fishburn3
   m_EditorClassIdentifier: Assembly-CSharp::Question
-  questionText: Do you have anything against the mayor?
+  questionText: What were you doing last night?
   conversation:
-  - "...<i>oh.</i> Alright, I <i> see.</i>  Don\u2019t worry, we\u2019re still on
-    the same page here."
-  - "\u201CYou\u2019ve gotta see if I\u2019ve got my own reasons for wanting to frame
-    the guy, right? Gotta scrutinize everyone, no stones unturned. Even for good
-    old Fishburn. I get it.\u201D"
-  - "\u201CWell to answer your suspicions, no. I\u2019ve got no reasons to want Bunyon
-    under the bus.\u201D"
-  - '"Good line of thinkin'' though."'
+  - I was up to my usual. <i>Stargazing.</i>
+  - "See, I\u2019m homeless by choice. Why on Earth would I choose to live life with
+    a constant barrier between me and nature\u2019s greatest beauty?"
+  - After all, you get some of the best night skies out here in Aberdeen.
+  - Or at least, you <i>used</i> to.
   unlocked: 1
-  newQuestion: 1
+  newQuestion: 0
   location: 7
   character: 3
   itemReceived: {fileID: 0}
@@ -41,6 +38,5 @@ MonoBehaviour:
   checkToUnlockLocation: 0
   unlockLocation: 0
   dialogue: []
-  exploredIDs:
-  - {fileID: 11400000, guid: 9c0d3ab07b600094e8cf0a7275a3f818, type: 2}
+  exploredIDs: []
   devNotes: Update this with actual accusation

@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
-  m_Name: SuburbsLightPollution
+  m_Name: DocksEddieWitnessedBody
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  titleText: LIGHT POLLUTION
-  text: The East District is creating light pollution.
+  titleText: EDDIE WITNESSED THE BODY
+  text: Three hours after setting off his fireworks, Eddie witnessed someone drop
+    a body onto the power lines in the Town Square.
   newItem: 1
   mayorResponseText: 
   mayorConversation: []
@@ -29,4 +30,4 @@ MonoBehaviour:
   handywomanConversation: []
   unlocked: 0
   exploredIDs: []
-  devNote: 'Obtained: Spider(What do you think of...)'
+  devNote: "Obtained: Shatter Eddie\u2019s mask."

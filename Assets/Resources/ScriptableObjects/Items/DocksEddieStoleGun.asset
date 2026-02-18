@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
-  m_Name: SuburbsLightPollution
+  m_Name: DocksEddieStoleGun
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  titleText: LIGHT POLLUTION
-  text: The East District is creating light pollution.
+  titleText: EDDIE STOLE THE GUN
+  text: Eddie stole Spider's gun. They took care of it, and never fired it.
   newItem: 1
   mayorResponseText: 
   mayorConversation: []
@@ -29,4 +29,4 @@ MonoBehaviour:
   handywomanConversation: []
   unlocked: 0
   exploredIDs: []
-  devNote: 'Obtained: Spider(What do you think of...)'
+  devNote: "Obtained: Shatter Eddie\u2019s mask."

@@ -10,66 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
-  m_Name: Docks4
+  m_Name: Fishburn5
   m_EditorClassIdentifier: Assembly-CSharp::Question
-  questionText: What do you think of your accommodation from Mayor Bunyon?
+  questionText: Do you have anything against the mayor?
   conversation:
-  - "Uhhh... it\u2019s <i>fine?</i> I <i>guess?</i>"
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  unlocked: 0
+  - "...<i>oh.</i> Alright, I <i> see.</i>  Don\u2019t worry, we\u2019re still on
+    the same page here."
+  - "\u201CYou\u2019ve gotta see if I\u2019ve got my own reasons for wanting to frame
+    the guy, right? Gotta scrutinize everyone, no stones unturned. Even for good
+    old Fishburn. I get it.\u201D"
+  - "\u201CWell to answer your suspicions, no. I\u2019ve got no reasons to want Bunyon
+    under the bus.\u201D"
+  - '"Good line of thinkin'' though."'
+  unlocked: 1
   newQuestion: 1
-  location: 3
-  character: 5
+  location: 7
+  character: 3
   itemReceived: {fileID: 0}
   itemUnlockAt: 0
   itemReceived2: {fileID: 0}
@@ -86,5 +42,5 @@ MonoBehaviour:
   unlockLocation: 0
   dialogue: []
   exploredIDs:
-  - {fileID: 11400000, guid: d8849970b4dfc78449e8adb99097eba7, type: 2}
-  devNotes: UPDATE THIS WHEN READY
+  - {fileID: 11400000, guid: 9c0d3ab07b600094e8cf0a7275a3f818, type: 2}
+  devNotes: Update this with actual accusation

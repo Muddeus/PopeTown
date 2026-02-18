@@ -12,19 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
   m_Name: Fishburn4
   m_EditorClassIdentifier: Assembly-CSharp::Question
-  questionText: What were you doing last night?
+  questionText: Anything strange you notice out on the streets?
   conversation:
-  - I was up to my usual. <i>Stargazing.</i>
-  - "See, I\u2019m homeless by choice. Why on Earth would I choose to live life with
-    a constant barrier between me and nature\u2019s greatest beauty?"
-  - After all, you get some of the best night skies out here in Aberdeen.
-  - Or at least, you <i>used</i> to.
-  unlocked: 1
-  newQuestion: 0
+  - <i>Ooo</i>, good angle. Good angle.
+  - "Let\u2019s see... <i>well</i>, here\u2019s a little oddity for you. Might not
+    be related, but I know the nature of these kinds of mysteries."
+  - How these little bits and pieces end up slotting into the puzzle in ways you
+    can never see coming.
+  - <color=notiCol>At 9pm on the dot, every Saturday, including <i>last night</i>,
+    someone sets off fireworks over the lake</color>. No clue who. No clue how they
+    keep getting away with it.
+  - "Sometimes I forget, and it starts up when I\u2019m already looking out over
+    the lake. Scares the shit out of me."
+  unlocked: 0
+  newQuestion: 1
   location: 7
   character: 3
-  itemReceived: {fileID: 0}
-  itemUnlockAt: 0
+  itemReceived: {fileID: 11400000, guid: 3c07221d7dd05804d8cd6815c089623e, type: 2}
+  itemUnlockAt: 4
   itemReceived2: {fileID: 0}
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}
@@ -39,4 +44,4 @@ MonoBehaviour:
   unlockLocation: 0
   dialogue: []
   exploredIDs: []
-  devNotes: Update this with actual accusation
+  devNotes: 

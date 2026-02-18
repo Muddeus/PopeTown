@@ -23,15 +23,15 @@ MonoBehaviour:
   - ...
   - "Because yeah that\u2019s been me I\u2019ve been setting those off."
   - "But I\u2019m allowed to! Well\u2013 uh \u2013<i>sort of</i>."
-  - "There\u2019s... <i>look</i>, I\u2019m not allowed to say who it is, but there\u2019s
-    someone who makes people look the other way."
+  - "There\u2019s... <i>look</i>, I\u2019m not allowed to say who it is, <color=notiCol>but
+    there\u2019s someone who makes people look the other way</color>."
   - "So it\u2019s <i>practically</i> legal."
   unlocked: 0
-  newQuestion: 0
+  newQuestion: 1
   location: 3
   character: 5
-  itemReceived: {fileID: 0}
-  itemUnlockAt: 0
+  itemReceived: {fileID: 11400000, guid: d58c8ff56554c484aa38ddaaa3a58646, type: 2}
+  itemUnlockAt: 9
   itemReceived2: {fileID: 0}
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}
@@ -47,4 +47,5 @@ MonoBehaviour:
   dialogue: []
   exploredIDs:
   - {fileID: 11400000, guid: 8ca6f14789159ee4e932c1c756d19e8e, type: 2}
+  - {fileID: 11400000, guid: 6c5b4fdb8cb8649499d62675f04f0114, type: 2}
   devNotes: 

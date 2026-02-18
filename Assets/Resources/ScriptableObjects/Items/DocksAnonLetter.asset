@@ -16,7 +16,7 @@ MonoBehaviour:
   text: 'An anonymous letter written with newspaper clippings, found in the bushes
     by the lake.\nIt reads: Come where the fire dances in the mirror, or my identity
     will be one for all to see.'
-  newItem: 0
+  newItem: 1
   mayorResponseText: 
   mayorConversation: []
   sexWorkerResponseText: 
@@ -31,4 +31,4 @@ MonoBehaviour:
   handywomanConversation: []
   unlocked: 0
   exploredIDs: []
-  devNote: 
+  devNote: 'Obtained: Examine the docks.'
