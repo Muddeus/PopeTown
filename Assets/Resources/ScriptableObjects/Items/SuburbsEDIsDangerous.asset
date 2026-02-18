@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
-  m_Name: TS1
+  m_Name: SuburbsEDIsDangerous
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  titleText: THE CORPSE
-  text: "The corpse is strung from power lines before the mayor\u2019s office balcony.
-    It is charred beyond recognition."
+  titleText: EAST DISTRICT IS BECOMING DANGEROUS
+  text: The East District is becoming increasingly dangerous.
   newItem: 1
   mayorResponseText: 
   mayorConversation: []
@@ -29,5 +28,5 @@ MonoBehaviour:
   handywomanResponseText: 
   handywomanConversation: []
   unlocked: 0
-  exploredIDs:
-  - {fileID: 11400000, guid: e5435f604ac100e4283c80f2442c33d0, type: 2}
+  exploredIDs: []
+  devNote: 'Obtained: Spider(Is there anything...)'
