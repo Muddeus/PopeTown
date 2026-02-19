@@ -369,17 +369,17 @@ public class UIManager : MonoBehaviour
         int alpha = GameManager.Ins.notifyAlpha;
         string notifyAlpha = alpha.ToString("D2");
         Color adjustedColor = GameManager.Ins.notifyColor;
-        Color.RGBToHSV(GameManager.Ins.notifyColor, out float h, out float s, out float v);
-        adjustedColor = Color.HSVToRGB(h, s, v * alpha);
-        print("baseColor: " + GameManager.Ins.notifyColor);
-        print("adjustedColor: " + adjustedColor);
-        string notifyColor = "#" + ColorUtility.ToHtmlStringRGB(adjustedColor) + notifyAlpha;
+        //Color.RGBToHSV(GameManager.Ins.notifyColor, out float h, out float s, out float v);
+        //adjustedColor = Color.HSVToRGB(h, s, v * alpha);
+        //print("baseColor: " + GameManager.Ins.notifyColor);
+        //print("adjustedColor: " + adjustedColor);
+        string notifyColor = "#" + ColorUtility.ToHtmlStringRGB(adjustedColor); //+ notifyAlpha;
         mainText = mainText.Replace("notiCol", notifyColor);
         
         // Only show as much of the string as as been revealed so far in the animation.
         mainTextDisplay.text = mainText.Substring(0, textPosition);
-        int hightlightPosition = textPosition - 0; // CHANGE TO INCREASE HIGHLIGHT DELAY
-        hightlightPosition = Math.Clamp(hightlightPosition, 0, int.MaxValue);
+        int highlightPosition = textPosition - 10; // CHANGE TO INCREASE HIGHLIGHT DELAY
+        highlightPosition = Math.Clamp(highlightPosition, 0, int.MaxValue);
         // Remove \ from end
         if(mainTextDisplay.text.EndsWith('\\'))mainTextDisplay.text = mainTextDisplay.text.Substring(0, mainTextDisplay.text.Length - 1);
         int mTextDisPos = 0;
@@ -409,9 +409,12 @@ public class UIManager : MonoBehaviour
             }
             mTextDisPos++;
         }
-        textHighlight.text = mainTextDisplay.text.Substring(0, hightlightPosition);
-        //mainTextDisplay.text.Replace("<mark=notiCol>", "<mark=notiCol></mark>");
-        //mainTextDisplay.text.Replace("</mark>", "");
+        print("highlight pos: " + highlightPosition);
+        textHighlight.text = mainTextDisplay.text.Substring(0, math.clamp(highlightPosition, 0, mainTextDisplay.text.Length));
+        //mainTextDisplay.text.Replace($"<mark={notifyColor}>", $"<mark={notifyColor}></mark>");
+        mainTextDisplay.text = mainTextDisplay.text.Replace("</mark>", "");
+        mainTextDisplay.text = Regex.Replace(mainTextDisplay.text, "<mark=.*?>", $"<mark={notifyColor}></mark>");
+        textHighlight.text = Regex.Replace(textHighlight.text, "<color=.*?>", "<color=#000000>");
 
         /*// dealing with complete blocks (<x>, </x>, etc...) but still bad formatting
         string[] formatTypes = new string[] { "i", "b" };
@@ -432,7 +435,22 @@ public class UIManager : MonoBehaviour
     private int textPosition;
     private int textLength;
     [Range(0.01f, 0.25f)]public float textSpeed;
-    private bool textAnimating = false;
+    private bool _textAnimating = false;
+
+    private bool textAnimating
+    {
+        get { return _textAnimating; }
+        set
+        {
+            _textAnimating = value;
+            if (!value)
+            {
+                
+            }
+        }
+    }
+    
+    
     private void AnimateText()
     {
         textAnimating = true;
