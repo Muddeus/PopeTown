@@ -46,6 +46,7 @@ public class UIManager : MonoBehaviour
 
     public string mainText;
     public TMP_Text mainTextDisplay;
+    public TMP_Text textHighlight;
     private int textProgress;
     private Notesification notesification;
 
@@ -365,11 +366,20 @@ public class UIManager : MonoBehaviour
         // Check for bad characters to replace
         mainText = mainText.Replace('’', '\'');
         mainText = mainText.Replace('‘', '’');
-        string notifyColor = "#" + ColorUtility.ToHtmlStringRGB(GameManager.Ins.notifyColor);
+        int alpha = GameManager.Ins.notifyAlpha;
+        string notifyAlpha = alpha.ToString("D2");
+        Color adjustedColor = GameManager.Ins.notifyColor;
+        Color.RGBToHSV(GameManager.Ins.notifyColor, out float h, out float s, out float v);
+        adjustedColor = Color.HSVToRGB(h, s, v * alpha);
+        print("baseColor: " + GameManager.Ins.notifyColor);
+        print("adjustedColor: " + adjustedColor);
+        string notifyColor = "#" + ColorUtility.ToHtmlStringRGB(adjustedColor) + notifyAlpha;
         mainText = mainText.Replace("notiCol", notifyColor);
         
         // Only show as much of the string as as been revealed so far in the animation.
         mainTextDisplay.text = mainText.Substring(0, textPosition);
+        int hightlightPosition = textPosition - 0; // CHANGE TO INCREASE HIGHLIGHT DELAY
+        hightlightPosition = Math.Clamp(hightlightPosition, 0, int.MaxValue);
         // Remove \ from end
         if(mainTextDisplay.text.EndsWith('\\'))mainTextDisplay.text = mainTextDisplay.text.Substring(0, mainTextDisplay.text.Length - 1);
         int mTextDisPos = 0;
@@ -399,6 +409,9 @@ public class UIManager : MonoBehaviour
             }
             mTextDisPos++;
         }
+        textHighlight.text = mainTextDisplay.text.Substring(0, hightlightPosition);
+        //mainTextDisplay.text.Replace("<mark=notiCol>", "<mark=notiCol></mark>");
+        //mainTextDisplay.text.Replace("</mark>", "");
 
         /*// dealing with complete blocks (<x>, </x>, etc...) but still bad formatting
         string[] formatTypes = new string[] { "i", "b" };
@@ -412,7 +425,7 @@ public class UIManager : MonoBehaviour
                 if(badPastIndex>1)mainTextDisplay.text = mainTextDisplay.text.Substring(0, badPastIndex);
             }
         }*/
-        
+
     }
 
     private float textTimer;

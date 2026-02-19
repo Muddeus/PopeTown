@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     }
 
     public Color notifyColor;
+    [Range(0,99)] public int notifyAlpha;
     public Location location; // Leave this set to Entrance in the inspector as default starting location
     public Character character;
     public int entranceTextProgress;
