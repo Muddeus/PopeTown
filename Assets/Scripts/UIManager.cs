@@ -378,7 +378,7 @@ public class UIManager : MonoBehaviour
         
         // Only show as much of the string as as been revealed so far in the animation.
         mainTextDisplay.text = mainText.Substring(0, textPosition);
-        int highlightPosition = textPosition - 10; // CHANGE TO INCREASE HIGHLIGHT DELAY
+        int highlightPosition = textPosition - GameManager.Ins.highlightDelay; // CHANGE TO INCREASE HIGHLIGHT DELAY
         highlightPosition = Math.Clamp(highlightPosition, 0, int.MaxValue);
         // Remove \ from end
         if(mainTextDisplay.text.EndsWith('\\'))mainTextDisplay.text = mainTextDisplay.text.Substring(0, mainTextDisplay.text.Length - 1);
@@ -409,7 +409,8 @@ public class UIManager : MonoBehaviour
             }
             mTextDisPos++;
         }
-        print("highlight pos: " + highlightPosition);
+
+        fullHighlightText = mainTextDisplay.text;
         textHighlight.text = mainTextDisplay.text.Substring(0, math.clamp(highlightPosition, 0, mainTextDisplay.text.Length));
         //mainTextDisplay.text.Replace($"<mark={notifyColor}>", $"<mark={notifyColor}></mark>");
         mainTextDisplay.text = mainTextDisplay.text.Replace("</mark>", "");
@@ -437,6 +438,7 @@ public class UIManager : MonoBehaviour
     [Range(0.01f, 0.25f)]public float textSpeed;
     private bool _textAnimating = false;
 
+    private string fullHighlightText;
     private bool textAnimating
     {
         get { return _textAnimating; }
@@ -445,7 +447,8 @@ public class UIManager : MonoBehaviour
             _textAnimating = value;
             if (!value)
             {
-                
+                textHighlight.text = fullHighlightText;
+                textHighlight.text = Regex.Replace(textHighlight.text, "<color=.*?>", "<color=#000000>");
             }
         }
     }
