@@ -295,7 +295,7 @@ public class UIManager : MonoBehaviour
             if (textLength < 10) textSpeedMult = 0.1f;
             if(GameManager.Ins.character == Character.None) PlayTextSound();
             if(GameManager.Ins.character != Character.None) PlayTextSound();
-            textPosition = (int)(textTimer / textSpeed * textSpeedMult);
+            textPosition = (int)(textTimer / textSpeed * textSpeedMult * GameManager.Ins.textSpeedMult);
             textPosition = Math.Clamp(textPosition, 0, textLength);
             scrollbar.value = 0;
             // portrait animation

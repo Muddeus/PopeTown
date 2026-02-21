@@ -40,6 +40,10 @@ public class GameManager : MonoBehaviour
     public Color notifyColor;
     [Range(0,99)] public int notifyAlpha;
     public int highlightDelay;
+    public float textSpeedMult;
+    public float textSpeedFast;
+    public float textSpeedMedium;
+    public float textSpeedSlow;
     public Location location; // Leave this set to Entrance in the inspector as default starting location
     public Character character;
     public int entranceTextProgress;
