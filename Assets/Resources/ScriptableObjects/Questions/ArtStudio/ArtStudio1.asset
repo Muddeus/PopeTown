@@ -33,10 +33,10 @@ MonoBehaviour:
   newQuestion: 1
   location: 5
   character: 4
-  itemReceived: {fileID: 0}
-  itemUnlockAt: 0
-  itemReceived2: {fileID: 0}
-  itemUnlockAt2: 0
+  itemReceived: {fileID: 11400000, guid: 827f88ee01b8b4f4381fe47bf3add417, type: 2}
+  itemUnlockAt: 9
+  itemReceived2: {fileID: 11400000, guid: a63ad586744452f40803bb1f60c4aa5f, type: 2}
+  itemUnlockAt2: 4
   itemReceived3: {fileID: 0}
   itemUnlockAt3: 0
   itemPresent: {fileID: 0}
