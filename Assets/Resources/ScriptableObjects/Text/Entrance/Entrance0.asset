@@ -16,8 +16,6 @@ MonoBehaviour:
   character: 0
   location: 0
   text:
-  - Test
-  - wwwwowowow wowowowowowowowowowowowow owowowowow wowowowowoow
   - "When a murder occurs, and the body can\u2019t be identified, then check to see
     who\u2019s missing."
   - "When things don\u2019t make sense, because <i>no one is missing</i>, then you\u2019re
