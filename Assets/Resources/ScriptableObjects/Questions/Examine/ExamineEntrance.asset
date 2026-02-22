@@ -15,7 +15,7 @@ MonoBehaviour:
   questionText: 
   conversation:
   - A small guardhouse, operated by a lone guard.
-  - <color=notiCol>He appears nervous and is sweating profusely</color>.
+  - <mark=notiCol>He appears nervous and is sweating profusely</mark>.
   unlocked: 0
   newQuestion: 1
   location: 0

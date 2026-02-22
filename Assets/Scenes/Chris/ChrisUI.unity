@@ -13535,10 +13535,10 @@ MonoBehaviour:
   notifyColor: {r: 0.4811321, g: 0.4589085, b: 0, a: 1}
   notifyAlpha: 10
   highlightDelay: 10
-  textSpeedMult: 1.5
+  textSpeedMult: 1.35
   textSpeedFast: 3
-  textSpeedMedium: 1.5
-  textSpeedSlow: 0.75
+  textSpeedMedium: 1.35
+  textSpeedSlow: 0.6
   location: 0
   character: 0
   entranceTextProgress: 0

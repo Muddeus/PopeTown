@@ -22,14 +22,14 @@ MonoBehaviour:
   - "I can assume you\u2019ve already spoken with him. He\u2019s been spending so
     many nights at the office. <i>Too many</i>."
   - "And I\u2019m... I..."
-  - "There\u2019s just a bit of tension is all. Sorry, but that\u2019s all I want
-    to say on that."
+  - "<mark=noticol>There\u2019s just a bit of tension is all</mark>. Sorry, but that\u2019s
+    all I want to say on that."
   unlocked: 0
   newQuestion: 0
   location: 5
   character: 4
-  itemReceived: {fileID: 0}
-  itemUnlockAt: 0
+  itemReceived: {fileID: 11400000, guid: 6d89439ce0701cd49ae3ddcbaf8004df, type: 2}
+  itemUnlockAt: 8
   itemReceived2: {fileID: 0}
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}

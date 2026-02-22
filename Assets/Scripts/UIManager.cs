@@ -409,6 +409,26 @@ public class UIManager : MonoBehaviour
             }
             mTextDisPos++;
         }
+        
+        // NEW LINE VISUAL BUG FIX
+            // Get incomplete word
+            string preFormattedMainText = mainText.Substring(0, textPosition);
+            string formattedMainText = Regex.Replace(preFormattedMainText, "<.*?>", string.Empty);
+            //int formattedTextPosition = textPosition - (preFormattedMainText.Length - mainText.Length);
+            int formattedTextPosition = textPosition - (preFormattedMainText.Length - formattedMainText.Length);
+            formattedTextPosition = math.clamp(formattedTextPosition, 0, formattedMainText.Length);
+            int nextSpaceIndex = formattedMainText.IndexOf(' ', formattedTextPosition);
+            if ((nextSpaceIndex == -1 || nextSpaceIndex > mainText.IndexOf('.', formattedTextPosition)) && mainText.IndexOf('.', formattedTextPosition) != -1) nextSpaceIndex = mainText.IndexOf('.', formattedTextPosition);
+            if ((nextSpaceIndex == -1 || nextSpaceIndex > mainText.IndexOf('?', formattedTextPosition)) && mainText.IndexOf('?', formattedTextPosition) != -1)  nextSpaceIndex = mainText.IndexOf('?', formattedTextPosition);
+            if ((nextSpaceIndex == -1 || nextSpaceIndex > mainText.IndexOf('!', formattedTextPosition)) && mainText.IndexOf('!', formattedTextPosition) != -1) nextSpaceIndex = mainText.IndexOf('!', formattedTextPosition);
+            if (nextSpaceIndex != -1) // if there is a space yet to come...
+            {   
+                Debug.Log($"formattedMainText.Length: {formattedMainText.Length}");
+                Debug.Log($"formattedTextPosition: {formattedTextPosition}");
+                string blackText = formattedMainText.Substring(formattedTextPosition);//, nextSpaceIndex - textPosition);
+                //blackText = Regex.Replace(blackText, "<.*?>", string.Empty);
+                mainTextDisplay.text = mainTextDisplay.text + "<color=#000099>" + blackText;// + "</color>";
+            }
 
         fullHighlightText = mainTextDisplay.text;
         textHighlight.text = mainTextDisplay.text.Substring(0, math.clamp(highlightPosition, 0, mainTextDisplay.text.Length));
