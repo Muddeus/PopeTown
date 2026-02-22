@@ -412,30 +412,23 @@ public class UIManager : MonoBehaviour
         
         // NEW LINE VISUAL BUG FIX
             // Get incomplete word
-            string preFormattedMainText = mainText.Substring(0, textPosition);
-            string formattedMainText = Regex.Replace(preFormattedMainText, "<.*?>", string.Empty);
-            //int formattedTextPosition = textPosition - (preFormattedMainText.Length - mainText.Length);
-            int formattedTextPosition = textPosition - (preFormattedMainText.Length - formattedMainText.Length);
-            formattedTextPosition = math.clamp(formattedTextPosition, 0, formattedMainText.Length);
-            int nextSpaceIndex = formattedMainText.IndexOf(' ', formattedTextPosition);
-            if ((nextSpaceIndex == -1 || nextSpaceIndex > mainText.IndexOf('.', formattedTextPosition)) && mainText.IndexOf('.', formattedTextPosition) != -1) nextSpaceIndex = mainText.IndexOf('.', formattedTextPosition);
-            if ((nextSpaceIndex == -1 || nextSpaceIndex > mainText.IndexOf('?', formattedTextPosition)) && mainText.IndexOf('?', formattedTextPosition) != -1)  nextSpaceIndex = mainText.IndexOf('?', formattedTextPosition);
-            if ((nextSpaceIndex == -1 || nextSpaceIndex > mainText.IndexOf('!', formattedTextPosition)) && mainText.IndexOf('!', formattedTextPosition) != -1) nextSpaceIndex = mainText.IndexOf('!', formattedTextPosition);
-            if (nextSpaceIndex != -1) // if there is a space yet to come...
-            {   
-                Debug.Log($"formattedMainText.Length: {formattedMainText.Length}");
-                Debug.Log($"formattedTextPosition: {formattedTextPosition}");
-                string blackText = formattedMainText.Substring(formattedTextPosition);//, nextSpaceIndex - textPosition);
-                //blackText = Regex.Replace(blackText, "<.*?>", string.Empty);
-                mainTextDisplay.text = mainTextDisplay.text + "<color=#000099>" + blackText;// + "</color>";
-            }
-
+            string blackText = mainText.Substring(textPosition);
+            string formattedBlackText = Regex.Replace(blackText, "<.*?>", string.Empty);
+            if(formattedBlackText.IndexOf('>') != -1) formattedBlackText = formattedBlackText.Substring(formattedBlackText.IndexOf('>')+1);
+            
+            int blackWordIndex = formattedBlackText.IndexOfAny(new char[] { ' ', '?', '!', '.' });
+            if(blackWordIndex != -1) formattedBlackText = formattedBlackText.Substring(0, blackWordIndex);
+            mainTextDisplay.text = mainTextDisplay.text + "<color=#000000>" + formattedBlackText;// + "</color>";
+            
         fullHighlightText = mainTextDisplay.text;
-        textHighlight.text = mainTextDisplay.text.Substring(0, math.clamp(highlightPosition, 0, mainTextDisplay.text.Length));
+        textHighlight.text = mainTextDisplay.text.Substring(0, math.clamp(mainTextDisplay.text.Length-formattedBlackText.Length-20, 0, int.MaxValue));//.Substring(0, math.clamp(highlightPosition, 0, mainTextDisplay.text.Length));
         //mainTextDisplay.text.Replace($"<mark={notifyColor}>", $"<mark={notifyColor}></mark>");
+        if(textHighlight.text.LastIndexOf('<') > textHighlight.text.LastIndexOf('>')) textHighlight.text = textHighlight.text.Substring(0, textHighlight.text.LastIndexOf('<'));
+
         mainTextDisplay.text = mainTextDisplay.text.Replace("</mark>", "");
         mainTextDisplay.text = Regex.Replace(mainTextDisplay.text, "<mark=.*?>", $"<mark={notifyColor}></mark>");
         textHighlight.text = Regex.Replace(textHighlight.text, "<color=.*?>", "<color=#000000>");
+        textHighlight.text += "</mark>" + formattedBlackText;
 
         /*// dealing with complete blocks (<x>, </x>, etc...) but still bad formatting
         string[] formatTypes = new string[] { "i", "b" };
