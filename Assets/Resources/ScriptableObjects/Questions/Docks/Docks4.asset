@@ -66,7 +66,7 @@ MonoBehaviour:
   - 
   - 
   - 
-  unlocked: 0
+  unlocked: 1
   newQuestion: 1
   location: 3
   character: 5
@@ -87,4 +87,5 @@ MonoBehaviour:
   dialogue: []
   exploredIDs:
   - {fileID: 11400000, guid: d8849970b4dfc78449e8adb99097eba7, type: 2}
+  - {fileID: 11400000, guid: 8ca6f14789159ee4e932c1c756d19e8e, type: 2}
   devNotes: UPDATE THIS WHEN READY
