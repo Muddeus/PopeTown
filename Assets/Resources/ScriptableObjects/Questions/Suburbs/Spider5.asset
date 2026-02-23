@@ -27,13 +27,13 @@ MonoBehaviour:
   - "And I bet you\u2019ve never even heard of gum-play."
   - "And I\u2019ll tell you all about it. Just stick around for my deathbed."
   - "For now, all I\u2019ll tell you for your investigation is this:"
-  - "I only leave the East District if I\u2019m called."
-  unlocked: 1
-  newQuestion: 0
+  - "<mark=noticol>I only leave the East District if I\u2019m called</mark>."
+  unlocked: 0
+  newQuestion: 1
   location: 4
   character: 2
-  itemReceived: {fileID: 0}
-  itemUnlockAt: 0
+  itemReceived: {fileID: 11400000, guid: a07fd7aa47b39984a8ef2707d4c8bc6a, type: 2}
+  itemUnlockAt: 12
   itemReceived2: {fileID: 0}
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}

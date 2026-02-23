@@ -21,8 +21,8 @@ MonoBehaviour:
   newQuestion: 1
   location: 6
   character: 6
-  itemReceived: {fileID: 0}
-  itemUnlockAt: 0
+  itemReceived: {fileID: 11400000, guid: 29d52a48cd31d32419c3d9cf6866a4b9, type: 2}
+  itemUnlockAt: 3
   itemReceived2: {fileID: 0}
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}

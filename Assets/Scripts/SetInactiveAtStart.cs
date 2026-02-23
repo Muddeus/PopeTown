@@ -4,7 +4,7 @@ public class SetInactiveAtStart : MonoBehaviour
 {
     void Start()
     {
-        gameObject.SetActive(false);
+        if(gameObject.activeInHierarchy)gameObject.SetActive(false);
     }
 
 }

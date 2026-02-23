@@ -10,15 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cd86166deead96458db596b2862e41a, type: 3}
-  m_Name: Shack3
+  m_Name: Shack4
   m_EditorClassIdentifier: Assembly-CSharp::Question
-  questionText: "What\u2019s that on your computer?"
+  questionText: "Why haven\u2019t you switched the power back off yet?"
   conversation:
-  - ...
-  - ...
-  - <i>...I wonder?</i>
-  unlocked: 1
-  newQuestion: 1
+  - <i>...Oh my God.</i>
+  - Not that simple.
+  - "The system gets messed up when it isn\u2019t shut off the proper way."
+  - "So since the power wasn\u2019t \u2018turned off,\u2019 the system\u2019s been
+    fried, so I have a lot to fix. i.e., you should <i>leave</i>."
+  unlocked: 0
+  newQuestion: 0
   location: 6
   character: 6
   itemReceived: {fileID: 0}
@@ -37,5 +39,5 @@ MonoBehaviour:
   unlockLocation: 0
   dialogue: []
   exploredIDs:
-  - {fileID: 11400000, guid: c6b41f26105723c4b98c363a3dd25c25, type: 2}
+  - {fileID: 11400000, guid: 879e90f053e2a0a4fb9c6a153e3b08a8, type: 2}
   devNotes: 

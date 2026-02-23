@@ -8,8 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PopeTown/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PopeTown/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FontTests/KiwiSoda SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FontTests/KiwiSoda SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FontTests/alagard SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FontTests/alagard SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Questions/ArtStudio/ArtStudio3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Questions/ArtStudio/ArtStudio3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Questions/Examine/ExamineEntrance.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Questions/Examine/ExamineEntrance.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SetInactiveAtStart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SetInactiveAtStart.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +19,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EndShattering.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemLogic.cs" root0="FORCE_HIGHLIGHTING" />
@@ -28,6 +26,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParticleFramerate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PortraitTalk.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Question.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SetNoteColor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/yOffset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@4976252adeb8/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
@@ -134,7 +133,8 @@
       <workItem from="1771472075297" duration="65000" />
       <workItem from="1771507074885" duration="4818000" />
       <workItem from="1771643171214" duration="4473000" />
-      <workItem from="1771731803474" duration="46000" />
+      <workItem from="1771731788203" duration="15472000" />
+      <workItem from="1771845408315" duration="983000" />
     </task>
     <servers />
   </component>

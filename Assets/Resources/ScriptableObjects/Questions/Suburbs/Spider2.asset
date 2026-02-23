@@ -25,11 +25,11 @@ MonoBehaviour:
   - "So the East District\u2019s getting dangerous, and it\u2019s only a hop and
     a skip away from the heart of Aberdeen."
   unlocked: 1
-  newQuestion: 0
+  newQuestion: 1
   location: 4
   character: 2
-  itemReceived: {fileID: 0}
-  itemUnlockAt: 0
+  itemReceived: {fileID: 11400000, guid: 6c71320e63fdda74bbf95bb372060f3f, type: 2}
+  itemUnlockAt: 6
   itemReceived2: {fileID: 0}
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}
