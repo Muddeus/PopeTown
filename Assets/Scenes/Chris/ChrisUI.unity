@@ -13532,6 +13532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b169980adbed6a8428d0084f403bd33f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  targetFramerate: 60
   notifyColor: {r: 0.4811321, g: 0.4589085, b: 0, a: 1}
   notifyAlpha: 10
   highlightDelay: 10

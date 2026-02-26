@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public int targetFramerate;
     public Color notifyColor;
     [Range(0,99)] public int notifyAlpha;
     public int highlightDelay;
@@ -84,7 +85,7 @@ public class GameManager : MonoBehaviour
     public GameObject clickBlocker;
     void Start()
     {
-        
+        Application.targetFrameRate = targetFramerate;
     }
 
     public void GoToEntrance()
