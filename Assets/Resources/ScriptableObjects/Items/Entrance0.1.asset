@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
   m_Name: Entrance0.1
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  titleText: <color=#FF0000>TWINSKIN</color> BEHAVIOUR
+  titleText: <color=#FF0000>TWINSKIN</color>\nBEHAVIOUR
   text: The <color=#FF0000>Twinskin</color> is a demon that will copy the appearance,
     behaviour and mannerisms of its victim and dispatch them in order to take their
     place.
