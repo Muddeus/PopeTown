@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: e5a818892c6c5b041b93c87ca70ae090
+guid: bd1b07e4b36788741a6c3f22922651ab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3787490157305779964
-    second: Crowd_0
+      213: 3894415531740123212
+    second: Phone_0
   - first:
-      213: -7407510931403723186
-    second: Crowd_1
+      213: -140988696014029210
+    second: Phone_1
   - first:
-      213: -1501375052724052872
-    second: Crowd_2
+      213: 984922140196257204
+    second: Phone_2
   - first:
-      213: -3826390311192506493
-    second: Crowd_3
+      213: -376848500426078955
+    second: Phone_3
+  - first:
+      213: 7996705535435686302
+    second: Phone_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -161,13 +164,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Crowd_0
+      name: Phone_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 196
-        height: 122
+        width: 112
+        height: 101
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf6df782b3edf8430800000000000000
-      internalID: 3787490157305779964
+      spriteID: c405229ea4ebb0630800000000000000
+      internalID: 3894415531740123212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crowd_1
+      name: Phone_1
       rect:
         serializedVersion: 2
-        x: 196
+        x: 112
         y: 0
-        width: 196
-        height: 122
+        width: 112
+        height: 101
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,52 +201,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e4eabd7fd0c333990800000000000000
-      internalID: -7407510931403723186
+      spriteID: 66efcb8278b1b0ef0800000000000000
+      internalID: -140988696014029210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crowd_2
+      name: Phone_2
       rect:
         serializedVersion: 2
-        x: 392
+        x: 224
         y: 0
-        width: 196
-        height: 122
+        width: 112
+        height: 101
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ddfaaa10d57e06144a0a792a6d6130de
-      internalID: 2104538022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crowd_3
-      rect:
-        serializedVersion: 2
-        x: 588
-        y: 0
-        width: 196
-        height: 122
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0dadaf38887938346b5b54378b7d620d
-      internalID: -820472178
+      spriteID: 4bdb0d9d7752bad00800000000000000
+      internalID: 984922140196257204
       vertices: []
       indices: 
       edges: []
@@ -252,7 +233,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 56328dff33873354a9835b6d61963dd2
+    spriteID: ce145c84c4b529e4e871b0cef349e83c
     internalID: 0
     vertices: []
     indices: 
@@ -262,12 +243,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":196.0,"y":122.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":1.0},"gridSpriteSize":{"x":112.0,"y":101.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Crowd_0: 3787490157305779964
-      Crowd_1: -7407510931403723186
-      Crowd_2: 2104538022
-      Crowd_3: -820472178
+      Phone_0: 3894415531740123212
+      Phone_1: -140988696014029210
+      Phone_2: 984922140196257204
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

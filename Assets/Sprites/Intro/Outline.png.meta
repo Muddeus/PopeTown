@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: e5a818892c6c5b041b93c87ca70ae090
+guid: 4b48294ada3d80e44b6526ba6e67aed4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3787490157305779964
-    second: Crowd_0
+      213: 954201540912243018
+    second: Outline_0
   - first:
-      213: -7407510931403723186
-    second: Crowd_1
-  - first:
-      213: -1501375052724052872
-    second: Crowd_2
-  - first:
-      213: -3826390311192506493
-    second: Crowd_3
+      213: -9087323474350795905
+    second: Outline_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -161,89 +155,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Crowd_0
+      name: Outline_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 196
-        height: 122
+        x: 5
+        y: 3
+        width: 80
+        height: 38
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf6df782b3edf8430800000000000000
-      internalID: 3787490157305779964
+      spriteID: a416432fe310e3d00800000000000000
+      internalID: 954201540912243018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crowd_1
+      name: Outline_1
       rect:
         serializedVersion: 2
-        x: 196
-        y: 0
-        width: 196
-        height: 122
+        x: 56
+        y: 35
+        width: 14
+        height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e4eabd7fd0c333990800000000000000
-      internalID: -7407510931403723186
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crowd_2
-      rect:
-        serializedVersion: 2
-        x: 392
-        y: 0
-        width: 196
-        height: 122
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ddfaaa10d57e06144a0a792a6d6130de
-      internalID: 2104538022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crowd_3
-      rect:
-        serializedVersion: 2
-        x: 588
-        y: 0
-        width: 196
-        height: 122
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0dadaf38887938346b5b54378b7d620d
-      internalID: -820472178
+      spriteID: f739040627753e180800000000000000
+      internalID: -9087323474350795905
       vertices: []
       indices: 
       edges: []
@@ -252,7 +202,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 56328dff33873354a9835b6d61963dd2
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -260,14 +210,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":196.0,"y":122.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Crowd_0: 3787490157305779964
-      Crowd_1: -7407510931403723186
-      Crowd_2: 2104538022
-      Crowd_3: -820472178
+      Outline_0: 954201540912243018
+      Outline_1: -9087323474350795905
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
