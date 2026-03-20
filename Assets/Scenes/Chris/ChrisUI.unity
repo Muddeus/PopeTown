@@ -10143,8 +10143,8 @@ RectTransform:
   - {fileID: 1261911407}
   - {fileID: 697412235}
   - {fileID: 23415826}
-  - {fileID: 1428344489}
   - {fileID: 1398368303}
+  - {fileID: 1428344489}
   - {fileID: 1682927419}
   - {fileID: 680892155}
   - {fileID: 1953772061}
@@ -19761,7 +19761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1833222486
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21134,7 +21134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1976820758
 Animator:
   serializedVersion: 7
