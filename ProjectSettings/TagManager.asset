@@ -43,8 +43,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: PortaitBox
+    uniqueID: 3340513615
+    locked: 0
   - name: Button
     uniqueID: 1103454183
+    locked: 0
+  - name: NotesBox
+    uniqueID: 3633705393
+    locked: 0
+  - name: OptionsBox
+    uniqueID: 2428483091
     locked: 0
   m_RenderingLayers:
   - Default
