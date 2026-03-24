@@ -10,10 +10,59 @@ public class ItemLogic : MonoBehaviour
     private TMP_Text buttonText;
     private bool initialized = false;
     private Image image;
+
+    public SpriteRenderer avatarSprite;
+    public Sprite guardSprite;
+    public Sprite mayorSprite;
+    public Sprite artistSprite;
+    public Sprite punkSprite;
+    public Sprite homelessSprite;
+    public Sprite handywomanSprite;
+    public Sprite sexWorkerSprite;
     void Start()
     {
         buttonText = GetComponentInChildren<TMP_Text>();
         image = GetComponent<Image>();
+
+
+
+        if (item != null)
+        {
+            // Happens once on initialisation
+            initialized = true;
+
+            newItem = item.newItem;
+            switch (item.character)
+            {
+                case Character.None:
+                    avatarSprite.sprite = null;
+                    break;
+                case Character.Mayor:
+                    avatarSprite.sprite = mayorSprite;
+                    break;
+                case Character.SexWorker:
+                    avatarSprite.sprite = sexWorkerSprite;
+                    break;
+                case Character.Homeless:
+                    avatarSprite.sprite = homelessSprite;
+                    break;
+                case Character.Artist:
+                    avatarSprite.sprite = artistSprite;
+                    break;
+                case Character.Punk:
+                    avatarSprite.sprite = punkSprite;
+                    break;
+                case Character.Handywoman:
+                    avatarSprite.sprite = handywomanSprite;
+                    break;
+                case Character.Guard:
+                    avatarSprite.sprite = guardSprite;
+                    break;
+                case Character.Twinskin:
+                    avatarSprite.sprite = null;
+                    break;
+            }
+        }
     }
 
     void Update()
@@ -22,9 +71,40 @@ public class ItemLogic : MonoBehaviour
         {
             if (item != null)
             {
+                // Happens once on initialisation
                 initialized = true;
                 
                 newItem = item.newItem;
+                switch (item.character)
+                {
+                    case Character.None:
+                        avatarSprite.sprite = null;
+                        break;
+                    case Character.Mayor:
+                        avatarSprite.sprite = mayorSprite;
+                        break;
+                    case Character.SexWorker:
+                        avatarSprite.sprite = sexWorkerSprite;
+                        break;
+                    case Character.Homeless:
+                        avatarSprite.sprite = homelessSprite;
+                        break;
+                    case Character.Artist:
+                        avatarSprite.sprite = artistSprite;
+                        break;
+                    case Character.Punk:
+                        avatarSprite.sprite = punkSprite;
+                        break;
+                    case Character.Handywoman:
+                        avatarSprite.sprite = handywomanSprite;
+                        break;
+                    case Character.Guard:
+                        avatarSprite.sprite = guardSprite;
+                        break;
+                    case Character.Twinskin:
+                        avatarSprite.sprite = null;
+                        break;
+                }
             }
         }
         else // After initialisation
@@ -34,7 +114,7 @@ public class ItemLogic : MonoBehaviour
             string notifyColor = "#" + ColorUtility.ToHtmlStringRGB(GameManager.Ins.notifyColor);
             buttonText.text = buttonText.text.Replace("notiCol", notifyColor);
         }
-        
+
     }
 
     public void OnClick()

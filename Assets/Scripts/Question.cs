@@ -30,6 +30,16 @@ public class Question : ScriptableObject
     public int itemPresentAt2;
     public Item itemPresent3;
     public int itemPresentAt3;
+    public Item itemPresent4;
+    public int itemPresentAt4;
+    public Item itemPresent5;
+    public int itemPresentAt5;
+    public Item itemPresent6;
+    public int itemPresentAt6;
+    public Item itemPresent7;
+    public int itemPresentAt7;
+    public Item itemPresent8;
+    public int itemPresentAt8;
 
     public bool checkToUnlockLocation;
     public Location unlockLocation;

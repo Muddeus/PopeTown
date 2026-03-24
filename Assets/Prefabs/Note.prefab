@@ -376,6 +376,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemLogic
   item: {fileID: 0}
   newItem: 0
+  avatarSprite: {fileID: 3164849842110187108}
+  guardSprite: {fileID: 0}
+  mayorSprite: {fileID: 1161201145128540330, guid: 3ff44fe8b949b764fa87560c9acbc22b, type: 3}
+  artistSprite: {fileID: 2130535880278150251, guid: 3ff44fe8b949b764fa87560c9acbc22b, type: 3}
+  punkSprite: {fileID: 184950751378207249, guid: 3ff44fe8b949b764fa87560c9acbc22b, type: 3}
+  homelessSprite: {fileID: 1202984965197363600, guid: 3ff44fe8b949b764fa87560c9acbc22b, type: 3}
+  handywomanSprite: {fileID: 5543941588292853863, guid: 3ff44fe8b949b764fa87560c9acbc22b, type: 3}
+  sexWorkerSprite: {fileID: -1863859237976802683, guid: 3ff44fe8b949b764fa87560c9acbc22b, type: 3}
 --- !u!114 &8939644758536693173
 MonoBehaviour:
   m_ObjectHideFlags: 0
