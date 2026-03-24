@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: bd1b07e4b36788741a6c3f22922651ab
+guid: f71e3cad068c569428c0f250cbe1dbaa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3894415531740123212
-    second: Phone_0
+      213: 3925063225147540587
+    second: Phone Updated_0
   - first:
-      213: -140988696014029210
-    second: Phone_1
+      213: 8010826104577246259
+    second: Phone Updated_1
   - first:
-      213: 984922140196257204
-    second: Phone_2
+      213: -8838068369644613717
+    second: Phone Updated_2
   - first:
-      213: -376848500426078955
-    second: Phone_3
+      213: 4697100203522090081
+    second: Phone Updated_3
   - first:
-      213: 7996705535435686302
-    second: Phone_4
+      213: -1449771306192073804
+    second: Phone Updated_4
+  - first:
+      213: 2485024226674765343
+    second: Phone Updated_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -87,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -164,7 +167,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Phone_0
+      name: Phone Updated_0
       rect:
         serializedVersion: 2
         x: 0
@@ -179,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c405229ea4ebb0630800000000000000
-      internalID: 3894415531740123212
+      spriteID: b644ed71530a87630800000000000000
+      internalID: 3925063225147540587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Phone_1
+      name: Phone Updated_1
       rect:
         serializedVersion: 2
         x: 112
@@ -201,14 +204,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 66efcb8278b1b0ef0800000000000000
-      internalID: -140988696014029210
+      spriteID: 334c0c026eb2c2f60800000000000000
+      internalID: 8010826104577246259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Phone_2
+      name: Phone Updated_2
       rect:
         serializedVersion: 2
         x: 224
@@ -223,8 +226,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4bdb0d9d7752bad00800000000000000
-      internalID: 984922140196257204
+      spriteID: baf87b6d4afd85580800000000000000
+      internalID: -8838068369644613717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone Updated_3
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 112
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1646951bfb37f2140800000000000000
+      internalID: 4697100203522090081
       vertices: []
       indices: 
       edges: []
@@ -233,7 +258,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ce145c84c4b529e4e871b0cef349e83c
+    spriteID: b158ba659508a094ea8fcdf1bc6cc818
     internalID: 0
     vertices: []
     indices: 
@@ -243,11 +268,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":1.0},"gridSpriteSize":{"x":112.0,"y":101.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":112.0,"y":101.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Phone_0: 3894415531740123212
-      Phone_1: -140988696014029210
-      Phone_2: 984922140196257204
+      Phone Updated_0: 3925063225147540587
+      Phone Updated_1: 8010826104577246259
+      Phone Updated_2: -8838068369644613717
+      Phone Updated_3: 4697100203522090081
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
