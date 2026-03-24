@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
   m_Name: ShackBlatantPornography
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  character: 6
   titleText: BLATANT PORNOGRAPHY
   text: The Handyma'am is clearly trying to look at internet pornography.
   newItem: 1

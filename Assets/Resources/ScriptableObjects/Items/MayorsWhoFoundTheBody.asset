@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
   m_Name: MayorsWhoFoundTheBody
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  character: 1
   titleText: WHO FOUND THE BODY, AND WHEN?
   text: "The body was found at 5:00am in Town Square by \u2018Lady of the night\u2019."
   newItem: 1

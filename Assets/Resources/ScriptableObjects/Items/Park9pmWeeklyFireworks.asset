@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
   m_Name: Park9pmWeeklyFireworks
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  character: 3
   titleText: 9PM WEEKLY FIREWORKS
   text: Fireworks go off over the lake every Saturday night at 9pm. This includes
     last night.

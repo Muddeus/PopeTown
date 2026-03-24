@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
   m_Name: ArtistStatueDelivery
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  character: 4
   titleText: STATUE DELIVERY FOR BUNYON'S OFFICE
   text: Gemini was tasked with delivering a life-sized sculpture of the Mayor to
     his office this morning.

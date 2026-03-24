@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
   m_Name: DocksEddieWitnessedBody
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  character: 5
   titleText: EDDIE WITNESSED THE BODY
   text: Three hours after setting off his fireworks, Eddie witnessed someone drop
     a body onto the power lines in the Town Square.

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
   m_Name: MayorsPowerReturned
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  character: 1
   titleText: POWER BACK\nON, CAN'T\nTURN OFF
   text: The power unexpectedly returned at 5:05am, and a local handywoman is still
     working towards switching it back off so the body can be examined.

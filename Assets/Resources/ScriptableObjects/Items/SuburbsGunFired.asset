@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
   m_Name: SuburbsGunFired
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  character: 2
   titleText: GUN FIRED
   text: Spider's gun has been fired.
   newItem: 1

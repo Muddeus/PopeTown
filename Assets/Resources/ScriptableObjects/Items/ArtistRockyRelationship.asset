@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
   m_Name: ArtistRockyRelationship
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  character: 4
   titleText: GEMINI ROCKY RELATIONSHIP
   text: Gemini and the Mayor are married, but Gemini thinks there's tension in their
     relationship.

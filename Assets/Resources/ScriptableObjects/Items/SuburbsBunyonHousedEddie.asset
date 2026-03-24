@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
   m_Name: SuburbsBunyonHousedEddie
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  character: 2
   titleText: MAYOR BUNYON HOUSED EDDIE
   text: Mayor Bunyon provided accommodation for Eddie in the East District.
   newItem: 1

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
   m_Name: MayorsEddie'sWeeklyRitual
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  character: 1
   titleText: EDDIE'S WEEKLY RITUAL
   text: Eddie's weekly ritual involves stripping down and smoking a joint as he floats
     on the lake beneath his fireworks.

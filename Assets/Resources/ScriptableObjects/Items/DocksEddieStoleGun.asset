@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
   m_Name: DocksEddieStoleGun
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  character: 5
   titleText: EDDIE STOLE THE GUN
   text: Eddie stole Spider's gun. They took care of it, and never fired it.
   newItem: 1

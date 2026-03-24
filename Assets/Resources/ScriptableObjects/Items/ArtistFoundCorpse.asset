@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c7866fff51981499087197e70fd665, type: 3}
   m_Name: ArtistFoundCorpse
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  character: 0
+  character: 4
   titleText: Gemini found corpse in kiln, she put it on powerlines
   text: "Gemini found the corpse in her kiln last night. She threw it onto the powerlines
     from Mayor Bunyon\u2019s office to avoid being framed."
