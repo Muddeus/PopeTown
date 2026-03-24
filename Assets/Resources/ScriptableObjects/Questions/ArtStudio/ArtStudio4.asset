@@ -13,8 +13,57 @@ MonoBehaviour:
   m_Name: ArtStudio4
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: Mayor Bunyon has admitted to cheating on you.
-  conversation: []
-  unlocked: 1
+  conversation:
+  - '!..'
+  - ...
+  - I...
+  - ...
+  - <i>He did it.</i>
+  - "There\u2019s no use pretending anymore. He did it. We all know, don\u2019t we?
+    <i>You</i> certainly know!"
+  - "Why are we all pretending that this entire thing isn\u2019t as obvious as it
+    looks!? I know you have to do it by the book, but\u2014 but <i>come on now</i>!"
+  - "It\u2019s open and closed! That\u2013 that <i>fucker</i> threw some poor soul
+    onto the lines, they were fried to a <i>crisp</i>, and it put the power out.
+    1-<b></b>2-<b></b>3!<b></b> What are you still missing!?"
+  - "Wh\u2013 <i>what?</i> What does that prove? I\u2019m sorry but if this sort
+    of\u2013 of pedantic <i>nonsense</i> is the reason my husband is still walking
+    free, then I\u2019m not impressed!"
+  - "I mean if that\u2019s true, then it only means that they were dropped onto the
+    lines <i>before</i> the outage!"
+  - What? He... but... but <i>that</i>...
+  - "Look! Clearly someone\u2019s gotten their times mixed up, or... or there\u2019s
+    something you\u2019ve overlooked! Because, I mean, have you not <i>seen</i> the
+    body?"
+  - "There\u2019s nothing else that could have done... <i>that</i> to someone, so
+    clearly you\u2019ve gotten something wrong!"
+  - "WHAT! <i>WHAT!?</i> You\u2019re accusing <i>me</i> now!?"
+  - "Did he\u2013 he <i>paid</i> you! No\u2014 no I bet he <i>fucked you too!</i>"
+  - "Have\u2013 have you thought this through at <i>all</i>. <i>Really</i>. Look
+    at me!"
+  - "How could I have possibly even gotten a body over there?! It wouldn\u2019t be
+    possible! What is <i>wrong</i> with you!?"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  unlocked: 0
   newQuestion: 1
   location: 5
   character: 4
@@ -24,15 +73,15 @@ MonoBehaviour:
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}
   itemUnlockAt3: 0
-  itemPresent: {fileID: 0}
-  itemPresentAt: 0
-  itemPresent2: {fileID: 0}
-  itemPresentAt2: 0
-  itemPresent3: {fileID: 0}
-  itemPresentAt3: 0
+  itemPresent: {fileID: 11400000, guid: 8d5f23fe069bf47409a900e2c003aa8e, type: 2}
+  itemPresentAt: 7
+  itemPresent2: {fileID: 11400000, guid: dcbea5a831ccfe143acef63d8d1abf90, type: 2}
+  itemPresentAt2: 9
+  itemPresent3: {fileID: 11400000, guid: 827f88ee01b8b4f4381fe47bf3add417, type: 2}
+  itemPresentAt3: 12
   checkToUnlockLocation: 0
   unlockLocation: 0
   dialogue: []
   exploredIDs:
   - {fileID: 11400000, guid: ef0988c6c8f6baf4d859b8e5e5b5053f, type: 2}
-  devNotes: 
+  devNotes: present at 16
