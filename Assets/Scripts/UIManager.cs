@@ -417,18 +417,32 @@ public class UIManager : MonoBehaviour
 
         int highlightStart = mainText.IndexOf("<mark=notiCol>");
         string highlightText = mainText;
-        highlightText.Remove(highlightStart, 14); // KEEP WORKING FROM HERE!!! 24/3/26
+        textHighlight.text = highlightText;
+        if (highlightStart != -1)
+        {
+            highlightText.Remove(highlightStart, 14); // KEEP WORKING FROM HERE!!! 24/3/26
+            int highlightEnd = highlightText.IndexOf("</mark>"); // thanks i did 24/3/26
+            highlightText.Remove(highlightEnd, 7);
+            textHighlight.text = highlightText;
+            if (textProgress >= highlightStart)
+            {
+                textHighlight.text.Insert(highlightStart, $"<mark={notifyColor}></mark>");
+                int currentEnd = textProgress < highlightEnd?textProgress:highlightEnd;
+                textHighlight.text.Insert(currentEnd, "</mark>");
+            }
+        }
+        
         /*
         // NEW LINE VISUAL BUG FIX
             // Get incomplete word
             string blackText = mainText.Substring(textPosition);
             string formattedBlackText = Regex.Replace(blackText, "<.*?>", string.Empty);
             if(formattedBlackText.IndexOf('>') != -1) formattedBlackText = formattedBlackText.Substring(formattedBlackText.IndexOf('>')+1);
-            
+
             int blackWordIndex = formattedBlackText.IndexOfAny(new char[] { ' ', '?', '!', '.' });
             if(blackWordIndex != -1) formattedBlackText = formattedBlackText.Substring(0, blackWordIndex);
             mainTextDisplay.text = mainTextDisplay.text + "<color=#000000>" + formattedBlackText;// + "</color>";
-            
+
         fullHighlightText = mainTextDisplay.text;
         textHighlight.text = mainTextDisplay.text.Substring(0, math.clamp(mainTextDisplay.text.Length-formattedBlackText.Length-20, 0, int.MaxValue));//.Substring(0, math.clamp(highlightPosition, 0, mainTextDisplay.text.Length));
         //mainTextDisplay.text.Replace($"<mark={notifyColor}>", $"<mark={notifyColor}></mark>");
