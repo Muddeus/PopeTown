@@ -187,6 +187,11 @@ public class UIManager : MonoBehaviour
             if(obj.itemPresent)necessaryItems.Add(obj.itemPresent);
             if(obj.itemPresent2)necessaryItems.Add(obj.itemPresent2);
             if(obj.itemPresent3)necessaryItems.Add(obj.itemPresent3);
+            if (obj.itemPresent4) necessaryItems.Add(obj.itemPresent4);
+            if (obj.itemPresent5) necessaryItems.Add(obj.itemPresent5);
+            if (obj.itemPresent6) necessaryItems.Add(obj.itemPresent6);
+            if (obj.itemPresent7) necessaryItems.Add(obj.itemPresent7);
+            if (obj.itemPresent8) necessaryItems.Add(obj.itemPresent8);
             if (obj.exploredIDs.Count == 0 && necessaryItems.Count == 0) // FIX THIS
             {
                 obj.unlocked = true;
@@ -378,7 +383,7 @@ public class UIManager : MonoBehaviour
         
         // Only show as much of the string as as been revealed so far in the animation.
         mainTextDisplay.text = mainText.Substring(0, textPosition);
-        int highlightPosition = textPosition - GameManager.Ins.highlightDelay; // CHANGE TO INCREASE HIGHLIGHT DELAY
+        int highlightPosition = textPosition;// - GameManager.Ins.highlightDelay; // CHANGE TO INCREASE HIGHLIGHT DELAY
         highlightPosition = Math.Clamp(highlightPosition, 0, int.MaxValue);
         // Remove \ from end
         if(mainTextDisplay.text.EndsWith('\\'))mainTextDisplay.text = mainTextDisplay.text.Substring(0, mainTextDisplay.text.Length - 1);
@@ -409,7 +414,11 @@ public class UIManager : MonoBehaviour
             }
             mTextDisPos++;
         }
-        
+
+        int highlightStart = mainText.IndexOf("<mark=notiCol>");
+        string highlightText = mainText;
+        highlightText.Remove(highlightStart, 14); // KEEP WORKING FROM HERE!!! 24/3/26
+        /*
         // NEW LINE VISUAL BUG FIX
             // Get incomplete word
             string blackText = mainText.Substring(textPosition);
@@ -429,7 +438,7 @@ public class UIManager : MonoBehaviour
         mainTextDisplay.text = Regex.Replace(mainTextDisplay.text, "<mark=.*?>", $"<mark={notifyColor}></mark>");
         textHighlight.text = Regex.Replace(textHighlight.text, "<color=.*?>", "<color=#000000>");
         textHighlight.text += "</mark>" + formattedBlackText;
-
+        */
         /*// dealing with complete blocks (<x>, </x>, etc...) but still bad formatting
         string[] formatTypes = new string[] { "i", "b" };
         foreach (string formatType in formatTypes)
@@ -559,6 +568,26 @@ public class UIManager : MonoBehaviour
                     expectedItem = true;
                 }
                 else if (currentQuestion.itemPresent3 != null && textProgress-1 == currentQuestion.itemPresentAt3)
+                {
+                    expectedItem = true;
+                }
+                else if (currentQuestion.itemPresent4 != null && textProgress - 1 == currentQuestion.itemPresentAt4)
+                {
+                    expectedItem = true;
+                }
+                else if (currentQuestion.itemPresent5 != null && textProgress - 1 == currentQuestion.itemPresentAt5)
+                {
+                    expectedItem = true;
+                }
+                else if (currentQuestion.itemPresent6 != null && textProgress - 1 == currentQuestion.itemPresentAt6)
+                {
+                    expectedItem = true;
+                }
+                else if (currentQuestion.itemPresent7 != null && textProgress - 1 == currentQuestion.itemPresentAt7)
+                {
+                    expectedItem = true;
+                }
+                else if (currentQuestion.itemPresent8 != null && textProgress - 1 == currentQuestion.itemPresentAt8)
                 {
                     expectedItem = true;
                 }
@@ -747,6 +776,11 @@ public class UIManager : MonoBehaviour
                                 if(q.itemPresent)necessaryItems.Add(q.itemPresent);
                                 if(q.itemPresent2)necessaryItems.Add(q.itemPresent2);
                                 if(q.itemPresent3)necessaryItems.Add(q.itemPresent3);
+                                if(q.itemPresent4) necessaryItems.Add(q.itemPresent4);
+                                if(q.itemPresent5) necessaryItems.Add(q.itemPresent5);
+                                if(q.itemPresent6) necessaryItems.Add(q.itemPresent6);
+                                if(q.itemPresent7) necessaryItems.Add(q.itemPresent7);
+                                if(q.itemPresent8) necessaryItems.Add(q.itemPresent8);
                                 //print("necessary item count for '" + q.name + "': " + necessaryItems.Count);
                                 foreach (Item n in necessaryItems) // each necessary item
                                 {
@@ -873,6 +907,26 @@ public class UIManager : MonoBehaviour
                 match = true;
             }
             else if (currentQuestion.itemPresent3 == presentedItem && textProgress-1 == currentQuestion.itemPresentAt3)
+            {
+                match = true;
+            }
+            else if (currentQuestion.itemPresent4 == presentedItem && textProgress - 1 == currentQuestion.itemPresentAt4)
+            {
+                match = true;
+            }
+            else if (currentQuestion.itemPresent5 == presentedItem && textProgress - 1 == currentQuestion.itemPresentAt5)
+            {
+                match = true;
+            }
+            else if (currentQuestion.itemPresent6 == presentedItem && textProgress - 1 == currentQuestion.itemPresentAt6)
+            {
+                match = true;
+            }
+            else if (currentQuestion.itemPresent7 == presentedItem && textProgress - 1 == currentQuestion.itemPresentAt7)
+            {
+                match = true;
+            }
+            else if (currentQuestion.itemPresent8 == presentedItem && textProgress - 1 == currentQuestion.itemPresentAt8)
             {
                 match = true;
             }
