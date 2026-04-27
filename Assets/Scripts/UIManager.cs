@@ -530,6 +530,7 @@ public class UIManager : MonoBehaviour
         }
         else // if moving to next text/screen
         {
+            textHighlight.text = ""; // clears the hightlight (only really required for going to map)
             /*if (playAnimNext)
             {
                 anim.Play("Hand Writing");
@@ -542,7 +543,7 @@ public class UIManager : MonoBehaviour
             }
             lastOwnedItemListCount = ownedItemList.Count;*/
             //PresentEvidenceCheck(emptyItem);
-            if(talking)print("1");
+            if(talking)print("talking");
             bool expectedItem = false;
             if (currentQuestion == null || presentPassed)
             {
