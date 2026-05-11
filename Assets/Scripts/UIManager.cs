@@ -421,14 +421,16 @@ public class UIManager : MonoBehaviour
             mainTextDisplay.text = mainTextDisplay.text + "<color=#000000>" + formattedBlackText;// + "</color>";
             
         fullHighlightText = mainTextDisplay.text;
-        textHighlight.text = mainTextDisplay.text.Substring(0, math.clamp(mainTextDisplay.text.Length-formattedBlackText.Length-20, 0, int.MaxValue));//.Substring(0, math.clamp(highlightPosition, 0, mainTextDisplay.text.Length));
+        //textHighlight.text = mainTextDisplay.text.Substring(0, math.clamp(mainTextDisplay.text.Length-formattedBlackText.Length-20, 0, int.MaxValue));//.Substring(0, math.clamp(highlightPosition, 0, mainTextDisplay.text.Length));
         //mainTextDisplay.text.Replace($"<mark={notifyColor}>", $"<mark={notifyColor}></mark>");
-        if(textHighlight.text.LastIndexOf('<') > textHighlight.text.LastIndexOf('>')) textHighlight.text = textHighlight.text.Substring(0, textHighlight.text.LastIndexOf('<'));
+        //if(textHighlight.text.LastIndexOf('<') > textHighlight.text.LastIndexOf('>')) textHighlight.text = textHighlight.text.Substring(0, textHighlight.text.LastIndexOf('<'));
 
         mainTextDisplay.text = mainTextDisplay.text.Replace("</mark>", "");
         mainTextDisplay.text = Regex.Replace(mainTextDisplay.text, "<mark=.*?>", $"<mark={notifyColor}></mark>");
-        textHighlight.text = Regex.Replace(textHighlight.text, "<color=.*?>", "<color=#000000>");
-        textHighlight.text += "</mark>" + formattedBlackText;
+        
+        // NEXT TWO LINES REMOVED TO REMOVE DEFUNCT HIGHLIGHT EFFECT
+        //textHighlight.text = Regex.Replace(textHighlight.text, "<color=.*?>", "<color=#000000>");
+        //textHighlight.text += "</mark>" + formattedBlackText;
 
         /*// dealing with complete blocks (<x>, </x>, etc...) but still bad formatting
         string[] formatTypes = new string[] { "i", "b" };
@@ -460,8 +462,8 @@ public class UIManager : MonoBehaviour
             _textAnimating = value;
             if (!value)
             {
-                textHighlight.text = fullHighlightText;
-                textHighlight.text = Regex.Replace(textHighlight.text, "<color=.*?>", "<color=#000000>");
+                //textHighlight.text = fullHighlightText;
+                //textHighlight.text = Regex.Replace(textHighlight.text, "<color=.*?>", "<color=#000000>");
             }
         }
     }
@@ -530,7 +532,7 @@ public class UIManager : MonoBehaviour
         }
         else // if moving to next text/screen
         {
-            textHighlight.text = ""; // clears the hightlight (only really required for going to map)
+            //textHighlight.text = ""; // clears the hightlight (only really required for going to map)
             /*if (playAnimNext)
             {
                 anim.Play("Hand Writing");
