@@ -22,10 +22,10 @@ MonoBehaviour:
   - "I can assume you\u2019ve already spoken with him. He\u2019s been spending so
     many nights at the office. <i>Too many</i>."
   - "And I\u2019m... I..."
-  - "<mark=noticol>There\u2019s just a bit of tension is all</mark>. Sorry, but that\u2019s
-    all I want to say on that."
+  - "<color=noticol>There\u2019s just a bit of tension is all</color>. Sorry, but
+    that\u2019s all I want to say on that."
   unlocked: 0
-  newQuestion: 0
+  newQuestion: 1
   location: 5
   character: 4
   itemReceived: {fileID: 11400000, guid: 6d89439ce0701cd49ae3ddcbaf8004df, type: 2}
@@ -40,6 +40,16 @@ MonoBehaviour:
   itemPresentAt2: 0
   itemPresent3: {fileID: 0}
   itemPresentAt3: 0
+  itemPresent4: {fileID: 0}
+  itemPresentAt4: 0
+  itemPresent5: {fileID: 0}
+  itemPresentAt5: 0
+  itemPresent6: {fileID: 0}
+  itemPresentAt6: 0
+  itemPresent7: {fileID: 0}
+  itemPresentAt7: 0
+  itemPresent8: {fileID: 0}
+  itemPresentAt8: 0
   checkToUnlockLocation: 0
   unlockLocation: 0
   dialogue: []

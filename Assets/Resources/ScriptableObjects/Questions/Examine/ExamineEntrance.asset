@@ -15,7 +15,7 @@ MonoBehaviour:
   questionText: 
   conversation:
   - A small guardhouse, operated by a lone guard.
-  - <mark=notiCol>He appears nervous and is sweating profusely</mark>.
+  - <color=notiCol>He appears nervous and is sweating profusely</color>.
   unlocked: 0
   newQuestion: 1
   location: 0
@@ -32,6 +32,16 @@ MonoBehaviour:
   itemPresentAt2: 0
   itemPresent3: {fileID: 0}
   itemPresentAt3: 0
+  itemPresent4: {fileID: 0}
+  itemPresentAt4: 0
+  itemPresent5: {fileID: 0}
+  itemPresentAt5: 0
+  itemPresent6: {fileID: 0}
+  itemPresentAt6: 0
+  itemPresent7: {fileID: 0}
+  itemPresentAt7: 0
+  itemPresent8: {fileID: 0}
+  itemPresentAt8: 0
   checkToUnlockLocation: 0
   unlockLocation: 0
   dialogue: []

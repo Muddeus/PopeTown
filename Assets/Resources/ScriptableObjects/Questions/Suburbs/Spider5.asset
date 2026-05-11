@@ -27,7 +27,7 @@ MonoBehaviour:
   - "And I bet you\u2019ve never even heard of gum-play."
   - "And I\u2019ll tell you all about it. Just stick around for my deathbed."
   - "For now, all I\u2019ll tell you for your investigation is this:"
-  - "<mark=noticol>I only leave the East District if I\u2019m called</mark>."
+  - "<color=noticol>I only leave the East District if I\u2019m called</color>."
   unlocked: 0
   newQuestion: 1
   location: 4
@@ -44,6 +44,16 @@ MonoBehaviour:
   itemPresentAt2: 0
   itemPresent3: {fileID: 0}
   itemPresentAt3: 0
+  itemPresent4: {fileID: 0}
+  itemPresentAt4: 0
+  itemPresent5: {fileID: 0}
+  itemPresentAt5: 0
+  itemPresent6: {fileID: 0}
+  itemPresentAt6: 0
+  itemPresent7: {fileID: 0}
+  itemPresentAt7: 0
+  itemPresent8: {fileID: 0}
+  itemPresentAt8: 0
   checkToUnlockLocation: 0
   unlockLocation: 4
   dialogue: []
