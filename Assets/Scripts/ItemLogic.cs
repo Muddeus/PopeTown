@@ -9,9 +9,8 @@ public class ItemLogic : MonoBehaviour
     public bool newItem;
     private TMP_Text buttonText;
     private bool initialized = false;
-    private Image image;
 
-    public SpriteRenderer avatarSprite;
+    public Image avatarSprite;
     public Sprite guardSprite;
     public Sprite mayorSprite;
     public Sprite artistSprite;
@@ -22,7 +21,6 @@ public class ItemLogic : MonoBehaviour
     void Start()
     {
         buttonText = GetComponentInChildren<TMP_Text>();
-        image = GetComponent<Image>();
 
 
 
@@ -32,10 +30,12 @@ public class ItemLogic : MonoBehaviour
             initialized = true;
 
             newItem = item.newItem;
+            avatarSprite.gameObject.SetActive(true);
             switch (item.character)
             {
                 case Character.None:
-                    avatarSprite.sprite = null;
+                    //avatarSprite.sprite = null;
+                    avatarSprite.gameObject.SetActive(false);
                     break;
                 case Character.Mayor:
                     avatarSprite.sprite = mayorSprite;
