@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: ArtStudio3
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: Why were you awake the entire night?
+  largeQuestionBox: 0
   conversation:
   - I... <i>um...</i>
   - Oh dear.
@@ -55,4 +56,4 @@ MonoBehaviour:
   dialogue: []
   exploredIDs:
   - {fileID: 11400000, guid: 7a3fed853d2570846b5d34caef8ce29b, type: 2}
-  devNotes: 
+  devNotes: FIX CONVO 7

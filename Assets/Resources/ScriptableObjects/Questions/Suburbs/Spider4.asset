@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Spider4
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: What do you think of the East District development?
+  largeQuestionBox: 1
   conversation:
   - "Well on paper it\u2019s good, but so\u2019s half the stuff Bunyon promises,
     and that\u2019s where most of it stays."
@@ -46,6 +47,16 @@ MonoBehaviour:
   itemPresentAt2: 0
   itemPresent3: {fileID: 0}
   itemPresentAt3: 0
+  itemPresent4: {fileID: 0}
+  itemPresentAt4: 0
+  itemPresent5: {fileID: 0}
+  itemPresentAt5: 0
+  itemPresent6: {fileID: 0}
+  itemPresentAt6: 0
+  itemPresent7: {fileID: 0}
+  itemPresentAt7: 0
+  itemPresent8: {fileID: 0}
+  itemPresentAt8: 0
   checkToUnlockLocation: 0
   unlockLocation: 0
   dialogue: []

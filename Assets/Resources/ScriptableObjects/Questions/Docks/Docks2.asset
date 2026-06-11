@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Docks2
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: Do you have anything to do with the fireworks going off?
+  largeQuestionBox: 1
   conversation:
   - Uhhh...
   - "Okay, I get that you\u2019re supposed to be some kind of detective, but since
@@ -26,7 +27,7 @@ MonoBehaviour:
   - "There\u2019s... <i>look</i>, I\u2019m not allowed to say who it is, <color=notiCol>but
     there\u2019s someone who makes people look the other way</color>."
   - "So it\u2019s <i>practically</i> legal."
-  unlocked: 0
+  unlocked: 1
   newQuestion: 1
   location: 3
   character: 5
@@ -42,6 +43,16 @@ MonoBehaviour:
   itemPresentAt2: 0
   itemPresent3: {fileID: 0}
   itemPresentAt3: 0
+  itemPresent4: {fileID: 0}
+  itemPresentAt4: 0
+  itemPresent5: {fileID: 0}
+  itemPresentAt5: 0
+  itemPresent6: {fileID: 0}
+  itemPresentAt6: 0
+  itemPresent7: {fileID: 0}
+  itemPresentAt7: 0
+  itemPresent8: {fileID: 0}
+  itemPresentAt8: 0
   checkToUnlockLocation: 0
   unlockLocation: 0
   dialogue: []

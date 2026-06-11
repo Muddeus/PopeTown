@@ -19,6 +19,7 @@ public class ButtonLogic : MonoBehaviour
 
     void Update()
     {
+        
         if (!initialized)
         {
             if (question != null)
@@ -27,11 +28,21 @@ public class ButtonLogic : MonoBehaviour
                 buttonText.text = question.questionText;
                 fadedColor = Color.Lerp(image.color, Color.black, fadedAmount);
                 if (!question.newQuestion) buttonText.color = fadedColor;
+
+                if (question.largeQuestionBox)
+                {
+                    RectTransform rectTransform = GetComponent<RectTransform>();
+                    var sizeDelta = rectTransform.sizeDelta;
+                    sizeDelta.y = 30;
+                    rectTransform.sizeDelta = sizeDelta;
+                }
+                
+                
             }
         }
         else // After initialisation
         {
-           
+            
         }
         
     }
