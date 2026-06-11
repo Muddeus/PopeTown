@@ -13,14 +13,44 @@ MonoBehaviour:
   m_Name: Shack4
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: "Why haven\u2019t you switched the power back off yet?"
+  largeQuestionBox: 0
   conversation:
   - <i>...Oh my God.</i>
   - Not that simple.
   - "The system gets messed up when it isn\u2019t shut off the proper way."
   - "So since the power wasn\u2019t \u2018turned off,\u2019 the system\u2019s been
     fried, so I have a lot to fix. i.e., you should <i>leave</i>."
+  - ...
+  - ...
+  - ...no?
+  - I mean, so what are you saying then?
+  - "That I\u2019m too lazy to throw one switch?"
+  - "I don\u2019t have any reason for <i>wanting</i> the power kept on, so what is
+    it that you\u2019re still trying to say?"
+  - "No, that\u2019s..."
+  - ...
+  - "That\u2019s the entire picture."
+  - "I\u2019m into gore."
+  - '[MASK SHATTERS]'
+  - '!...'
+  - ...
+  - "You\u2019re only here for the one murder, right?"
+  - Because there's about to be another one.
+  - ...Goddamn, fine. <i>Fine!</i>
+  - "Every morning I get up at 5 to start a download, because it literally takes
+    all day to load one goddamn picture. That\u2019s how bad the internet is here."
+  - "So when I found that the power had been switched off, yeah, I figured it had
+    been Fishburn. He\u2019s done it before, but he usually does it at night so I
+    don\u2019t really care."
+  - "Anyway I didn\u2019t know about old Mr BBQ up on the lines, so I just turned
+    it right back on."
+  - "God, couldn\u2019t you have just waited 9 more hours?!"
+  - "Just...just <i>get out of here</i> and I\u2019ll turn the damn power off."
+  - "God, <i>I</i> ask for half-decent internet, but apparently 'That\u2019s just
+    not a priority!'"
+  - No, apparently a <i>real</i> priority, is a <i>second fucking squash court.</i>
   unlocked: 0
-  newQuestion: 0
+  newQuestion: 1
   location: 6
   character: 6
   itemReceived: {fileID: 0}
@@ -29,12 +59,22 @@ MonoBehaviour:
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}
   itemUnlockAt3: 0
-  itemPresent: {fileID: 0}
-  itemPresentAt: 0
-  itemPresent2: {fileID: 0}
-  itemPresentAt2: 0
-  itemPresent3: {fileID: 0}
-  itemPresentAt3: 0
+  itemPresent: {fileID: 11400000, guid: 8d5f23fe069bf47409a900e2c003aa8e, type: 2}
+  itemPresentAt: 3
+  itemPresent2: {fileID: 11400000, guid: 29d52a48cd31d32419c3d9cf6866a4b9, type: 2}
+  itemPresentAt2: 9
+  itemPresent3: {fileID: 11400000, guid: 1cd98cac55a127743b88d4536a233a4e, type: 2}
+  itemPresentAt3: 13
+  itemPresent4: {fileID: 0}
+  itemPresentAt4: 0
+  itemPresent5: {fileID: 0}
+  itemPresentAt5: 0
+  itemPresent6: {fileID: 0}
+  itemPresentAt6: 0
+  itemPresent7: {fileID: 0}
+  itemPresentAt7: 0
+  itemPresent8: {fileID: 0}
+  itemPresentAt8: 0
   checkToUnlockLocation: 0
   unlockLocation: 0
   dialogue: []

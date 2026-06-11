@@ -13,34 +13,77 @@ MonoBehaviour:
   m_Name: Fishburn5
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: Do you have anything against the mayor?
+  largeQuestionBox: 0
   conversation:
   - "...<i>oh.</i> Alright, I <i> see.</i>  Don\u2019t worry, we\u2019re still on
     the same page here."
-  - "\u201CYou\u2019ve gotta see if I\u2019ve got my own reasons for wanting to frame
-    the guy, right? Gotta scrutinize everyone, no stones unturned. Even for good
-    old Fishburn. I get it.\u201D"
-  - "\u201CWell to answer your suspicions, no. I\u2019ve got no reasons to want Bunyon
-    under the bus.\u201D"
-  - '"Good line of thinkin'' though."'
-  unlocked: 1
+  - "You\u2019ve gotta see if I\u2019ve got my own reasons for wanting to frame the
+    guy, right? Gotta scrutinize everyone, no stones unturned. Even for good old
+    Fishburn. I get it."
+  - "Well to answer your suspicions, <i>no</i>. I\u2019ve got no reasons to want
+    Bunyon under the bus."
+  - Hm.
+  - <i>...Hmmm...</i>
+  - "Alright, I\u2019ll level with you. You\u2019re losing me a little here. Think
+    you might be floundering a bit."
+  - I mean...
+  - "I don\u2019t even go to the East District, so there\u2019s no reason for me
+    to be opposed to its development in the first place."
+  - '[MASK SHATTERS]'
+  - "<i>AND WE\u2019RE BACK.</i>"
+  - Yes! <i>YEEES!</i>
+  - That tracks. That <i>absolutely</i> tracks.
+  - Perfectly apt deduction, but not the <i>entire</i> story.
+  - "So for your display of wits I\u2019ll offer you this:"
+  - "While I <i>have</i> been involved in mild matters of nefarious deedery relating
+    to this matter, it\u2019s not quite what you think."
+  - "So I\u2019ll tell you <i>this,</i> and do with it as you will."
+  - "The body on the powerlines didn\u2019t cause the power outage. <color=notiCol><i>I</i>
+    did.</color>"
+  - I snuck into the power station and turned it off at 11pm so I could go stargazing
+    above the East District.
+  - "See, that\u2019s my favourite spot, because that\u2019s where the stars gaze
+    <i>back.</i>"
+  - "But, <i>as I\u2019m sure you\u2019ve already pieced together, as have I,</i>
+    that means that the murder has to have taken place <i>before</i> then."
+  - So do with <i>that</i> as you will.
+  - "I don\u2019t like Bunyon but I\u2019d never wanna frame him for a murder he
+    didn\u2019t do."
+  - "...oh and I wouldn\u2019t kill someone for no reason. And I haven\u2019t had
+    a reason to kill someone ...since..."
+  - ...The Jungle...
+  - "<b>[Fishburn takes a seat and looks off into the distance. He seems to be looking
+    at something that you can\u2019t quite see.]</b>"
+  unlocked: 0
   newQuestion: 1
   location: 7
   character: 3
-  itemReceived: {fileID: 0}
-  itemUnlockAt: 0
+  itemReceived: {fileID: 11400000, guid: 8d5f23fe069bf47409a900e2c003aa8e, type: 2}
+  itemUnlockAt: 25
   itemReceived2: {fileID: 0}
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}
   itemUnlockAt3: 0
-  itemPresent: {fileID: 0}
-  itemPresentAt: 0
-  itemPresent2: {fileID: 0}
-  itemPresentAt2: 0
+  itemPresent: {fileID: 11400000, guid: d4c9313030bfd00469c29d3ff00f727d, type: 2}
+  itemPresentAt: 2
+  itemPresent2: {fileID: 11400000, guid: 7c1bf975b1e3550449fb0f147d06ac3e, type: 2}
+  itemPresentAt2: 7
   itemPresent3: {fileID: 0}
   itemPresentAt3: 0
+  itemPresent4: {fileID: 0}
+  itemPresentAt4: 0
+  itemPresent5: {fileID: 0}
+  itemPresentAt5: 0
+  itemPresent6: {fileID: 0}
+  itemPresentAt6: 0
+  itemPresent7: {fileID: 0}
+  itemPresentAt7: 0
+  itemPresent8: {fileID: 0}
+  itemPresentAt8: 0
   checkToUnlockLocation: 0
   unlockLocation: 0
   dialogue: []
   exploredIDs:
   - {fileID: 11400000, guid: 9c0d3ab07b600094e8cf0a7275a3f818, type: 2}
-  devNotes: Update this with actual accusation
+  devNotes: Update this with actual accusation ;; Get rid of "Good line of thinkin'
+    though." line 3?
