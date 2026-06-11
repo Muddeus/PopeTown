@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: MayorsOffice2
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: What can you tell me about the incident?
+  largeQuestionBox: 0
   conversation:
   - "Some sorry sap \u2014or sapette, or what have you\u2014 flung themselves from
     my balcony and onto the live-wires sometime last night."
-  - Put the power out too. Lost a good half-tub of rocky road.
+  - <color=notiCol>Put the power out too.</color> Lost a good half-tub of rocky road.
   - "The body was spotted at... when was it\u2014"
-  - "5. Yeah, 5am this morning. Spotted by a \u2018Lady of the night\u2019 as she
-    was passing by."
+  - "<color=notiCol>5. Yeah, 5am this morning. Spotted by a \u2018Lady of the night\u2019
+    as she was passing by.</color>"
   - Scream woke the whole damn town.
   - "I\u2019d been burning the midnight oil and had taken a nap in the rec room downstairs,
     so I was the first one out after her."
@@ -40,6 +41,16 @@ MonoBehaviour:
   itemPresentAt2: 0
   itemPresent3: {fileID: 0}
   itemPresentAt3: 0
+  itemPresent4: {fileID: 0}
+  itemPresentAt4: 0
+  itemPresent5: {fileID: 0}
+  itemPresentAt5: 0
+  itemPresent6: {fileID: 0}
+  itemPresentAt6: 0
+  itemPresent7: {fileID: 0}
+  itemPresentAt7: 0
+  itemPresent8: {fileID: 0}
+  itemPresentAt8: 0
   checkToUnlockLocation: 0
   unlockLocation: 0
   dialogue: []

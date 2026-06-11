@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: ExamineEntrance
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: 
+  largeQuestionBox: 0
   conversation:
   - A small guardhouse, operated by a lone guard.
-  - <color=notiCol>He appears nervous and is sweating profusely</color>.
+  - <color=notiCol>He appears nervous and is sweating profusely.</color>
   unlocked: 0
   newQuestion: 1
   location: 0
   character: 7
   itemReceived: {fileID: 11400000, guid: 4a44b0ea9545cba4d83780808363e350, type: 2}
-  itemUnlockAt: 2
+  itemUnlockAt: 1
   itemReceived2: {fileID: 0}
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}

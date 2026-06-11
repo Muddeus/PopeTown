@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: Spider3
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: Do you feel safe here?
+  largeQuestionBox: 0
   conversation:
   - Well, I used to feel <i>safer.</i>
   - "And I\u2019m not referring to the murder. Although that obviously hasn\u2019t
     helped."
-  - No, some asswipe ass-swiped my <i>gun.</i>
-  - "That or I dropped it. Either way, now there\u2019s some asshole running around
-    with my Colt Delta Elite and I\u2019m stuck with bear mace."
+  - No, <color=notiCol>some asswipe ass-swiped my <i>gun.</i></color>
+  - "That or I dropped it. Either way, <color=notiCol>now there\u2019s some asshole
+    running around with my Colt Delta Elite</color> and I\u2019m stuck with bear
+    mace."
   - And yeah, <i>sure</i>, there are plenty of street corners in the safer parts
     of Aberdeen, but not as much action either.
   - "So if you\u2019re gonna be poking around anyway, mind keeping an eye out for
@@ -40,6 +42,16 @@ MonoBehaviour:
   itemPresentAt2: 0
   itemPresent3: {fileID: 0}
   itemPresentAt3: 0
+  itemPresent4: {fileID: 0}
+  itemPresentAt4: 0
+  itemPresent5: {fileID: 0}
+  itemPresentAt5: 0
+  itemPresent6: {fileID: 0}
+  itemPresentAt6: 0
+  itemPresent7: {fileID: 0}
+  itemPresentAt7: 0
+  itemPresent8: {fileID: 0}
+  itemPresentAt8: 0
   checkToUnlockLocation: 0
   unlockLocation: 4
   dialogue: []

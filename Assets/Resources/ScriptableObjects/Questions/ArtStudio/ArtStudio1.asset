@@ -13,30 +13,32 @@ MonoBehaviour:
   m_Name: ArtStudio1
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: Tell me about yourself
+  largeQuestionBox: 0
   conversation:
   - "Oh, well. What\u2019s there to say..."
   - "I\u2019m Gemini. I run the\u2013 uh, <i>this</i> art shop."
   - "I also take commissions, or at least I usually do. I\u2019ve been a little swamped
     lately."
-  - "All my time\u2019s been spent on a sculpture for the mayor. A \u2018to scale\u2019
-    rendition, and he\u2019s been rather diff\u2013 uh, <i>pedantic</i>, about it."
+  - "<color=notiCol>All my time\u2019s been spent on a sculpture for the mayor.</color>
+    A \u2018to scale\u2019 rendition, and he\u2019s been rather diff\u2013 uh, <i>pedantic</i>,
+    about it."
   - "He wanted to make sure it was truly \u2018reflective of his image\u2019 after
     the work he\u2019d had done."
   - "...Oh dear, don\u2019t tell him I said that."
   - Anyway, I only just got it in the kiln last night.
-  - "I was supposed to deliver it to his office this morning, before\u2014 you know,
-    all of... <i>this</i>."
-  - "I can\u2019t complain though when he\u2019s the one who actually set me up with
-    the kiln. Uh, <i>new</i> kiln, that is."
+  - "<color=notiCol>I was supposed to deliver it to his office this morning</color>,
+    before\u2014 you know, all of... <i>this</i>."
+  - "<color=notiCol>I can\u2019t complain though when he\u2019s the one who actually
+    set me up with the kiln. Uh, <i>new</i> kiln, that is.</color>"
   - The old one was, well, <i>old</i>, and there were problems with using the gas.
   unlocked: 1
   newQuestion: 1
   location: 5
   character: 4
   itemReceived: {fileID: 11400000, guid: 827f88ee01b8b4f4381fe47bf3add417, type: 2}
-  itemUnlockAt: 9
+  itemUnlockAt: 8
   itemReceived2: {fileID: 11400000, guid: a63ad586744452f40803bb1f60c4aa5f, type: 2}
-  itemUnlockAt2: 4
+  itemUnlockAt2: 3
   itemReceived3: {fileID: 0}
   itemUnlockAt3: 0
   itemPresent: {fileID: 0}
@@ -45,8 +47,19 @@ MonoBehaviour:
   itemPresentAt2: 0
   itemPresent3: {fileID: 0}
   itemPresentAt3: 0
+  itemPresent4: {fileID: 0}
+  itemPresentAt4: 0
+  itemPresent5: {fileID: 0}
+  itemPresentAt5: 0
+  itemPresent6: {fileID: 0}
+  itemPresentAt6: 0
+  itemPresent7: {fileID: 0}
+  itemPresentAt7: 0
+  itemPresent8: {fileID: 0}
+  itemPresentAt8: 0
   checkToUnlockLocation: 0
   unlockLocation: 0
   dialogue: []
   exploredIDs: []
-  devNotes: 
+  devNotes: ArtistStatueDelivery special text doesn't follow the rule perfectly.
+    Disguff with Andy

@@ -13,21 +13,22 @@ MonoBehaviour:
   m_Name: MayorsOffice3
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: Why is the body still up?
+  largeQuestionBox: 0
   conversation:
   - "Yes. Why is the body still up? I\u2019d just love to know that as well."
-  - "See, we\u2019d have had them down by now, yet somehow the power managed to spring
-    back on five minutes after the body was first sighted."
-  - "The one person responsible for it all, this local handywoman of ours, she\u2019s
-    saying that turning it off again is a \u2018matter more complicated than it seems\u2019.
-    Somehow."
+  - "See, we\u2019d have had them down by now, yet somehow <color=notiCol>the power
+    managed to spring back on five minutes after the body was first sighted.</color>"
+  - "<color=notiCol>The one person responsible for it all, this local handywoman
+    of ours, she\u2019s saying that turning it off again is a \u2018matter more complicated
+    than it seems\u2019.</color> Somehow."
   - Hence why the power is yet to be turned off. Hence why a rotten, roasted corpse
     can still be seen from my window.
   - "If the smell ends up sticking around I\u2019ll have to swap buildings."
   - "Oh! I know. Morris down at the Butcher\u2019s is behind on utilities. I\u2019ll
     just swap us \u2018round and call it even."
   - "He won\u2019t mind the smell either."
-  unlocked: 0
-  newQuestion: 0
+  unlocked: 1
+  newQuestion: 1
   location: 2
   character: 1
   itemReceived: {fileID: 11400000, guid: ebc5ec1234fe10c4f861a04fa2feba9f, type: 2}
@@ -42,6 +43,16 @@ MonoBehaviour:
   itemPresentAt2: 0
   itemPresent3: {fileID: 0}
   itemPresentAt3: 0
+  itemPresent4: {fileID: 0}
+  itemPresentAt4: 0
+  itemPresent5: {fileID: 0}
+  itemPresentAt5: 0
+  itemPresent6: {fileID: 0}
+  itemPresentAt6: 0
+  itemPresent7: {fileID: 0}
+  itemPresentAt7: 0
+  itemPresent8: {fileID: 0}
+  itemPresentAt8: 0
   checkToUnlockLocation: 0
   unlockLocation: 0
   dialogue: []

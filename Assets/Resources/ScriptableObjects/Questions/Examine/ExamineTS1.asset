@@ -13,16 +13,18 @@ MonoBehaviour:
   m_Name: ExamineTS1
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: 
+  largeQuestionBox: 0
   conversation:
   - "A rather homely little town square. The space is encompassed by numerous buildings,
-    including a church, an art studio, and most notably, the mayor\u2019s office,
-    before which the body is strung upon the power lines. It is charred beyond recognition."
+    including a church, an art studio, and most notably, <color=notiCol>the mayor\u2019s
+    office, before which the body is strung upon the power lines. It is charred beyond
+    recognition.</color>"
   unlocked: 0
-  newQuestion: 0
+  newQuestion: 1
   location: 1
   character: 0
   itemReceived: {fileID: 11400000, guid: 6c3c29969208c0f46bdfd85423869ba8, type: 2}
-  itemUnlockAt: 1
+  itemUnlockAt: 0
   itemReceived2: {fileID: 0}
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}
@@ -33,9 +35,19 @@ MonoBehaviour:
   itemPresentAt2: 0
   itemPresent3: {fileID: 0}
   itemPresentAt3: 0
+  itemPresent4: {fileID: 0}
+  itemPresentAt4: 0
+  itemPresent5: {fileID: 0}
+  itemPresentAt5: 0
+  itemPresent6: {fileID: 0}
+  itemPresentAt6: 0
+  itemPresent7: {fileID: 0}
+  itemPresentAt7: 0
+  itemPresent8: {fileID: 0}
+  itemPresentAt8: 0
   checkToUnlockLocation: 1
   unlockLocation: 2
   dialogue: []
   exploredIDs:
   - {fileID: 11400000, guid: ef0988c6c8f6baf4d859b8e5e5b5053f, type: 2}
-  devNotes: 
+  devNotes: check with Andy if this is good placement of the special text

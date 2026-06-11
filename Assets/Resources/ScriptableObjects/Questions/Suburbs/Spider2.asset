@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Spider2
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: Is there anything you know about the incident?
+  largeQuestionBox: 0
   conversation:
   - "Well, I\u2019m the one who found the body, which I\u2019m assuming is the reason
     you\u2019re talking to me."
@@ -21,15 +22,16 @@ MonoBehaviour:
   - "I was obviously shocked when I found it, but in the big picture, it\u2019s not
     particularly unexpected. At least not for what Aberdeen\u2019s becoming."
   - "Bunyon\u2019s being really lax with his whole \u2018East Development Project\u2019.
-    Not enough\u2019s being put into keeping the expanding neighbourhood safe."
-  - "So the East District\u2019s getting dangerous, and it\u2019s only a hop and
-    a skip away from the heart of Aberdeen."
+    <color=notiCol>Not enough\u2019s being put into keeping the expanding neighbourhood
+    safe.</color>"
+  - "<color=notiCol>So the East District\u2019s getting dangerous, and it\u2019s
+    only a hop and a skip away from the heart of Aberdeen.</color>"
   unlocked: 1
   newQuestion: 1
   location: 4
   character: 2
   itemReceived: {fileID: 11400000, guid: 6c71320e63fdda74bbf95bb372060f3f, type: 2}
-  itemUnlockAt: 6
+  itemUnlockAt: 5
   itemReceived2: {fileID: 0}
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}
@@ -40,8 +42,19 @@ MonoBehaviour:
   itemPresentAt2: 0
   itemPresent3: {fileID: 0}
   itemPresentAt3: 0
+  itemPresent4: {fileID: 0}
+  itemPresentAt4: 0
+  itemPresent5: {fileID: 0}
+  itemPresentAt5: 0
+  itemPresent6: {fileID: 0}
+  itemPresentAt6: 0
+  itemPresent7: {fileID: 0}
+  itemPresentAt7: 0
+  itemPresent8: {fileID: 0}
+  itemPresentAt8: 0
   checkToUnlockLocation: 0
   unlockLocation: 4
   dialogue: []
   exploredIDs: []
-  devNotes: 
+  devNotes: Andy is convo 5 special text ok? or cut it shorter? also with it starting
+    on 4

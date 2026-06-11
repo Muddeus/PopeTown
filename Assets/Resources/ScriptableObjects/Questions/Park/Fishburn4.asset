@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Fishburn4
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: Anything strange you notice out on the streets?
+  largeQuestionBox: 0
   conversation:
   - <i>Ooo</i>, good angle. Good angle.
   - "Let\u2019s see... <i>well</i>, here\u2019s a little oddity for you. Might not
@@ -24,12 +25,12 @@ MonoBehaviour:
     keep getting away with it.
   - "Sometimes I forget, and it starts up when I\u2019m already looking out over
     the lake. Scares the shit out of me."
-  unlocked: 0
+  unlocked: 1
   newQuestion: 1
   location: 7
   character: 3
   itemReceived: {fileID: 11400000, guid: 3c07221d7dd05804d8cd6815c089623e, type: 2}
-  itemUnlockAt: 4
+  itemUnlockAt: 3
   itemReceived2: {fileID: 0}
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}
@@ -40,6 +41,16 @@ MonoBehaviour:
   itemPresentAt2: 0
   itemPresent3: {fileID: 0}
   itemPresentAt3: 0
+  itemPresent4: {fileID: 0}
+  itemPresentAt4: 0
+  itemPresent5: {fileID: 0}
+  itemPresentAt5: 0
+  itemPresent6: {fileID: 0}
+  itemPresentAt6: 0
+  itemPresent7: {fileID: 0}
+  itemPresentAt7: 0
+  itemPresent8: {fileID: 0}
+  itemPresentAt8: 0
   checkToUnlockLocation: 0
   unlockLocation: 0
   dialogue: []

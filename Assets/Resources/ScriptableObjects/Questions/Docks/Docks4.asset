@@ -13,75 +13,110 @@ MonoBehaviour:
   m_Name: Docks4
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: What do you think of your accommodation from Mayor Bunyon?
+  largeQuestionBox: 0
   conversation:
   - "Uhhh... it\u2019s <i>fine?</i> I <i>guess?</i>"
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  unlocked: 1
+  - "I mean it isn\u2019t <i>great</i>."
+  - I've noticed that sometimes people have just <i>come in</i> and, like, gone through
+    my stuff, which I don't <i>love</i>.
+  - "But it\u2019s also not, you know, <i>the street</i>."
+  - "It definitely doesn\u2019t mean I love Bunyon for it though, and I\u2019m sure
+    you don\u2019t either, right?"
+  - "Like, <i>come on</i>, he\u2019s so... <i>so...</i>"
+  - "Fake! <i>Right?</i> He\u2019s so <i>fake</i>. His words are fake, even his <i>smile\u2019s</i>
+    fake."
+  - "The second I get the chance I\u2019m outta here. Don\u2019t owe him or this
+    place anything."
+  - "It\u2019ll be easy too. There isn\u2019t a single damn thing I care about in
+    this stupid town."
+  - "...what are you\u2014 what are you even talking about?"
+  - "Wait, they didn\u2019t say anything did they?"
+  - "Oh shit, they think <i>I</i> did it, don\u2019t they? They sent you after me?"
+  - "I\u2019m\u2013 <i>I didn\u2019t mean\u2014</i> shit! I\u2019m sorry!"
+  - ...
+  - "...oh wait, you don\u2019t\u2013 you don\u2019t know what I\u2019m talking about,
+    do you?"
+  - ...
+  - "Okay wait, <i>wait</i>. I just realised how that sounded. I wasn\u2019t talking
+    about the murder!"
+  - "I wasn\u2019t talking about <i>anything</i>. Spider wouldn\u2019t have said
+    anything anyway because nothing actually happened, I just got <i>confused</i>."
+  - "<i>...What?</i> I\u2013 I didn\u2019t even <i>know.</i>"
+  - Well, okay, but what does that have to do with me?
+  - "What would\u2013 I don\u2019t even have a reason for <i>needing</i> a gun!"
+  - '[MASK SHATTERS]'
+  - ...
+  - They... they really...
+  - ...
+  - I... I was going to give it <i>back.</i>
+  - I just wanted to feel <i>safe</i> for once. I thought that once I got my own
+    place, that things would be <i>different.</i>
+  - "But it\u2019s the same. It\u2019s always gonna be the <i>same</i>. I get back
+    to my place\u2014 <i>what\u2019s supposed to be my home, right?</i> And people
+    have just been coming in and going through my <i>shit.</i>"
+  - God, I think one or two times people <i>actually</i> came in when I was <i>sleeping!</i>
+  - "Can you understand how that feels? To feel like you\u2019re never allowed to
+    have your own space, no matter where you go?"
+  - "Like at any waking moment, someone can just violate that space, and there\u2019s
+    nothing you can do? It\u2019s suffocating! It\u2019s so fucking <i>scary!</i>"
+  - "Please tell me you understand! I need to know that someone else can understand
+    what I\u2019m saying!"
+  - Because I need... I need <i>them</i> to understand. I need Spider to forgive
+    me...
+  - "They\u2019re all I have in this stupid town, and I risked it all for <i>nothing.</i>"
+  - ...sniff...
+  - "...Look, here it is. You can give it back. I\u2019ll talk to them later, I just...
+    I just need some time."
+  - "I\u2019ve been careful with it. <i>Really.</i> I never even fired it, and I
+    kept it out of the water."
+  - "And... <i>look</i>, to thank you properly, because I\u2014 I <i>really</i> appreciate
+    this, I\u2019ll tell you something else."
+  - "When I left after setting off my fireworks last night, which would\u2019ve been,
+    like, three hours afterwards, I cut through the Town Square."
+  - When I did...
+  - I <i>saw</i> it happen.
+  - "It was dark, and I wasn\u2019t close enough to see everything, but I saw something
+    <i>drop</i> from the Mayor\u2019s balcony and onto the wires."
+  - I... I got scared and ran home.
+  - "I didn\u2019t say anything about it until now \u2018cause... I didn\u2019t want
+    to incriminate anyone."
+  - So I hope that helps.
+  - ...
+  - I really hope they forgive me.
+  - "I mean, how else am I gonna hear about all the weird kinks people have? There\u2019s
+    someone walking around here who gets off to being pelted with rocks!"
+  - "Like I\u2019ve had to keep a straight face when calling out this guy\u2019s
+    bruises 'cause they said they\u2019d just been caught in a 'small rockslide'."
+  - Or like, that one of the handy- uh- <i>people</i>, likes wrinkly feet? Like,
+    <i>fell asleep in the bath for 3 hours</i> wrinkly?
+  - Oh shit, wait... we only have, like, one handy person.
+  - "...Don\u2019t tell Spider I said that."
+  unlocked: 0
   newQuestion: 1
   location: 3
   character: 5
-  itemReceived: {fileID: 0}
-  itemUnlockAt: 0
+  itemReceived: {fileID: 11400000, guid: 5c03fedbb40192d44a0d1b745672767d, type: 2}
+  itemUnlockAt: 52
   itemReceived2: {fileID: 0}
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}
   itemUnlockAt3: 0
-  itemPresent: {fileID: 0}
-  itemPresentAt: 0
-  itemPresent2: {fileID: 0}
-  itemPresentAt2: 0
-  itemPresent3: {fileID: 0}
-  itemPresentAt3: 0
+  itemPresent: {fileID: 11400000, guid: 682f8e67249aea24ea99fe9d4f650ecf, type: 2}
+  itemPresentAt: 8
+  itemPresent2: {fileID: 11400000, guid: 2233951c10d5cc84e9510d3116ab76cd, type: 2}
+  itemPresentAt2: 17
+  itemPresent3: {fileID: 11400000, guid: 6c71320e63fdda74bbf95bb372060f3f, type: 2}
+  itemPresentAt3: 20
+  itemPresent4: {fileID: 0}
+  itemPresentAt4: 0
+  itemPresent5: {fileID: 0}
+  itemPresentAt5: 0
+  itemPresent6: {fileID: 0}
+  itemPresentAt6: 0
+  itemPresent7: {fileID: 0}
+  itemPresentAt7: 0
+  itemPresent8: {fileID: 0}
+  itemPresentAt8: 0
   checkToUnlockLocation: 0
   unlockLocation: 0
   dialogue: []

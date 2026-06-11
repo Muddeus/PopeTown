@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: MayorsOffice4
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: Might anyone be looking to frame you?
+  largeQuestionBox: 0
   conversation:
   - Broadly speaking? Many.
   - "See, most people who end up in my position, they\u2019re either weasels or pencil
@@ -24,8 +25,9 @@ MonoBehaviour:
   - "The people want to be me, be with me, or be in me. And if they can\u2019t be
     any one of those things, then they want to be rid of me."
   - To go so far as to frame me for murder though..? Not so sure.
-  - "Only one who\u2019s had my number lately is this old coot, Fishburn. Local bum.
-    Been mad about the new development I\u2019ve got going on in the East District."
+  - "<<color=notiCol>Only one who\u2019s had my number lately is this old coot, Fishburn.
+    Local bum. Been mad about the new development I\u2019ve got going on in the East
+    District.</color>"
   - "Real nerve on the guy, getting uppity about new houses when he can\u2019t even
     be bothered to get his own."
   unlocked: 0
@@ -44,6 +46,16 @@ MonoBehaviour:
   itemPresentAt2: 0
   itemPresent3: {fileID: 0}
   itemPresentAt3: 0
+  itemPresent4: {fileID: 0}
+  itemPresentAt4: 0
+  itemPresent5: {fileID: 0}
+  itemPresentAt5: 0
+  itemPresent6: {fileID: 0}
+  itemPresentAt6: 0
+  itemPresent7: {fileID: 0}
+  itemPresentAt7: 0
+  itemPresent8: {fileID: 0}
+  itemPresentAt8: 0
   checkToUnlockLocation: 1
   unlockLocation: 3
   dialogue: []

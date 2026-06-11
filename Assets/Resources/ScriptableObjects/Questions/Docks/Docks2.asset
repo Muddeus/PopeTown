@@ -25,14 +25,14 @@ MonoBehaviour:
   - "Because yeah that\u2019s been me I\u2019ve been setting those off."
   - "But I\u2019m allowed to! Well\u2013 uh \u2013<i>sort of</i>."
   - "There\u2019s... <i>look</i>, I\u2019m not allowed to say who it is, <color=notiCol>but
-    there\u2019s someone who makes people look the other way</color>."
+    there\u2019s someone who makes people look the other way.</color>"
   - "So it\u2019s <i>practically</i> legal."
-  unlocked: 1
+  unlocked: 0
   newQuestion: 1
   location: 3
   character: 5
   itemReceived: {fileID: 11400000, guid: d58c8ff56554c484aa38ddaaa3a58646, type: 2}
-  itemUnlockAt: 9
+  itemUnlockAt: 8
   itemReceived2: {fileID: 0}
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}

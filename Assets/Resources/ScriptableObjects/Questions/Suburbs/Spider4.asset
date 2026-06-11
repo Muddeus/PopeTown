@@ -25,10 +25,10 @@ MonoBehaviour:
   - "What I <i>really don\u2019t</i> care for is what it\u2019s all doing to the
     sky, because of the... <i>what do you call it...</i>"
   - "<color=notiCol>Light pollution, that\u2019s it. It\u2019s ruining the view at
-    night</color>. Which is a shame, since that\u2019s when I\u2019m the most busy."
+    night.</color> Which is a shame, since that\u2019s when I\u2019m the most busy."
   - "The one <i>good</i> thing he\u2019s done with it all is the Youth Housing."
-  - "Eddie, that punk teenager you might\u2019ve seen running around, I looked out
-    for him when he was on the street. <color=notiCol>He and I are tight</color>."
+  - "Eddie, that punk teenager you might\u2019ve seen running around, <color=notiCol>I
+    looked out for him when he was on the street. He and I are tight.</color>"
   - "<color=notiCol>So after the mayor set him up there</color>, that put me at ease
     a little. So there\u2019s that at least."
   unlocked: 1
@@ -36,11 +36,11 @@ MonoBehaviour:
   location: 4
   character: 2
   itemReceived: {fileID: 11400000, guid: 7c1bf975b1e3550449fb0f147d06ac3e, type: 2}
-  itemUnlockAt: 6
+  itemUnlockAt: 5
   itemReceived2: {fileID: 11400000, guid: 404d050caeec80a4a9842ada48b29c11, type: 2}
-  itemUnlockAt2: 9
+  itemUnlockAt2: 8
   itemReceived3: {fileID: 11400000, guid: 682f8e67249aea24ea99fe9d4f650ecf, type: 2}
-  itemUnlockAt3: 8
+  itemUnlockAt3: 7
   itemPresent: {fileID: 0}
   itemPresentAt: 0
   itemPresent2: {fileID: 0}

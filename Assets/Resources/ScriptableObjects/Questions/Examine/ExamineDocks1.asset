@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: ExamineDocks1
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: 
+  largeQuestionBox: 0
   conversation:
   - The lake is quiet and peaceful.
   - The mild hubbub of the town is but a faint murmur.
   - However, you happen to spot something strange.
-  - In the bushes you spot a suspicious note, written with newspaper clippings.
+  - <color=notiCol>In the bushes you spot a suspicious note, written with newspaper
+    clippings.</color>
   - After taking the note however, you notice something <i>else</i> amongst the bushes.
     Somebody is hiding.
   - "Shit. Okay, <i>okay</i>. I\u2019m coming out."
@@ -30,7 +32,7 @@ MonoBehaviour:
   location: 3
   character: 0
   itemReceived: {fileID: 11400000, guid: e31fa2b84276ad54eb6e5fb72dfbe45e, type: 2}
-  itemUnlockAt: 4
+  itemUnlockAt: 3
   itemReceived2: {fileID: 0}
   itemUnlockAt2: 0
   itemReceived3: {fileID: 0}
@@ -41,6 +43,16 @@ MonoBehaviour:
   itemPresentAt2: 0
   itemPresent3: {fileID: 0}
   itemPresentAt3: 0
+  itemPresent4: {fileID: 0}
+  itemPresentAt4: 0
+  itemPresent5: {fileID: 0}
+  itemPresentAt5: 0
+  itemPresent6: {fileID: 0}
+  itemPresentAt6: 0
+  itemPresent7: {fileID: 0}
+  itemPresentAt7: 0
+  itemPresent8: {fileID: 0}
+  itemPresentAt8: 0
   checkToUnlockLocation: 0
   unlockLocation: 0
   dialogue: []
