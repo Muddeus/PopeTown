@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Spider5
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: What were you doing in the Town Square when you found the body?
-  largeQuestionBox: 0
+  largeQuestionBox: 1
   conversation:
   - ...
   - I like you hun.

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: "Eddie stole your gun and wanted me to return it. He says he never
     fired it, and he\u2019s sorry."
-  largeQuestionBox: 0
+  largeQuestionBox: 1
   conversation:
   - ...
   - Yeah, I know it was him.

@@ -15834,6 +15834,22 @@ PrefabInstance:
       propertyPath: m_Colors.m_NormalColor.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 110688998135125902, guid: 1d6910cda24ecd34789d7a06d837877f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 110688998135125902, guid: 1d6910cda24ecd34789d7a06d837877f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 110688998135125902, guid: 1d6910cda24ecd34789d7a06d837877f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 110688998135125902, guid: 1d6910cda24ecd34789d7a06d837877f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Button, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 651801370949787973, guid: 1d6910cda24ecd34789d7a06d837877f, type: 3}
       propertyPath: m_SizeDelta.y
       value: 19

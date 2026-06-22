@@ -122,6 +122,9 @@ public class UIManager : MonoBehaviour
     private Animator anim;
     public Animator handAnim;
 
+    public GameObject presentableIcon;
+    public bool presentNow;
+
     public Sprite mayorIdle;
     public Sprite mayorTalk;
     private Character currentCharacter;
@@ -133,6 +136,8 @@ public class UIManager : MonoBehaviour
         currentLocation = Location.Entrance;
         anim = GetComponent<Animator>();
         presentable = false;
+        presentNow = false;
+        presentableIcon.SetActive(false);
         talking = true;
         textProgress = 0;
         questionMode = false;
@@ -553,6 +558,23 @@ public class UIManager : MonoBehaviour
             }
             else
             {
+                presentNow = false;
+                // check if evidence should be presented now
+                if (currentQuestion.itemPresent != null && textProgress == currentQuestion.itemPresentAt)
+                {
+                    presentNow = true;
+                }
+                else if (currentQuestion.itemPresent2 != null && textProgress == currentQuestion.itemPresentAt2)
+                {
+                    presentNow = true;
+                }
+                else if (currentQuestion.itemPresent3 != null && textProgress == currentQuestion.itemPresentAt3)
+                {
+                    presentNow = true;
+                }
+                presentableIcon.SetActive(presentNow);
+                
+                // check if evidence presented
                 if (currentQuestion.itemPresent != null && textProgress-1 == currentQuestion.itemPresentAt)
                 {
                     expectedItem = true;
@@ -1100,6 +1122,8 @@ public class UIManager : MonoBehaviour
         notesBox.gameObject.SetActive(true);
         notesification.UpdateUnderline(notesBox.gameObject);
         SetPresentingMode(true);
+        presentNow = false;
+        presentableIcon.SetActive(false);
     }
 
     public void SetPresentingMode(bool set)
