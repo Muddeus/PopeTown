@@ -1666,8 +1666,44 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2015027462}
         m_TargetAssemblyTypeName: IntroManager, Assembly-CSharp
-        m_MethodName: LoadNewGame
+        m_MethodName: NewGame
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1320058088}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 131661812}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 644170804}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2684,7 +2720,6 @@ Transform:
   m_Children:
   - {fileID: 1320058089}
   - {fileID: 1620631877}
-  - {fileID: 1620365360}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &977082033
@@ -3579,10 +3614,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: SetTalking
-        m_Mode: 6
+      - m_Target: {fileID: 2015027462}
+        m_TargetAssemblyTypeName: IntroManager, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3986,7 +4021,8 @@ Transform:
   m_LocalPosition: {x: 0.0000000037253, y: 1.28, z: 0}
   m_LocalScale: {x: 10.1326, y: 1.86, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1620365360}
   m_Father: {fileID: 977082032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1320058090
@@ -4872,12 +4908,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620365359}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0132, y: 1.28, z: 0}
-  m_LocalScale: {x: 10.15895, y: 1.7875, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0013027255, y: 0, z: 0}
+  m_LocalScale: {x: 1.0026006, y: 0.9610216, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 977082032}
+  m_Father: {fileID: 1320058089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1620365361
 SpriteRenderer:
@@ -5578,6 +5614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b7ffcf853819684eb8caddf9131324f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  anim: {fileID: 726962839}
   targetFrameRate: 60
   gameSceneName: ChrisUI
 --- !u!1 &2019298133
