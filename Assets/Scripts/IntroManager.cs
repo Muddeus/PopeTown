@@ -34,9 +34,7 @@ public class IntroManager : MonoBehaviour
             introPress = 0f;
         }
 
-        introTimer += Time.deltaTime;
-
-        if (introPress >= 1f || introTimer >= 15.2f)
+        if ((introPress >= 1f || introTimer >= 15.2f) && !introOver)
         {
             introOver = true;
             menuAnim.Play("Menu Rising", 0, 1.0f);
@@ -47,6 +45,10 @@ public class IntroManager : MonoBehaviour
         {
             introPress = 0;
         }
+        else
+        {
+            introTimer += Time.deltaTime;
+        }
 
         skipText.alpha = introPress;
 
@@ -55,11 +57,13 @@ public class IntroManager : MonoBehaviour
     public void NewGame()
     {
         StartCoroutine(NewTransition());
+        introOver = true;
     }
 
     public void Continue()
     {
         StartCoroutine(ContinueTransition());
+        introOver = true;
     }
 
     public void Quit()
