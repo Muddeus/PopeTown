@@ -1,20 +1,65 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class IntroManager : MonoBehaviour
 {
     public Animator anim;
+    public Animator menuAnim;
     [Range(60, 120)] public int targetFrameRate = 60;
     public string gameSceneName = "ChrisUI";
+
+    //Andy stuff
+    public bool introOver = false;
+    public float introPress = 0f;
+    public float introTimer = 0f;
+
+    public TMP_Text skipText;
+
     void Start()
     {
         Application.targetFrameRate = targetFrameRate;
     }
 
+    public void Update()
+    {
+        if ((Input.GetMouseButton(0)) && !introOver)
+        {
+            Debug.Log("Pressed");
+            introPress += Time.deltaTime;
+        }
+        else
+        {
+            introPress = 0f;
+        }
+
+        introTimer += Time.deltaTime;
+
+        if (introPress >= 1f || introTimer >= 15.2f)
+        {
+            introOver = true;
+            menuAnim.Play("Menu Rising", 0, 1.0f);
+            anim.Play("Intro", 0, 1.0f);
+        }
+
+        if (introOver)
+        {
+            introPress = 0;
+        }
+
+        skipText.alpha = introPress;
+
+    }
+
     public void NewGame()
     {
-        StartCoroutine(BeginTransition());
+        StartCoroutine(NewTransition());
+    }
+
+    public void Continue()
+    {
+        StartCoroutine(ContinueTransition());
     }
 
     public void Quit()
@@ -22,10 +67,20 @@ public class IntroManager : MonoBehaviour
         Application.Quit();
     }
 
-    IEnumerator BeginTransition()
+    IEnumerator NewTransition()
     {
+        Debug.Log("New Game");
         anim.Play("Begin");
         yield return new WaitForSeconds(6.7f);
+        SceneManager.LoadScene(gameSceneName);
+    }
+
+    IEnumerator ContinueTransition()
+    {
+        Debug.Log("Continue");
+        anim.Play("Begin");
+        yield return new WaitForSeconds(6.7f);
+        //Put in something here to load saved data
         SceneManager.LoadScene(gameSceneName);
     }
 
