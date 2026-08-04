@@ -12,8 +12,10 @@ public class IntroManager : MonoBehaviour
 
     //Andy stuff
     public bool introOver = false;
+    public AudioSource introMusic;
     public float introPress = 0f;
     public float introTimer = 0f;
+    private bool musicFadeEnabled;
 
     public TMP_Text skipText;
 
@@ -34,7 +36,7 @@ public class IntroManager : MonoBehaviour
             introPress = 0f;
         }
 
-        if ((introPress >= 1f || introTimer >= 15.2f) && !introOver)
+        if ((introPress >= 1f || introTimer >= 17.15f) && !introOver)
         {
             introOver = true;
             menuAnim.Play("Menu Rising", 0, 1.0f);
@@ -51,6 +53,11 @@ public class IntroManager : MonoBehaviour
         }
 
         skipText.alpha = introPress;
+
+        if(musicFadeEnabled)
+        {
+            float newVolume = introMusic.volume - (0.1f * Time.deltaTime);
+        }
 
     }
 
@@ -73,6 +80,7 @@ public class IntroManager : MonoBehaviour
 
     IEnumerator NewTransition()
     {
+        musicFadeEnabled = true;
         Debug.Log("New Game");
         anim.Play("Begin");
         yield return new WaitForSeconds(6.7f);
@@ -81,6 +89,7 @@ public class IntroManager : MonoBehaviour
 
     IEnumerator ContinueTransition()
     {
+        musicFadeEnabled = true;
         Debug.Log("Continue");
         anim.Play("Begin");
         yield return new WaitForSeconds(6.7f);
