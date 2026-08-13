@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Docks4
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: What do you think of your accommodation from Mayor Bunyon?
-  largeQuestionBox: 0
+  largeQuestionBox: 1
   conversation:
   - "Uhhh... it\u2019s <i>fine?</i> I <i>guess?</i>"
   - "I mean it isn\u2019t <i>great</i>."
