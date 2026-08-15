@@ -421,7 +421,7 @@ MonoBehaviour:
   item: {fileID: 0}
   newItem: 0
   avatarSprite: {fileID: 2073358270686243046}
-  guardSprite: {fileID: 0}
+  guardSprite: {fileID: -6435146285046653479, guid: 0005bcc27ccbfac4396bf91efb894c29, type: 3}
   mayorSprite: {fileID: 1161201145128540330, guid: 3ff44fe8b949b764fa87560c9acbc22b, type: 3}
   artistSprite: {fileID: 2130535880278150251, guid: 3ff44fe8b949b764fa87560c9acbc22b, type: 3}
   punkSprite: {fileID: 184950751378207249, guid: 3ff44fe8b949b764fa87560c9acbc22b, type: 3}

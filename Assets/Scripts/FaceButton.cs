@@ -18,4 +18,14 @@ public class FaceButton : MonoBehaviour
     {
         UIManager.Ins.FaceClick();
     }
+
+    public void OnMouseEnter()
+    {
+        UIManager.Ins.ShowFaceBox();
+    }
+
+    public void OnMouseExit()
+    {
+        UIManager.Ins.HideFaceBox();
+    }
 }

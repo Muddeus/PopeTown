@@ -860,7 +860,7 @@ public class UIManager : MonoBehaviour
             
             
             
-
+            HideFaceBox();
             AnimateText();
         }
     }
@@ -1511,13 +1511,20 @@ public class UIManager : MonoBehaviour
 
     public void ShowFaceBox()
     {
-        if (currentPortrait == null)
+        if (portraitPanel.transform.childCount == 0)
         {
+            print("FAILED: SHOW FACEBUTTON");
             return;
         }
-        Transform faceButton = currentPortrait.transform.Find("FaceButton");
+        Transform faceButton = portraitPanel.transform.GetChild(0).transform.Find("FaceButton");
         if (faceButton != null)
         {
+            Button button = faceButton.GetComponent<Button>();
+            ColorBlock colors = button.colors;
+            Color newColor = Color.white;
+            newColor.a = 1f;
+            colors.normalColor = newColor;
+            button.colors = colors;
             foreach (Transform child in faceButton)
             {
                 child.gameObject.SetActive(true);
@@ -1528,16 +1535,23 @@ public class UIManager : MonoBehaviour
 
     public void HideFaceBox()
     {
-        if (currentPortrait == null)
+        if (portraitPanel.transform.childCount == 0)
         {
+            print("FAILED: HIDE FACEBUTTON");
             return;
         }
-        Transform faceButton = currentPortrait.transform.Find("FaceButton");
+        Transform faceButton = portraitPanel.transform.GetChild(0).transform.Find("FaceButton");
         if (faceButton != null)
         {
+            Button button = faceButton.GetComponent<Button>();
+            ColorBlock colors = button.colors;
+            Color newColor = Color.white;
+            newColor.a = 0f;
+            colors.normalColor = newColor;
+            button.colors = colors;
             foreach (Transform child in faceButton)
             {
-                child.gameObject.SetActive(true);
+                child.gameObject.SetActive(false);
             }
         }
     }
