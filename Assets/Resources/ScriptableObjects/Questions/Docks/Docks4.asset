@@ -87,18 +87,18 @@ MonoBehaviour:
     someone walking around here who gets off to being pelted with rocks!"
   - "Like I\u2019ve had to keep a straight face when calling out this guy\u2019s
     bruises 'cause they said they\u2019d just been caught in a 'small rockslide'."
-  - Or like, that one of the handy- uh- <i>people</i>, likes wrinkly feet? Like,
-    <i>fell asleep in the bath for 3 hours</i> wrinkly?
-  - Oh shit, wait... we only have, like, one handy person.
+  - Or like, <color=notiCol>that one of the handy- uh- <i>people</i>, likes wrinkly
+    feet? Like, <i>fell asleep in the bath for 3 hours</i> wrinkly?</color>
+  - Oh shit, wait... <color=notiCol>we only have, like, one handy person.</color>
   - "...Don\u2019t tell Spider I said that."
-  unlocked: 0
-  newQuestion: 1
+  unlocked: 1
+  newQuestion: 0
   location: 3
   character: 5
   itemReceived: {fileID: 11400000, guid: 5c03fedbb40192d44a0d1b745672767d, type: 2}
   itemUnlockAt: 52
-  itemReceived2: {fileID: 0}
-  itemUnlockAt2: 0
+  itemReceived2: {fileID: 11400000, guid: 1cd98cac55a127743b88d4536a233a4e, type: 2}
+  itemUnlockAt2: 52
   itemReceived3: {fileID: 0}
   itemUnlockAt3: 0
   itemPresent: {fileID: 11400000, guid: 682f8e67249aea24ea99fe9d4f650ecf, type: 2}

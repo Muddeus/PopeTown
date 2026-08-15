@@ -25,13 +25,13 @@ MonoBehaviour:
   - "The people want to be me, be with me, or be in me. And if they can\u2019t be
     any one of those things, then they want to be rid of me."
   - To go so far as to frame me for murder though..? Not so sure.
-  - "<<color=notiCol>Only one who\u2019s had my number lately is this old coot, Fishburn.
+  - "<color=notiCol>Only one who\u2019s had my number lately is this old coot, Fishburn.
     Local bum. Been mad about the new development I\u2019ve got going on in the East
     District.</color>"
   - "Real nerve on the guy, getting uppity about new houses when he can\u2019t even
     be bothered to get his own."
-  unlocked: 0
-  newQuestion: 1
+  unlocked: 1
+  newQuestion: 0
   location: 2
   character: 1
   itemReceived: {fileID: 11400000, guid: d4c9313030bfd00469c29d3ff00f727d, type: 2}

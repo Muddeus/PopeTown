@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Docks1
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: Is there anything you know about the incident?
+  largeQuestionBox: 0
   conversation:
   - "...It\u2019s exciting? <i>I guess</i>?"
   - "I mean maybe I\u2019ll feel bad when I find out who it is, but since we don\u2019t
@@ -25,7 +26,7 @@ MonoBehaviour:
   - ...
   - But yeah.
   unlocked: 1
-  newQuestion: 1
+  newQuestion: 0
   location: 3
   character: 5
   itemReceived: {fileID: 0}
@@ -40,6 +41,16 @@ MonoBehaviour:
   itemPresentAt2: 0
   itemPresent3: {fileID: 0}
   itemPresentAt3: 0
+  itemPresent4: {fileID: 0}
+  itemPresentAt4: 0
+  itemPresent5: {fileID: 0}
+  itemPresentAt5: 0
+  itemPresent6: {fileID: 0}
+  itemPresentAt6: 0
+  itemPresent7: {fileID: 0}
+  itemPresentAt7: 0
+  itemPresent8: {fileID: 0}
+  itemPresentAt8: 0
   checkToUnlockLocation: 0
   unlockLocation: 0
   dialogue: []
