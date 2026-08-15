@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7285e2cb-2db6-429d-b2e4-ccad62700fa0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PopeTown/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PopeTown/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/GuardPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/GuardPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chris/ChrisUI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chris/ChrisUI.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/DocksPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/DocksPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/FishburnPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/FishburnPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/GeminiPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/GeminiPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/Handyma'amPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/Handyma'amPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/MayorPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/MayorPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/SpiderPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CharacterPortraits/SpiderPrefab.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +146,7 @@
       <workItem from="1782097350793" duration="2892000" />
       <workItem from="1784176503293" duration="2386000" />
       <workItem from="1786596096810" duration="1766000" />
-      <workItem from="1786767568380" duration="10337000" />
+      <workItem from="1786767568380" duration="11573000" />
     </task>
     <servers />
   </component>
