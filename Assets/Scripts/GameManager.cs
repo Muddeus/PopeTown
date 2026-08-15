@@ -168,7 +168,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         clickBlocker.SetActive(shattering);
-        if (Input.GetMouseButtonDown(0) && !shattering)
+        if (Input.GetMouseButtonDown(0) && !shattering && !UIManager.Ins.presentNow)
         {
             Vector2 mouseWorldPos=
                 cam.ScreenToWorldPoint(Input.mousePosition);
@@ -187,7 +187,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && !UIManager.Ins.presentNow)
             {
                 UIManager.Ins.NextText();
             }
