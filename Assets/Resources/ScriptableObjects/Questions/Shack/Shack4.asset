@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shack4
   m_EditorClassIdentifier: Assembly-CSharp::Question
   questionText: "Why haven\u2019t you switched the power back off yet?"
-  largeQuestionBox: 0
+  largeQuestionBox: 1
   conversation:
   - <i>...Oh my God.</i>
   - Not that simple.
@@ -49,8 +49,8 @@ MonoBehaviour:
   - "God, <i>I</i> ask for half-decent internet, but apparently 'That\u2019s just
     not a priority!'"
   - No, apparently a <i>real</i> priority, is a <i>second fucking squash court.</i>
-  unlocked: 0
-  newQuestion: 1
+  unlocked: 1
+  newQuestion: 0
   location: 6
   character: 6
   itemReceived: {fileID: 0}

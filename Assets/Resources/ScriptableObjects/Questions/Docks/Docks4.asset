@@ -74,9 +74,9 @@ MonoBehaviour:
   - "When I left after setting off my fireworks last night, which would\u2019ve been,
     like, three hours afterwards, I cut through the Town Square."
   - When I did...
-  - I <i>saw</i> it happen.
-  - "It was dark, and I wasn\u2019t close enough to see everything, but I saw something
-    <i>drop</i> from the Mayor\u2019s balcony and onto the wires."
+  - <color=notiCol>I <i>saw</i> it happen.</color>
+  - "It was dark, and I wasn\u2019t close enough to see everything, but <color=notiCol>I
+    saw something <i>drop</i> from the Mayor\u2019s balcony and onto the wires.</color>"
   - I... I got scared and ran home.
   - "I didn\u2019t say anything about it until now \u2018cause... I didn\u2019t want
     to incriminate anyone."
@@ -99,8 +99,8 @@ MonoBehaviour:
   itemUnlockAt: 52
   itemReceived2: {fileID: 11400000, guid: 1cd98cac55a127743b88d4536a233a4e, type: 2}
   itemUnlockAt2: 52
-  itemReceived3: {fileID: 0}
-  itemUnlockAt3: 0
+  itemReceived3: {fileID: 11400000, guid: dcbea5a831ccfe143acef63d8d1abf90, type: 2}
+  itemUnlockAt3: 52
   itemPresent: {fileID: 11400000, guid: 682f8e67249aea24ea99fe9d4f650ecf, type: 2}
   itemPresentAt: 8
   itemPresent2: {fileID: 11400000, guid: 2233951c10d5cc84e9510d3116ab76cd, type: 2}
