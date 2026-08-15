@@ -83,9 +83,11 @@ public class GameManager : MonoBehaviour
     public bool shattering;
 
     public GameObject clickBlocker;
+    private Camera cam;
     void Start()
     {
         Application.targetFrameRate = targetFramerate;
+        cam = Camera.main;
     }
 
     public void GoToEntrance()
@@ -169,7 +171,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !shattering)
         {
             Vector2 mouseWorldPos=
-                Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                cam.ScreenToWorldPoint(Input.mousePosition);
 
             RaycastHit2D hit = Physics2D.Raycast(
                 mouseWorldPos,

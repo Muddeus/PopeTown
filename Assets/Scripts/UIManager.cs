@@ -550,7 +550,7 @@ public class UIManager : MonoBehaviour
             }
             lastOwnedItemListCount = ownedItemList.Count;*/
             //PresentEvidenceCheck(emptyItem);
-            if(talking)print("talking");
+            //if(talking)print("talking");
             bool expectedItem = false;
             if (currentQuestion == null || presentPassed)
             {
@@ -592,7 +592,7 @@ public class UIManager : MonoBehaviour
             if (expectedItem)
             {
                 RefreshQuestions();
-                if(talking)print("2");
+                //if(talking)print("2");
             }
             presentPassed = false;
             // Update the log here, text has been read
@@ -601,7 +601,7 @@ public class UIManager : MonoBehaviour
             emptyNotesText.SetActive(notesBoxContent.childCount == 0); // Get rid of EMPTY text if not empty
             
             textProgress++;
-            if(talking)print("3");
+            //if(talking)print("3");
             if (questionMode)
             {
                 if (currentQuestion != null) // If there is a current question
@@ -637,7 +637,7 @@ public class UIManager : MonoBehaviour
                     //SetPortrait();
                     //PresentEvidenceCheck();
                     // Check if item to unlock (multiple items ahead)
-                    if(talking)print("4");
+                    //if(talking)print("4");
                     if (currentQuestion.itemReceived != null)
                     {
                         if (textProgress >= currentQuestion.itemUnlockAt)
@@ -753,7 +753,7 @@ public class UIManager : MonoBehaviour
                                 }
                             }
                         }
-                        if(talking)print("5");
+                        //if(talking)print("5");
                         // Check prerequisites
                         foreach (Question q in allQuestionArray)
                         {
@@ -789,7 +789,7 @@ public class UIManager : MonoBehaviour
                         currentQuestion = null;
                         textProgress = -1; // to ensure text starts from actual start as it is technically triggered by a NextText
                         RefreshQuestions();
-                        if(talking)print("6");
+                        //if(talking)print("6");
                     }
                 }
                 else // If there is no current question
@@ -805,7 +805,7 @@ public class UIManager : MonoBehaviour
                         SetPortrait();
                         //this doesnt trigger when returning to entrance, return, bug
                     }
-                    if(talking)print("7");
+                    //if(talking)print("7");
                     //if(GameManager.Ins.townSquareUnlocked)leaveObj.SetActive(true);
                 }
 
@@ -820,7 +820,7 @@ public class UIManager : MonoBehaviour
                     questionMode = false;
                     textProgress = -1;
                 }
-                if(talking)print("8");
+                //if(talking)print("8");
             }
             else // NOT in Question Mode (text mode)
             {
@@ -1118,6 +1118,7 @@ public class UIManager : MonoBehaviour
 
     public void FaceClick()
     {
+        Debug.Log("FACeCLICK CALLED");
         UpdateNotes();
         notesBox.gameObject.SetActive(true);
         notesification.UpdateUnderline(notesBox.gameObject);
@@ -1505,6 +1506,39 @@ public class UIManager : MonoBehaviour
             default:
                 print("ERROR: NO VALID LOCATION");
                 break;
+        }
+    }
+
+    public void ShowFaceBox()
+    {
+        if (currentPortrait == null)
+        {
+            return;
+        }
+        Transform faceButton = currentPortrait.transform.Find("FaceButton");
+        if (faceButton != null)
+        {
+            foreach (Transform child in faceButton)
+            {
+                child.gameObject.SetActive(true);
+            }
+        }
+        
+    }
+
+    public void HideFaceBox()
+    {
+        if (currentPortrait == null)
+        {
+            return;
+        }
+        Transform faceButton = currentPortrait.transform.Find("FaceButton");
+        if (faceButton != null)
+        {
+            foreach (Transform child in faceButton)
+            {
+                child.gameObject.SetActive(true);
+            }
         }
     }
 }
