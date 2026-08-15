@@ -102,6 +102,7 @@ MonoBehaviour:
   checkToUnlockLocation: 0
   unlockLocation: 0
   dialogue: []
-  exploredIDs: []
+  exploredIDs:
+  - {fileID: 11400000, guid: ef0988c6c8f6baf4d859b8e5e5b5053f, type: 2}
   devNotes: '"I found IT there"? with italics on the "them" next line ;; line 32
     em dash??'
